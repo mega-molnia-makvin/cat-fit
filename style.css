@@ -1,0 +1,45 @@
+.fon{
+        background-repeat: no-repeat;
+        background-position: center center;
+        object-fit: cover;
+        filter: opacity(20%);
+        position: fixed;
+}
+.logo{
+    position:absolute;
+    left: 20%;
+    top: 15%;
+
+}
+    
+.tlogo{
+    font-family: Pussyfoot;
+    src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
+    font-display: swap;
+    position:absolute;
+    left: 30%;
+    top: 15%;
+    font-size: 600%;
+} 
+nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+}
+a{
+    padding-left: 15%;
+}
+article{
+    position:absolute;
+    top: 50%;
+    height: 100%; 
+    width: 80%;
+    left: 10%;
+    padding-left: 15px; 
+    background: rgba(182, 158, 93, 0.5);
+}
+address{
+    position:absolute;
+    top: 150%;
+    left: 10%;
+    background: url(img\down.jpg);
+}
