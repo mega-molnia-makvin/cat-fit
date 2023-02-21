@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="manifest" sizes="32x32" href="img/minilogo.png">
+        <title> CAT FIT</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/team.css">
+</head>
+<body>
+    <button data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+
+    <div data-modal="modal0" class="modal content-hidden">
+        <h3 class="modal-title">Вход</h3>
+        <div class="reg">
+            <ul><input class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+            <ul> <input class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+        </div>
+        <input id="Continue" class="submit" type="submit" value="Продолжить"/>
+        <button data-modal_butt="modal2" class="close">Выход</button>
+    </div>
+
+    <nav>
+        <a href="index.html" >Главная</a>
+        <a href="team.html" >Наша команда</a>
+        <a href="#" >Расписание</a>
+        <a href="#1111" >Карты</a>
+    </nav>
+
+    <h1>Наша команда</h1>
+
+    <article class="flex-container flex-item item2">
+        <div data-name="bayan">
+            <h2>Йога</h2>
+        </div>
+        <div class="content-hidden">
+            <img src="img/legs.jpg">
+        </div>
+
+        <div data-name="bayan">
+            <h2>Тренеры</h2>
+        </div>
+        <div class="content-hidden">
+            <img src="img/arms.webp">
+        </div>
+
+        <div data-name="bayan">
+            <h2>Бассейн</h2>
+        </div>
+        <div class="content-hidden">
+            <img src="img/fullcat.webp">
+        </div>
+    </article>
+
+    <footer>
+        <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+        <h3>Тел.: meow, спросить Барсика</h3>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/team.js"></script>
+</body>
+</html>

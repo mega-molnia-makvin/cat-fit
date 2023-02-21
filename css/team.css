@@ -1,0 +1,28 @@
+h1{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
+}
+article{
+    top: 40%;
+}
+
+.flex-container {
+    display: flex;
+}
+.flex-item {
+    text-align: center;
+    font-size: 1em;
+    padding: 1.2em;
+}
+.item1 {
+    align-self: center;
+    flex-basis: content;
+}
+.item2 {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: content;
+}

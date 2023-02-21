@@ -1,0 +1,106 @@
+body{
+    margin: 0px;
+    background: url(../img/fon.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    -webkit-background-size:cover ;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+form{
+    position: relative;
+    transform: translate(1%,1%);
+}
+
+.logo{
+    position:absolute;
+    left: 60%;
+    top: 15%;
+
+}
+
+.tlogo{
+    font-family: Pussyfoot;
+    src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
+    font-display: swap;
+    position:absolute;
+    left: 30%;
+    top: 15%;
+    font-size: 600%;
+}
+
+nav{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 150%;
+}
+
+a{
+    text-decoration: none;
+    padding-left: 12%;
+    color: black;
+    font-weight: bold;
+}
+
+.close{
+    position: fixed;
+    left: 60%;
+    top: 70%;
+}
+article{
+    position:absolute;
+    top: 50%;
+    height: 100%; 
+    width: 80%;
+    left: 10%;
+    padding-left: 15px; 
+    background: rgba(190, 175, 131, 0.836);
+}
+.modal {
+    z-index: 20000;
+    background: rgba(221, 198, 198, 0.959); 
+    position: fixed;
+    top: 20%;
+    right: 30%;
+    bottom: 20%;
+    left: 30%;
+  
+}
+.content-hidden{
+   display: none;
+}
+.reg{
+    position: fixed;
+    top: 30%;
+    left: 40%;
+}
+
+.input-form{
+    height: 30px;
+}
+
+.submit{
+position: fixed;
+top: 55%;
+left: 46%;
+}
+.modal-title {
+    padding-left: 45%;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+
+footer{
+    padding-left: 3%;
+    width: 79%;
+    height: 60%;
+    position:absolute;
+    background: url(../img/down.jpg) no-repeat;
+    top: 150%;
+    left: 10.5%;
+}

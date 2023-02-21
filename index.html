@@ -7,36 +7,38 @@
         <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
         <link rel="manifest" sizes="32x32" href="img/minilogo.png">
         <title> CAT FIT</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body >
-        <div class="fon">
-        <form method="post" autocomplete="oN" action="">
-                <input type="login" name="login" autocomplete="on" placeholder="Введите логин"/>
-                <input type="password" name="password" placeholder="Введите пароль"/>
-                <input type="submit" value="Войти"/>
-                <button>Зарегистрироваться</button>
-                <a href="#" class="forget">Забыли пароль?</a>
-        </form>
+        <button data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+
+        <div data-modal="modal0" class="modal content-hidden">
+            <h3 class="modal-title">Вход</h3>
+            <div class="reg">
+                <ul><input class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                <ul> <input class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+            </div>
+            <input id="Continue" class="submit" type="submit" value="Продолжить"/>
+            <button data-modal_butt="modal2" class="close">Выход</button>
+
+        </div>
         <h1 class="tlogo">CAT FIT</h1>
         <img  class = "logo" src="img\fullcat.webp" >
         <nav>
-            <a href="#" >Наша команда</a>
+            <a href="index.html" >Главная</a>
+            <a href="team.html" >Наша команда</a>
             <a href="#" >Расписание</a>
-            <a href="#" >Карты</a>
+            <a href="#1111" >Карты</a>
         </nav>
         <article>
             <h2>О клубе</h2>
-            <p>Мы хорошие котятки, честно. Мяумяумяуммяумяумяу </p>
+            <p>Мы хорошие котятки, честно. Мяумяумяуммяумяумяу. Наш Фитнес Клуб отличается своими праКОТическими тренировками :) </p>
         </article>
-        <div class="cellar">
+
         <footer>
-            <address>
             <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
             <h3>Тел.: meow, спросить Барсика</h3>
-            </address>>
         </footer>
-        </div>
-    </div>
+        <script src="scripts/main.js"></script>
     </body>
 </html>
