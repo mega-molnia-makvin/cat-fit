@@ -1,9 +1,27 @@
-.fon{
-        background-repeat: no-repeat;
+body{
+    margin: 0px;
+    background: url(img/fon.jpg) no-repeat;
+        height: 100%;
+        width: 100%;
         background-position: center center;
+        -webkit-background-size:cover ;
         background-size: cover;
-        filter: opacity(20%);
-        position: fixed;
+        background-attachment: fixed;
+        position: rela;
+}
+.fon{
+    background: url(img/fon.jpg) no-repeat;
+    opacity: 70%;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+        -webkit-background-size:cover ;
+        -moz-background-size:cover ;
+        -o-background-size:cover ;
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        
 }
 form{
     position: relative;
@@ -45,6 +63,7 @@ nav{
     font-size: 200%;
 }
 a{
+    text-decoration: none;
     padding-left: 15%;
 }
 article{
@@ -56,7 +75,8 @@ article{
     padding-left: 15px; 
     background: rgba(182, 158, 93, 0.5);
 }
-.kitty{
+footer{
+    background-image: url(img\down.jpg);
     position:absolute;
     top: 150%;
     left: 0%;
