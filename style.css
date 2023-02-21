@@ -1,28 +1,15 @@
 body{
     margin: 0px;
-    background: url(img/fon.jpg) no-repeat;
-        height: 100%;
-        width: 100%;
-        background-position: center center;
-        -webkit-background-size:cover ;
-        background-size: cover;
-        background-attachment: fixed;
-        position: rela;
-}
-.fon{
-    background: url(img/fon.jpg) no-repeat;
-    opacity: 70%;
+    background: url(img/fon.png) no-repeat;
     height: 100%;
     width: 100%;
     background-position: center center;
-        -webkit-background-size:cover ;
-        -moz-background-size:cover ;
-        -o-background-size:cover ;
-        background-size: cover;
-        background-attachment: fixed;
-        position: relative;
-        
+    -webkit-background-size:cover ;
+    background-size: cover;
+    background-attachment: fixed;
+    position: rela;
 }
+
 form{
     position: relative;
     transform: translate(1%,1%);
