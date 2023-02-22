@@ -10,15 +10,13 @@
         <link rel="stylesheet" href="css/style.css">
 
         <script type="text/javascript" src="https://vk.com/js/api/openapi.js?169"></script>
-
-<script type="text/javascript">
-  VK.init({apiId: 51562792, onlyWidgets: true});
-</script>
+        <script type="text/javascript">
+            VK.init({apiId: 51562792, onlyWidgets: true});
+        </script>
     </head>
 
     <body >
-        <button data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-
+        <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
         <div data-modal="modal0" class="modal content-hidden">
             <h3 class="modal-title">Вход</h3>
             <div class="reg">
@@ -27,32 +25,33 @@
             </div>
             <input id="Continue" class="submit" type="submit" value="Продолжить"/>
             <button data-modal_butt="modal2" class="close">Выход</button>
-
         </div>
+
         <h1 class="tlogo">CAT FIT</h1>
         <img  class = "logo" src="img\fullcat.webp" >
         <nav class="flex-container flex-item-row">
             <a href="index.html" >Главная</a>
             <a href="team.html" >Наша команда</a>
-            <a href="#" >Расписание</a>
-            <a href="#1111" >Карты</a>
+            <a href="timetab.html" >Расписание</a>
+            <a href="cards.html" >Карты</a>
         </nav>
+        
         <article class="flex-container flex-item">
             <h2>О клубе</h2>
             <p>Мы хорошие котятки, честно. Мяумяумяуммяумяумяу. Наш Фитнес Клуб отличается своими праКОТическими тренировками :) </p>
         </article>
         
-        <div class="flex-container flex-item item">
+        <footer class="flex-container flex-item">
+            <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+            <h3>Тел.: meow, спросить Барсика</h3>
+        </footer>
+
+        <div class="comment flex-container flex-item item">
             <div id="vk_comments"></div>
             <script type="text/javascript">
                 VK.Widgets.Comments("vk_comments", {limit: 10, attach: "*"});
             </script>
         </div>
-
-        <footer class="flex-container flex-item">
-            <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
-            <h3>Тел.: meow, спросить Барсика</h3>
-        </footer>
         <script src="scripts/main.js"></script>
     </body>
 </html>
