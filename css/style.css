@@ -9,6 +9,14 @@ body{
     background-attachment: fixed;
 }
 
+.flex-container {
+    display: flex;
+}
+.flex-item {
+    flex-direction: column;
+    align-items: baseline;
+}
+
 form{
     position: relative;
     transform: translate(1%,1%);
@@ -94,6 +102,9 @@ left: 46%;
     font-weight: 500;
 }
 
+.item{
+    top: 150%;
+}
 
 footer{
     padding-left: 3%;
@@ -101,6 +112,6 @@ footer{
     height: 60%;
     position:absolute;
     background: url(../img/down.jpg) no-repeat;
-    top: 150%;
+    top: 250%;
     left: 10.5%;
 }
