@@ -5,10 +5,13 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 300%;
 }
+
 article{
     position: absolute;
     top: 40%;
     height: 300%;
+    left: 12%;
+    width: 75%;
 }
 
 .description{
