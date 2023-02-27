@@ -10,13 +10,18 @@ buttonClose.addEventListener("click",function(){
     modal.classList.add('content-hidden')
 })
 
+const login=document.querySelector('#log');
+const password=document.querySelector('#pas');
 
-const buttonContinue=document.querySelector('"#Continue"');
-const labelNumber=document.querySelector('[name="login"]');
-const labelPas=document.querySelector('[name="password"]');
 
-buttonContinue.addEventListener("click",function(){
-if (labelNumber!=null && labelPas!=null) {
-    window.location.href = 'office.html';
-  }
-})
+function lk(){
+    if (login!=null || password!=null){
+    window.location.href='office.html';}
+}
+
+
+
+
+
+
+

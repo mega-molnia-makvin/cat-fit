@@ -52,9 +52,9 @@ a{
 }
 
 .close{
-    position: fixed;
-    left: 60%;
-    top: 70%;
+    position: absolute;
+    left: 150%;
+    top: 270%;
 }
 article{
     position:absolute;
@@ -80,8 +80,8 @@ article{
 }
 .reg{
     position: fixed;
-    top: 30%;
-    left: 40%;
+    top: 50%;
+    left: 25%;
 }
 
 .input-form{
@@ -89,8 +89,8 @@ article{
 }
 
 .submit{
-position: fixed;
-top: 55%;
+position: absolute;
+top: 155%;
 left: 46%;
 }
 .modal-title {
