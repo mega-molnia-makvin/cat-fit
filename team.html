@@ -15,15 +15,17 @@
 
 <body>
     <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-
     <div data-modal="modal0" class="modal content-hidden">
+        <form method="post">
         <h3 class="modal-title">Вход</h3>
         <div class="reg">
-            <ul><input class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-            <ul> <input class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-        </div>
-        <input id="Continue" class="submit" type="submit" value="Продолжить"/>
+            <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+            <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+        
+        <input type="button" class="submit" onclick="lk()" value="Продолжить">
         <button data-modal_butt="modal2" class="close">Выход</button>
+    </div>
+    </form>
     </div>
     
     <nav class="flex-container flex-item-row">
