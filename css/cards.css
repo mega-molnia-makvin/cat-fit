@@ -10,3 +10,17 @@ article{
     position: absolute;
     height: 250%;
 }
+
+.buyButton{
+    position: absolute;
+    height: 3%;
+    width: 5%;
+    background: rgb(71, 38, 6);
+    border: rgb(71, 38, 6);
+    right: 10%;
+}
+
+.buyImg{
+    height: 100%;
+    width: 100%;
+}

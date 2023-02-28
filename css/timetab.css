@@ -1,14 +1,7 @@
-h1 {
-  position: absolute;
-  top: 15%;
-  left: 40%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 300%;
-}
-.schedule {
-  position: relative;
-  margin-top: 1%;
-}
-.flex-item {
-  top: 98%;
+h1{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
 }

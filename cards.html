@@ -15,15 +15,20 @@
 </head>
 <body>
     <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-        <div data-modal="modal0" class="modal content-hidden">
-            <h3 class="modal-title">Вход</h3>
-            <div class="reg">
-                <ul><input class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-                <ul> <input class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-            </div>
-            <input id="Continue" class="submit" type="submit" value="Продолжить"/>
-            <button data-modal_butt="modal2" class="close">Выход</button>
-        </div>
+    <div data-modal="modal0" class="modal content-hidden">
+        <form method="post">
+        <h3 class="modal-title">Вход</h3>
+        <div class="reg">
+            <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+            <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+        
+        <input type="button" class="submit" onclick="lk()" value="Продолжить">
+        <button data-modal_butt="modal2" class="close">Выход</button>
+    </div>
+    </form>
+    </div>
+
+                  
 
         <nav class="flex-container flex-item-row">
             <a href="index.html" >Главная</a>
@@ -40,19 +45,35 @@
             <div class="description2 flex-container">
                 <img src="img/3.jpg">
                 <h3>На год</h3>
+                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
             </div>
 
             <div class="description2 flex-container">
                 <img src="img/4.jpg">
                 <h3>На полгода</h3>
+                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
             </div>
 
             <div class="description2 flex-container">
                 <img src="img/8.jpg">
                 <h3>На месяц</h3>
+                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
             </div>
             
         </div>
+
+        <div data-modal="modalBuy" class="modal content-hidden">
+            <form method="post">
+            <h3 class="modal-title">Оформление</h3>
+            <div class="reg">
+                <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+            
+            <input type="button" class="submit" value="Продолжить">
+            <button data-modal_butt="closeBut" class="close">Выход</button>
+        </div>
+        </form>
+        </div> 
 
         <div data-name="bayan">
             <h2>Дополнительные предложения</h2>
@@ -82,6 +103,6 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script src="scripts/team.js"></script>
+    <script src="scripts/cards.js"></script>
 </body>
 </html>

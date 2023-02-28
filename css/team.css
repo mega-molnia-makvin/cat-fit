@@ -1,39 +1,40 @@
-h1 {
-  position: absolute;
-  top: 15%;
-  left: 40%;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 300%;
+h1{
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
 }
 
-article {
-  position: absolute;
-  top: 40%;
-  height: 90%;
-  left: 12%;
-  width: 75%;
+article{
+    position: absolute;
+    top: 40%;
+    height: 300%;
+    left: 12%;
+    width: 75%;
 }
 
-.description {
-  padding-top: 2%;
-  flex-direction: row;
-  height: 45%;
+.description{
+    padding-top: 2%;
+    flex-direction: row;
+    height: 45%;
 }
 
-.description2 {
-  padding-top: 2%;
-  flex-direction: row;
-  height: 30%;
+.description2{
+    padding-top: 2%;
+    flex-direction: row;
+    height: 30%;
 }
 
-.flex-item {
-  flex-direction: column;
-  align-self: start;
+.flex-item{
+    flex-direction: column;
+    align-self: start;
+
 }
 
 .item1 {
-  height: 30%;
+    height: 30%;
 }
 .item2 {
-  height: 20%;
+    height: 20%;
 }
