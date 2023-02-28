@@ -10,13 +10,14 @@ buttonClose.addEventListener("click",function(){
     modal.classList.add('content-hidden')
 })
 
-const login=document.querySelector('#log');
-const password=document.querySelector('#pas');
 
 
 function lk(){
-    if (login!=null || password!=null){
+    var login=document.getElementById('log').value;
+    var password=document.getElementById('pas').value;
+    if (login && password){
     window.location.href='office.html';}
+    else alert('Заполните все поля');
 }
 
 
