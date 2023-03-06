@@ -14,40 +14,41 @@
 </head>
 
 <body>
-    <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+    <div class="header">
+        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <h1 class="header__title">Наша команда</h1>
+        <img  class = "header__logo" src="img\fullcat.webp" >
+        <nav class="header__menu header__row">
+            <a href="index.html" >Главная</a>
+            <a href="team.html" >Наша команда</a>
+            <a href="timetab.html" >Расписание</a>
+            <a href="cards.html" >Карты</a>
+        </nav>
+    </div>
     <div data-modal="modal0" class="modal content-hidden">
         <form method="post">
-        <h3 class="modal-title">Вход</h3>
-        <div class="reg">
-            <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-            <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-        
-        <input type="button" class="submit" onclick="lk()" value="Продолжить">
-        <button data-modal_butt="modal2" class="close">Выход</button>
+            <h3 class="modal__title">Вход</h3>
+            <div class="modal__data">
+                <ul><input id="log" class="label" type="login" required name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                <ul> <input id="pas" class="label" type="password" required name="password" placeholder="Введите код из смс"/></ul>
+                <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="button" data-modal_butt="modal2" class="modal__close" value="Выход">
+            </div>
+        </form>
     </div>
-    </form>
-    </div>
+  
     
-    <nav class="flex-container flex-item-row">
-        <a href="index.html" >Главная</a>
-        <a href="team.html" >Наша команда</a>
-        <a href="timetab.html" >Расписание</a>
-        <a href="cards.html" >Карты</a>
-    </nav>
-
-    <h1>Наша команда</h1>
-    
-    <article class="flex-container flex-item">
+    <article class="about">
         <div data-name="bayan">
             <h2>Йога</h2>
         </div>
-        <div class="content-hidden item2">
-            <div class="description flex-container">
+        <div class="content-hidden">
+            <div class="about__description">
                 <img src="img/1.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
-            <div class="description flex-container">
+            <div class="about__description">
                 <img src="img/2.jpg">
                 <h3>Классный обжора</h3>
             </div>
@@ -57,18 +58,18 @@
         <div data-name="bayan">
             <h2>Тренеры</h2>
         </div>
-        <div class="content-hidden item1">
-            <div class="description2 flex-container">
+        <div class="content-hidden">
+            <div class="about__description">
                 <img src="img/3.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
-            <div class="description2 flex-container">
+            <div class="about__description">
                 <img src="img/4.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
-            <div class="description2 flex-container">
+            <div class="about__description">
                 <img src="img/8.jpg">
                 <h3>Классный обжора</h3>
             </div>
@@ -78,18 +79,18 @@
         <div data-name="bayan">
             <h2>Бассейн</h2>
         </div>
-        <div class="content-hidden item1">
-            <div class="description2 flex-container">
+        <div class="content-hidden">
+            <div class="about__description">
                 <img src="img/5.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
-            <div class="description2 flex-container">
+            <div class="about__description">
                 <img src="img/6.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
-            <div class="description2 flex-container">
+            <div class="about__description">
                 <img src="img/7.jpg">
                 <h3>Классный обжора</h3>
             </div>

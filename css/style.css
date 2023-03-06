@@ -1,137 +1,51 @@
 body{
-    margin: 0px;
     background: url(../img/fon.png) no-repeat;
-    height: 100%;
-    width: 100%;
+    height: 100vi;
+    width: 100vi;
     background-position: center center;
     -webkit-background-size:cover ;
     background-size: cover;
     background-attachment: fixed;
 }
 
-.flex-container {
-    display: flex;
-}
-.flex-item {
-    flex-direction: column;
-    align-items: baseline;
-}
-
-form{
+.header{
     position: relative;
-    transform: translate(1%,1%);
+    width: 100vi;
+    height: 30vb;
 }
 
-.logo{
-    position:absolute;
-    left: 60%;
-    top: 15%;
-
+.header__logo{
+    position:relative;
+    left: 60vi;
+    top: -15vi;
 }
 
-.tlogo{
+.header__title{
     font-family: Pussyfoot;
     src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
     font-display: swap;
-    position:absolute;
-    left: 30%;
-    top: 15%;
-    font-size: 600%;
+    position:relative;
+    left: 30vi;
+    top: 5vi;
+    font-size: 7vi;
 }
 
-nav{
+.header__menu{
+    position: relative;
+    top: -35vi;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 150%;
+    font-size: 2vi;
 }
 
 a{
     text-decoration: none;
-    padding-left: 12%;
+    padding-left: 12vi;
     color: black;
     font-weight: bold;
 }
 
-.close{
-    position: absolute;
-    left: 150%;
-    top: 270%;
-}
-article{
-    position:absolute;
-    top: 50%;
-    height: 100%; 
-    width: 80%;
-    left: 10%;
-    padding-left: 15px; 
-    background: rgba(190, 175, 131, 0.836);
-}
-.modal {
-    z-index: 20000;
-    background: rgba(221, 198, 198, 0.959); 
-    position: fixed;
-    top: 20%;
-    right: 30%;
-    bottom: 20%;
-    left: 30%;
-  
-}
-.content-hidden{
-   display: none;
-}
-.reg{
-    position: fixed;
-    top: 50%;
-    left: 25%;
-}
-
-.input-form{
-    height: 30px;
-}
-
-.submit{
-position: absolute;
-top: 155%;
-left: 46%;
-}
-.modal-title {
-    padding-left: 45%;
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 1.5;
-    font-size: 1.25rem;
-    font-weight: 500;
-}
-
-.item{
-    top: 150%;
-}
-
-footer{
-    background: url(../img/down.jpg) no-repeat;
-    position:absolute;
-    padding-left: 3%;
-    width: 80%;
-    height: 60%;
-    top: 150%;
-    left: 11%;
-}
-
-.comment{
-    position: absolute;
-    padding-left: 10%;
-    top: 215%;
-    width: 81%;
-}
-
-
-
-
-
-
-
-
-.custom-btn {
-    width: 100px;
+.header__custom-btn {
+    width: 8vi;
     color: #494030;
     border-radius: 5px;
     padding: 10px 25px;
@@ -167,10 +81,6 @@ footer{
     right: 0;
     bottom: 0;
     background: #ebd597;
-    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
     transition: all 0.3s ease;
   }
   .btn-8:before{
@@ -200,10 +110,6 @@ footer{
     left: 0;
     top: 0;
     background: #ebe397;
-    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
     transition: all 0.3s ease;
   }
   .btn-8 span:before {
@@ -220,4 +126,70 @@ footer{
   .btn-8 span:hover:after {
     width: 100%;
   }
-    
+
+.modal {
+    z-index: 20000;
+    background: rgba(221, 198, 198, 0.959); 
+    position: fixed;
+    top: 20vb;
+    right: 30vi;
+    bottom: 20vb;
+    left: 30vi;
+  
+}
+.content-hidden{
+   display: none;
+}
+.modal__data{
+    position: fixed;
+    top: 30vb;
+    left: 40vi;
+}
+
+.label{
+    height: 30px;
+}
+
+.modal__submit{
+    position: relative;
+    top: 5vb;
+    left: 6vi;
+}
+.modal__title {
+    padding-left: 18vi;
+    font-size: 1.25vi;
+}
+.modal__close{
+    position: relative;
+    top: 25vb;
+    left: 15vi;
+  }
+
+.about{
+    position:relative;
+    top: 20vb;
+    height: 100vh;
+    width: 80vi;
+    left: 10vi; 
+    background: rgba(190, 175, 131, 0.836);
+    padding-top: 3vb;
+    padding-left: 3vi;
+}
+
+.contacts{
+    position:relative;
+    background: url(../img/down.jpg) no-repeat;
+    padding-left: 5vi;
+    padding-top: 3vb;
+    width: 80vi;
+    height: 60vb;
+    top: 20vb;
+    left: 12vi;
+}
+
+.comment{
+    position: relative;
+    top: 15vb;
+    left: 12vi;
+    width: 79vi;
+}

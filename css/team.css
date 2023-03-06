@@ -1,23 +1,17 @@
-h1{
-    position: absolute;
-    top: 15%;
-    left: 40%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 300%;
+.header__title{
+    left: 25vi;
+    font-size: 6vi;
 }
 
-article{
-    position: absolute;
-    top: 40%;
-    height: 300%;
-    left: 12%;
-    width: 75%;
+.header__logo{
+    left: 70vi;
 }
 
-.description{
-    padding-top: 2%;
-    flex-direction: row;
-    height: 45%;
+
+.about__description{
+    top: 20vi;
+    width: 40vi;
+    height: auto;
 }
 
 .description2{
@@ -26,15 +20,3 @@ article{
     height: 30%;
 }
 
-.flex-item{
-    flex-direction: column;
-    align-self: start;
-
-}
-
-.item1 {
-    height: 30%;
-}
-.item2 {
-    height: 20%;
-}
