@@ -14,10 +14,17 @@ body{
     height: 30vb;
 }
 
+#header {
+  position: relative;
+  width: 60%;
+  margin-left: 25%;
+}
+
 .header__logo{
     position:relative;
-    left: 60vi;
-    top: -15vi;
+    margin-left: 60%;
+    top: -12vi;
+    width: 15%;
 }
 
 .header__title{
@@ -25,16 +32,16 @@ body{
     src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
     font-display: swap;
     position:relative;
-    left: 30vi;
+/*    left: 30vi; */
     top: 5vi;
     font-size: 7vi;
 }
 
 .header__menu{
     position: relative;
-    top: -35vi;
+/*    top: -25vi; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2vi;
+    font-size: 2.5vi;
 }
 
 a{
@@ -45,12 +52,12 @@ a{
 }
 
 .header__custom-btn {
-    width: 8vi;
+    width: 10%;
     color: #494030;
     border-radius: 5px;
     padding: 10px 25px;
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
+    font-weight: 10em;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -167,10 +174,10 @@ a{
 
 .about{
     position:relative;
-    top: 20vb;
-    height: 100vh;
-    width: 80vi;
-    left: 10vi; 
+    margin-top: 15%;
+    height: 50%;
+    width: 80%;
+    margin-left: 10%; 
     background: rgba(190, 175, 131, 0.836);
     padding-top: 3vb;
     padding-left: 3vi;
@@ -179,12 +186,13 @@ a{
 .contacts{
     position:relative;
     background: url(../img/down.jpg) no-repeat;
+    background-size: contain;
     padding-left: 5vi;
     padding-top: 3vb;
-    width: 80vi;
-    height: 60vb;
-    top: 20vb;
-    left: 12vi;
+    width: 80%;
+    height: 20%;
+    margin-top: 5%;
+    margin-left: 20%;
 }
 
 .comment{
