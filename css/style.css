@@ -133,7 +133,7 @@ a{
   }
 
 .modal {
-    z-index: 20000;
+
     background: rgba(221, 198, 198, 0.959); 
     position: fixed;
     top: 20vb;
@@ -143,7 +143,7 @@ a{
   
 }
 .content-hidden{
-   display: none;
+   /*display: none;*/
 }
 .modal__data{
     position: fixed;

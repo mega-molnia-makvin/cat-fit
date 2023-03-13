@@ -6,9 +6,35 @@ footer{
     top: 320%;
 }
 
-article{
-    position: absolute;
-    height: 250%;
+.modal{
+    top: 10vb;
+    right: 20vi;
+    bottom: 10vb;
+    left: 20vi;
+    padding: 1vb;
+}
+
+.modal__title{
+    position: relative;
+    margin-left: 8vi;
+}
+.modal__another{
+    position: relative;
+    bottom: 45vb;
+    left: 30vi;
+}
+
+#datepicker{
+    position: relative;
+    font-size: 12px;
+}
+
+.close{
+    position: relative;
+    top: 26vb;
+    left: 48vi;
+    background-color: rgb(160, 94, 151);
+    border-color: rgb(160, 94, 151);
 }
 
 .buyButton{
