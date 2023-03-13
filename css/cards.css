@@ -1,6 +1,3 @@
-h1{
-    left: 30% !important;
-}
 
 footer{
     top: 320%;
@@ -19,8 +16,18 @@ article{
     border: rgb(71, 38, 6);
     right: 10%;
 }
-
+.header_title{
+    margin-left: 10vi;
+    text-align: center;
+}
 .buyImg{
     height: 100%;
     width: 100%;
+}
+.about_description{
+    top: 20vi;
+    width: 20%;
+    height: 20%;
+    font-size: 2vi;
+    margin: 20px;
 }

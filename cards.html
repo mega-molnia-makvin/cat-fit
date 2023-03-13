@@ -14,95 +14,102 @@
     <link rel="stylesheet" href="css/team.css">
 </head>
 <body>
-    <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-    <div data-modal="modal0" class="modal content-hidden">
-        <form method="post">
-        <h3 class="modal-title">Вход</h3>
-        <div class="reg">
-            <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-            <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-        
-        <input type="button" class="submit" onclick="lk()" value="Продолжить">
-        <button data-modal_butt="modal2" class="close">Выход</button>
-    </div>
-    </form>
-    </div>
-
-                  
-
-        <nav class="flex-container flex-item-row">
+    <div class="header">
+        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <img  class = "header__logo" src="img\fullcat.webp" >
+        <nav class="header__menu header__row">
             <a href="index.html" >Главная</a>
             <a href="team.html" >Наша команда</a>
             <a href="timetab.html" >Расписание</a>
             <a href="cards.html" >Карты</a>
         </nav>
-    <h1>Наши предложения</h1>
-    <article class="flex-container flex-item">
-        <div data-name="bayan">
-            <h2>Абонементы в тренажерный зал</h2>
-        </div>
-        <div class="item1">
-            <div class="description2 flex-container">
-                <img src="img/3.jpg">
-                <h3>На год</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+    </div>
+    <div id="header">
+        <h1 class="header__title">Наши предложения</h1>
+    </div>
+    <div data-modal="modal0" class="modal content-hidden">
+        <form method="post">
+            <h3 class="modal__title">Вход</h3>
+            <div class="modal__data">
+                <ul><input id="log" class="label" type="login" required name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                <ul> <input id="pas" class="label" type="password" required name="password" placeholder="Введите код из смс"/></ul>
+                <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="button" data-modal_butt="modal2" class="modal__close" value="Выход">
             </div>
-
-            <div class="description2 flex-container">
-                <img src="img/4.jpg">
-                <h3>На полгода</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
-            </div>
-
-            <div class="description2 flex-container">
-                <img src="img/8.jpg">
-                <h3>На месяц</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
-            </div>
-            
-        </div>
-
-        <div data-modal="modalBuy" class="modal content-hidden">
-            <form method="post">
-            <h3 class="modal-title">Оформление</h3>
-            <div class="reg">
-                <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-                <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-            
-            <input type="button" class="submit" value="Продолжить">
-            <button data-modal_butt="closeBut" class="close">Выход</button>
-        </div>
         </form>
-        </div> 
+    </div>
 
-        <div data-name="bayan">
-            <h2>Дополнительные предложения</h2>
-        </div>
-        <div class="item1">
-            <div class="description2 flex-container">
-                <img src="img/5.jpg">
-                <h3>Йога</h3>
+    <div class="block">
+        <article class="about">
+            <div data-name="bayan">
+                <h2>Абонементы в тренажерный зал</h2>
             </div>
-
-            <div class="description2 flex-container">
-                <img src="img/6.jpg">
-                <h3>Бассейн</h3>
-            </div>
-
-            <div class="description2 flex-container">
-                <img src="img/7.jpg">
-                <h3>Что-то еще</h3>
+            <div class="content-hidden">
+                <div class="about_description">
+                    <img class="img" src="img/3.jpg">
+                    <h3>На год</h3>
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+    
+                <div class="about_description">
+                    <img class="img" src="img/4.jpg">
+                    <h3>На полгода</h3>
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+    
+                <div class="about_description">
+                    <img class="img" src="img/8.jpg">
+                    <h3>На месяц</h3>
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+                
             </div>
             
-        </div>
-    </article>
-
-    <footer class="flex-container flex-item">
+            <div data-name="bayan">
+                <h2>Дополнительные предложения</h2>
+            </div>
+            <div class="content-hidden">
+                <div class="about_description">
+                    <img class="img" src="img/5.jpg">
+                    <h3>Йога</h3>
+                </div>
+    
+                <div class="about_description">
+                    <img class="img" src="img/6.jpg">
+                    <h3>Бассейн</h3>
+                </div>
+    
+                <div class="about_description">
+                    <img class="img" src="img/7.jpg">
+                    <h3>Что-то еще</h3>
+                </div>
+                
+            </div>
+    
+            <div data-modal="modalBuy" class="modal content-hidden">
+                <form method="post">
+                <h3 class="modal-title">Оформление</h3>
+                <div class="reg">
+                    <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                    <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
+                
+                <input type="button" class="submit" value="Продолжить">
+                <button data-modal_butt="closeBut" class="close">Выход</button>
+            </div>
+            </form>
+            </div> 
+    
+        </article>
+    
+    </div>
+    
+    <footer class="contacts">
         <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
         <h3>Тел.: meow, спросить Барсика</h3>
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>
 </body>
 </html>
