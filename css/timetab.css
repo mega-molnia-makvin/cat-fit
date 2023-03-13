@@ -1,7 +1,13 @@
 h1{
-    position: absolute;
+    position: relative;
     top: 15%;
-    left: 40%;
+    left: 15%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 300%;
+    font-size: 200%;
+}
+
+.about__timetable{
+    position: relative;
+    margin-top: 5vb;
+    margin-left: -3vi;
 }
