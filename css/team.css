@@ -5,9 +5,9 @@ html{
 }
 
 .header__title{
-    top: 16vi;
+    top: 20vi;
     text-align: center;
-    font-size: 4vi;
+    font-size: 6vi;
 }
 .header__logo{
     left: 70vi;
@@ -19,16 +19,19 @@ html{
     top: 20vi;
     width: 20%;
     height: 20%;
-    font-size: 2vi;
+    font-size: 1.2vi;
     display: inline-block;
     margin: 20px;
 }
 h2{
     cursor: pointer;
+    border: 1px solid black;
+    text-align: center;
+    margin-left: -3vi;
 }
 .about{
-    margin-top: 20vi;
-    padding-top: 3vi;
+    margin-top: 28vi;
+    padding: auto;
 }
 
 .img{
@@ -36,7 +39,7 @@ h2{
     height: 100%;
     border: 1px solid black;
     border-radius: 30px;
-    filter: drop-shadow(10px 10px rgb(89, 0, 255));
+    filter: drop-shadow(10px 10px rgb(102, 90, 102));
 }
 
 
