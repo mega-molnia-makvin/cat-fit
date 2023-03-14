@@ -16,15 +16,16 @@
 <body>
     <div class="header">
         <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-        <nav class="header__menu">
-            <a href="index.html">Главная</a>
-            <a href="team.html">Наша команда</a>
-            <a href="timetab.html">Расписание</a>
-            <a href="cards.html">Карты</a>
+        <img  class = "header__logo" src="img\fullcat.webp" >
+        <nav class="header__menu header__row">
+            <a class="header-fonts" href="index.html" >Главная</a>
+            <a class="header-fonts" href="team.html" >Наша команда</a>
+            <a class="header-fonts" href="timetab.html" >Расписание</a>
+            <a class="header-fonts" href="cards.html" >Карты</a>
         </nav>
-        <div id="header">
-            <h1 class="header__title">Наша команда</h1>
-        </div>
+    </div>
+    <div id="header">
+        <h1 class="header__title">Наша команда</h1>
     </div>
     <div data-modal="modal0" class="modal content-hidden">
         <form method="post">
@@ -38,40 +39,40 @@
         </form>
     </div>
   
+    <div class="block">
+        <article class="about">
+            <div data-name="bayan">
+                <h2>Йога</h2>
+            </div>
+            <div class="content-hidden">
+                <div class="about__description">
+                    <img class="img" src="img/1.jpg">
+                    <h3>Классный обжора</h3>
+                </div>
     
-    <article class="about">
-        <div data-name="bayan">
-            <h2>Йога</h2>
-        </div>
-        <div class="content-hidden">
-            <div class="about__description">
-                <img src="img/1.jpg">
-                <h3>Классный обжора</h3>
-            </div>
-
-            <div class="about__description">
-                <img src="img/2.jpg">
-                <h3>Классный обжора</h3>
-            </div>
-            
-        </div>
+                <div class="about__description">
+                    <img class="img" src="img/2.jpg">
+                    <h3>Классный обжора</h3>
+                </div>
+                
+            </div>       
 
         <div data-name="bayan">
             <h2>Тренеры</h2>
         </div>
         <div class="content-hidden">
             <div class="about__description">
-                <img class="description" src="img/3.jpg">
+                <img class="img" src="img/3.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
             <div class="about__description">
-                <img src="img/4.jpg">
+                <img class="img" src="img/4.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
             <div class="about__description">
-                <img src="img/8.jpg">
+                <img class="img" src="img/8.jpg">
                 <h3>Классный обжора</h3>
             </div>
             
@@ -82,22 +83,28 @@
         </div>
         <div class="content-hidden">
             <div class="about__description">
-                <img src="img/5.jpg">
+                <img class="img" src="img/5.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
             <div class="about__description">
-                <img src="img/6.jpg">
+                <img class="img" src="img/6.jpg">
                 <h3>Классный обжора</h3>
             </div>
 
             <div class="about__description">
-                <img src="img/7.jpg">
+                <img class="img" src="img/7.jpg">
                 <h3>Классный обжора</h3>
             </div>
             
         </div>
-    </article>
+</article>
+    </div>
+    
+    <footer class="contacts">
+        <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+        <h3>Тел.: meow, спросить Барсика</h3>
+    </footer>
 
     <script src="scripts/main.js"></script>
     <script src="scripts/team.js"></script>

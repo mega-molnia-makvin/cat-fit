@@ -12,121 +12,130 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/team.css">
-
-
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/sunny/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
-    <link rel="stylesheet" href="/resources/demos/style.css" />
-
 </head>
 <body>
-    <button class="custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-    <div data-modal="modal0" class="modal content-hidden">
-        <form method="post">
-        <h3 class="modal-title">Вход</h3>
-        <div class="reg">
-            <ul><input required id="log" class="input-form" type="login" name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-            <ul> <input required id="pas" class="input-form" type="password" name="password" placeholder="Введите код из смс"/></ul>
-        
-        <input type="button" class="submit" onclick="lk()" value="Продолжить">
-        <button data-modal_butt="modal2" class="close">Выход</button>
-    </div>
-    </form>
-    </div>
-
-                  
-
-        <nav class="flex-container flex-item-row">
+    <div class="header">
+        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <img  class = "header__logo" src="img\fullcat.webp" >
+        <nav class="header__menu header__row">
             <a href="index.html" >Главная</a>
             <a href="team.html" >Наша команда</a>
             <a href="timetab.html" >Расписание</a>
             <a href="cards.html" >Карты</a>
         </nav>
-    <h1>Наши предложения</h1>
-    <article class="about">
-        <div data-name="bayan">
-            <h2>Абонементы в тренажерный зал</h2>
-        </div>
-        <div class="item1">
-            <div class="description2 flex-container">
-                <img width="300px" src="img/3.jpg">
-                <h3>На год</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
-            </div>
-
-            <div class="description2 flex-container">
-                <img width="300px" src="img/4.jpg">
-                <h3>На полгода</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
-            </div>
-
-            <div class="description2 flex-container">
-                <img width="300px" src="img/8.jpg">
-                <h3>На месяц</h3>
-                <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
-            </div>
-            
-        </div>
-
-        <div data-modal="modalBuy" class="modal content-hidden">
-            <form method="post">
-            <h3 class="modal__title">Оформление</h3>
-            <div class="reg">
-                <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></ul>
-                <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></ul>
-                <ul><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-                <ul><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></ul>
-                <div>
-                    <label for="date">Дата начала посещения</label>
-                    <input type="date" name="date">
-                </div>
-                <ul><input type="checkbox" name="cbox">Нужна консультация?<Br></ul>
-                    <input type="button" class="submit" value="Продолжить">
-                    <button data-modal_butt="closeBut" class="close">Выход</button>
-            </div>
-            <div class="modal__another">
-                <p>Дополнительные программы</p>
-                <ul><input type="checkbox" name="cbox">Йога<Br>
-                    <div>
-                        <label>Даты посещения</label>
-                         
-                    </div>
-                </ul>
-                <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
-                <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
+    </div>
+    <div id="header">
+        <h1 class="header__title">Наши предложения</h1>
+    </div>
+    <div data-modal="modal0" class="modal content-hidden">
+        <form method="post">
+            <h3 class="modal__title">Вход</h3>
+            <div class="modal__data">
+                <ul><input id="log" class="label" type="login" required name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                <ul> <input id="pas" class="label" type="password" required name="password" placeholder="Введите код из смс"/></ul>
+                <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="button" data-modal_butt="modal2" class="modal__close" value="Выход">
             </div>
         </form>
-        </div> 
+    </div>
 
-        <div data-name="bayan">
-            <h2>Дополнительные предложения</h2>
-        </div>
-        <div class="item1">
-            <div class="description2 flex-container">
-                <img width="200px" src="img/5.jpg">
-                <h3>Йога</h3>
+    <div class="block">
+        <article class="about">
+            <div data-name="bayan">
+                <h2>Абонементы в тренажерный зал</h2>
             </div>
-
-            <div  class="description2 flex-container">
-                <img width="200px" src="img/6.jpg">
-                <h3>Бассейн</h3>
-            </div>
-
-            <div width="200px" class="description2 flex-container">
-                <img src="img/7.jpg">
-                <h3>Что-то еще</h3>
+            <div class="content-hidden">
+                <div class="about_description">
+                    <h3>На год</h3>
+                    <img class="img" src="img/month.jpg">
+                    
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+    
+                <div class="about_description">
+                    <h3>На полгода</h3>
+                    <img class="img" src="img/6month.jpg">
+                    
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+    
+                <div class="about_description">
+                    <h3>На месяц</h3>
+                    <img class="img" src="img/year.jpg">
+                    
+                    <button data-modal_butt="buyBut" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                </div>
+                
             </div>
             
-        </div>
-    </article>
-
-    <footer class="flex-container flex-item">
-        <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
-        <h3>Тел.: meow, спросить Барсика</h3>
-    </footer>
+            <div data-name="bayan">
+                <h2>Дополнительные предложения</h2>
+            </div>
+            <div class="content-hidden">
+                <div class="about_description">
+                    <h3>Йога</h3>
+                    <img class="img" src="img/yoga.jpg">
+                    
+                </div>
+    
+                <div class="about_description">
+                    <h3>Бассейн</h3>
+                    <img class="img" src="img/swim.jpg">
+                    
+                </div>
+    
+                <div class="about_description">
+                    <h3>Что-то еще</h3>
+                    <img class="img" src="img/etc.jpg">
+                   
+                </div>
+                
+            </div>
+    
+            <div data-modal="modalBuy" class="modal content-hidden">
+                <form method="post">
+                <h3 class="modal__title">Оформление</h3>
+                <div class="reg">
+                    <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></ul>
+                    <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></ul>
+                    <ul><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                    <ul><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></ul>
+                    <div>
+                        <label for="date">Дата начала посещения</label>
+                        <input type="date" name="date">
+                    </div>
+                    <ul><input type="checkbox" name="cbox">Нужна консультация?<Br></ul>
+                        <input type="button" class="submit" value="Продолжить">
+                        <button data-modal_butt="closeBut" class="close">Выход</button>
+                </div>
+                <div class="modal__another">
+                    <p>Дополнительные программы</p>
+                    <ul><input type="checkbox" name="cbox">Йога<Br>
+                        <div>
+                            <label>Даты посещения</label>
+                             
+                        </div>
+                    </ul>
+                    <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
+                    <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
+                </div>
+            </form>
+            </div> 
+    
+    
+        </article>
+        
+    </div>
+    <div class="contacts">
+        <footer>
+            <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+            <h3>Тел.: meow, спросить Барсика</h3>
+        </footer>
+    </div>
+    
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>
 </body>
 </html>

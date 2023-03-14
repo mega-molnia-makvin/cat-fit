@@ -1,11 +1,11 @@
 body{
     background: url(../img/fon.png) no-repeat;
-    height: 100vi;
     width: 100vi;
     background-position: center center;
     -webkit-background-size:cover ;
     background-size: cover;
     background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .header{
@@ -143,7 +143,7 @@ a{
   
 }
 .content-hidden{
-   /*display: none;*/
+   display: none;
 }
 .modal__data{
     position: fixed;
@@ -176,19 +176,23 @@ a{
     height: 50%;
     width: 80%;
     margin-left: 10%; 
-    background: rgba(190, 175, 131, 0.836);
-    padding-top: 3vb;
-    padding-left: 3vi;
+  }
+
+
+article{
+  background: rgba(190, 175, 131, 0.836);
+  padding-top: 3vb;
+  padding-left: 3vi;
 }
+
 
 .contacts{
     position:relative;
     background: url(../img/down.jpg) no-repeat;
-    background-size: contain;
     padding-left: 5vi;
     padding-top: 3vb;
-    width: 80%;
-    height: 20%;
+    width: auto;
+    height: 20vi;
     margin-top: 5%;
     margin-left: 20%;
 }
