@@ -1,5 +1,6 @@
 body{
     background: url(../img/fon.png) no-repeat;
+    height: 100vi;
     width: 100vi;
     background-position: center center;
     -webkit-background-size:cover ;
@@ -32,14 +33,16 @@ body{
     src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
     font-display: swap;
     position:relative;
+/*    left: 30vi; */
     top: 5vi;
     font-size: 7vi;
 }
 
 .header__menu{
     position: relative;
+/*    top: -25vi; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2vi;
+    font-size: 2.5vi;
 }
 
 a{
@@ -133,7 +136,7 @@ a{
   }
 
 .modal {
-
+    z-index: 20000;
     background: rgba(221, 198, 198, 0.959); 
     position: fixed;
     top: 20vb;
@@ -176,30 +179,27 @@ a{
     height: 50%;
     width: 80%;
     margin-left: 10%; 
-  }
-
-
-article{
-  background: rgba(190, 175, 131, 0.836);
-  padding-top: 3vb;
-  padding-left: 3vi;
+    background: rgba(190, 175, 131, 0.836);
+    padding-top: 3vb;
+    padding-left: 3vi;
 }
-
 
 .contacts{
     position:relative;
     background: url(../img/down.jpg) no-repeat;
+    background-size: contain;
     padding-left: 5vi;
     padding-top: 3vb;
-    width: auto;
-    height: 20vi;
+    width: 80%;
+    height: 20%;
     margin-top: 5%;
     margin-left: 20%;
 }
 
 .comment{
     position: relative;
-    top: 15vb;
+    top: 9.8vb;
+    border: 2px solid rgb(141, 140, 140);
     left: 12vi;
     width: 79vi;
 }
