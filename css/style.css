@@ -38,18 +38,40 @@ body{
     font-size: 7vi;
 }
 
-.header__menu{
+.header__menu a{
     position: relative;
 /*    top: -25vi; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5vi;
-}
-
-a{
+    display: inline-block;
+    color: #494030;
     text-decoration: none;
-    padding-left: 12vi;
-    color: black;
     font-weight: bold;
+    line-height: 1;
+    padding-left: 12vi;
+    transition: color .1s linear;
+    -webkit-transition: color .1s linear;
+    -moz--transition: color .1s linear;
+    -webkit-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
+-moz-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
+text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
+}
+.header__menu a:after {
+    background-color: #4b2821;
+    display: block;
+    height: 2px;
+    content: "";
+    width: 0%;
+    -webkit-transition: width .3s ease-in-out;
+    -moz--transition: width .3s ease-in-out;
+    transition: width .3s ease-in-out;
+}
+.header__menu a:hover:after,
+.header__menu a:focus:after {
+    width: 100%;
+}
+.header__menu a:hover{
+    color: #c2601ff5;
 }
 
 .header__custom-btn {
@@ -106,6 +128,10 @@ a{
     right: 30vi;
     bottom: 20vb;
     left: 30vi;
+    border-radius: 20px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
   
 }
 .content-hidden{
@@ -132,8 +158,13 @@ a{
 }
 .modal__close{
     position: relative;
-    top: 25vb;
-    left: 15vi;
+    top: -24vb;
+    left: 20.5vi;
+    border: none;
+    background: rgba(221, 198, 198, 0.959);
+    font-weight: bold;
+    font-size: 1vi;
+    cursor: pointer;
   }
 
 .about{
