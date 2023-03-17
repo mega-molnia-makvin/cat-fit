@@ -51,6 +51,18 @@ article{
     bottom: 12vi;
     margin-top: 8vi;
 }
+
+.active .ui-state-default{
+    background: rgba(102, 255, 102, 1)
+}
+.active:hover .ui-state-default{
+    background: rgba(255, 255, 0, 1)
+}
+
+.test .ui-state-default{
+    background: rgba(255, 215, 0, 1)
+}
+
 .header_title{
     margin-left: 10vi;
     text-align: center;

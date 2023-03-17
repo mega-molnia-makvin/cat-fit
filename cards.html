@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/team.css">
+
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/sunny/jquery-ui.css" />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 </head>
 <body>
     <div class="header">
@@ -118,20 +124,7 @@
                     <ul><input type="checkbox" name="cbox">Йога<Br>
                         <div>
                             <label>Даты посещения</label>
-                            <input type="date" id="datepicker-date-range">
-                            <div class="list no-hairlines-md">
-                                <ul>
-                                  <li>
-                                    <div class="item-content item-input">
-                                      <div class="item-inner">
-                                        <div class="item-input-wrap">
-                                          <input type="text" placeholder="Select multiple dates" readonly="readonly"
-                                            id="datepicker-date-range" />
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </li>
-                                </ul>
+                            <div id="datepicker"></div>
                         </div>
                     </ul>
                     <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
