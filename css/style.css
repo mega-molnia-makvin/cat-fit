@@ -49,6 +49,8 @@ body{
     font-weight: bold;
     line-height: 1;
     padding-left: 12vi;
+    z-index: 1;
+    text-transform: uppercase;
     transition: color .1s linear;
     -webkit-transition: color .1s linear;
     -moz--transition: color .1s linear;
@@ -73,7 +75,69 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
 .header__menu a:hover{
     color: #c2601ff5;
 }
+nav .animation{
+    position: absolute;
+    height: 50%;
+    top: 3vi;
+    margin-left: -10vi;
+    z-index: 0;
+    background: linear-gradient(360deg,transparent,#792a9e70);
+    border-radius: 20px;
+}
+nav .start-home,a:nth-child(1):hover~.animation{
+    top: 3vi;
+    width: 15vi;
+    left: 19.6vi;
+}
+nav .start-home,a:nth-child(2):hover~.animation{
+    top: 2vi;
+    width: 20vi;
+    left: 40.5vi;
+}
+nav .start-home,a:nth-child(3):hover~.animation{
+    top: 3vi;
+    width: 20vi;
+    left: 66.2vi;
+}
+nav .start-home,a:nth-child(4):hover~.animation{
+    top: 3vi;
+    width: 13vi;
+    left: 94vi;
+}
+a:nth-child(1){
+    width: 160px;
+}
+a:nth-child(1){
+    width: 160px;
+}
+a:nth-child(2){
+    width: 180px;
+}
+a:nth-child(3){
+    width: 240px;
+}
+a:nth-child(4){
+    width: 120px;
+}
+a:hover span:nth-child(1){
+transition: 1s;
+transition-delay: 0.25s;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    background: rgba(0,0,0,0.7);
+    transition: opacity 500ms;
+    height: 100%;
 
+}
+.overlay-hidden{
+    display: none;
+}
 .header__custom-btn {
     width: 10%;
     color: #494030;
@@ -142,15 +206,14 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     top: 30vb;
     left: 40vi;
 }
-
 .label{
     height: 30px;
 }
-
 .modal__submit{
     position: relative;
     top: 5vb;
     left: 6vi;
+    border-radius: 10px;
 }
 .modal__title {
     padding-left: 18vi;
@@ -166,18 +229,16 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     font-size: 1vi;
     cursor: pointer;
   }
-
 .about{
     position:relative;
-    margin-top: 15%;
+    margin-top: 1vi;
     height: 50%;
     width: 80%;
-    margin-left: 10%; 
+    margin-left: 7.9%; 
     background: rgba(190, 175, 131, 0.836);
     padding-top: 3vb;
     padding-left: 3vi;
 }
-
 .contacts{
     position:relative;
     background: url(../img/down.jpg) no-repeat;
@@ -189,11 +250,10 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     margin-top: 5%;
     margin-left: 20%;
 }
-
 .comment{
     position: relative;
-    top: 9.8vb;
-    border: 2px solid rgb(141, 140, 140);
+    top: 8vb;
+    border: 2px solid rgb(189, 188, 188);
     left: 12vi;
     width: 79vi;
 }

@@ -19,28 +19,19 @@
         <div class="header">
             <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
             <nav class="header__menu">
+               
                 <a href="index.html">Главная</a>
                 <a href="team.html">Наша команда</a>
                 <a href="timetab.html">Расписание</a>
                 <a href="cards.html">Карты</a>
+                 <div class="animation start-home"></div></div>
             </nav>
             <div id="header">
                 <h1 class="header__title">CAT FIT</h1>
                 <img  class = "header__logo" src="img\fullcat.webp" >
             </div>
         </div>
-        <div data-modal="modal0" class="modal content-hidden">
-            <form method="post">
-                <h3 class="modal__title">Вход</h3>
-                <div class="modal__data">
-                    <ul><input id="log" class="label" type="login" required name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-                    <ul> <input id="pas" class="label" type="password" required name="password" placeholder="Введите пароль"/></ul>
-                    <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
-                    <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
-                </div>
-            </form>
-        </div>
-        
+                
         <article class="about">
                 <h2>О клубе</h2>
                 <p>Мы хорошие котятки, честно. Мяумяумяуммяумяумяу. Наш Фитнес Клуб отличается своими праКОТическими тренировками :)                 
@@ -59,6 +50,19 @@
             </footer>
     
         </div>
+        <div data-overlay="overlay0" class="overlay overlay-hidden">
+            <div data-modal="modal0" class="modal content-hidden">           
+                    <form method="post">
+                        <h3 class="modal__title">Вход</h3>
+                        <div class="modal__data">
+                            <ul><input id="log" class="label" type="login" required name="login" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+                            <ul> <input id="pas" class="label" type="password" required name="password" placeholder="Введите пароль"/></ul>
+                            <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                            <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+                        </div>
+                    </form>
+                </div>            
+            </div>
         
         
         <script src="scripts/main.js"></script>
