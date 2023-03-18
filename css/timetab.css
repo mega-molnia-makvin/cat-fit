@@ -5,9 +5,11 @@ h1{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 200%;
 }
-
 .about__timetable{
     position: relative;
     margin-top: 5vb;
     margin-left: -3vi;
+}
+.header__menu a{
+    top: -2vi;
 }

@@ -79,33 +79,30 @@ nav .animation{
     position: absolute;
     height: 50%;
     top: 3vi;
-    margin-left: -10vi;
     z-index: 0;
     background: linear-gradient(360deg,transparent,#792a9e70);
     border-radius: 20px;
+    transition: all .5s ease 0s;
 }
 nav .start-home,a:nth-child(1):hover~.animation{
     top: 3vi;
     width: 15vi;
-    left: 19.6vi;
+    left: 9.8vi;
 }
-nav .start-home,a:nth-child(2):hover~.animation{
+nav .start-team,a:nth-child(2):hover~.animation{
     top: 2vi;
     width: 20vi;
-    left: 40.5vi;
+    left: 30vi;
 }
-nav .start-home,a:nth-child(3):hover~.animation{
+nav .start-schedule,a:nth-child(3):hover~.animation{
     top: 3vi;
     width: 20vi;
-    left: 66.2vi;
+    left: 56vi;
 }
-nav .start-home,a:nth-child(4):hover~.animation{
+nav .start-cards,a:nth-child(4):hover~.animation{
     top: 3vi;
     width: 13vi;
-    left: 94vi;
-}
-a:nth-child(1){
-    width: 160px;
+    left: 84vi;
 }
 a:nth-child(1){
     width: 160px;
@@ -123,7 +120,7 @@ a:hover span:nth-child(1){
 transition: 1s;
 transition-delay: 0.25s;
 }
-.overlay{
+.modal .overlay{
     position: fixed;
     top: 0;
     bottom: 0;
@@ -133,11 +130,9 @@ transition-delay: 0.25s;
     background: rgba(0,0,0,0.7);
     transition: opacity 500ms;
     height: 100%;
+    z-index: 0;
+}
 
-}
-.overlay-hidden{
-    display: none;
-}
 .header__custom-btn {
     width: 10%;
     color: #494030;
@@ -196,42 +191,130 @@ transition-delay: 0.25s;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
      7px 7px 20px 0px rgba(0,0,0,.1),
      4px 4px 5px 0px rgba(0,0,0,.1);
-  
+     overflow: hidden;
+     transition: all .9s ease-out; 
+}
+.modal::before{
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    rgb(235, 62, 39),rgb(69, 69, 245));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.modal::after{
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 100%;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,
+    rgb(235, 62, 39),rgb(69, 69, 245));
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.form{
+    position: absolute;
+    inset: 5px;
+    border-radius: 20px;
+    background: rgb(233, 189, 189);
+    z-index: 10;
 }
 .content-hidden{
    display: none;
 }
 .modal__data{
     position: fixed;
-    top: 30vb;
-    left: 40vi;
+    top: 29vb;
+    left: 39vi;
+}
+
+.modal__submit{
+    background: #ad9668;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 50%;
+    margin-left: 5.2vi;
+    margin-top: 2.7vi;
+    font-weight: 700;
+}
+.modal__submit:active{
+    background: sandybrown;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+    7px 7px 20px 0px rgba(0,0,0,.1),
+    4px 4px 5px 0px rgba(0,0,0,.1);
 }
 .label{
-    height: 30px;
-}
-.modal__submit{
     position: relative;
-    top: 5vb;
-    left: 6vi;
+    margin-top: 60px;
+    width: 300px;
+}
+.label input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    border: none;
+    outline: none;
     border-radius: 10px;
+    letter-spacing: .05em;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+}
+.label span{
+    position: absolute;
+    top: -0.5vi;
+    padding: 20px 10px 10px;
+    font-size: 1.25em;
+    pointer-events: none;
+    letter-spacing: .05em;
+    transition: .5s;
+}
+.label input:valid~span,
+.label input:focus~span{
+    color: #ad100a;
+    transform: translateY(-34px);
+    font-size: 1em;
 }
 .modal__title {
-    padding-left: 18vi;
-    font-size: 1.25vi;
+    text-align: center;
+    font-size: 2vi;
+    font-weight: 900;
+    letter-spacing: .1em;
 }
 .modal__close{
     position: relative;
-    top: -24vb;
-    left: 20.5vi;
+    top: -21vi;
+    left: 12vi;
     border: none;
-    background: rgba(221, 198, 198, 0.959);
+    background: rgb(233, 189, 189);
     font-weight: bold;
     font-size: 1vi;
     cursor: pointer;
   }
+  .modal__close:hover{
+    color: rgb(46, 46, 224);
+  }
 .about{
     position:relative;
-    margin-top: 1vi;
+    margin-top: 20vi;
     height: 50%;
     width: 80%;
     margin-left: 7.9%; 

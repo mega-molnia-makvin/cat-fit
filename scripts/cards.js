@@ -1,5 +1,3 @@
-
-
 const butOpen=document.querySelector('[data-modal_butt="buyBut"]');
 const modalBuy=document.querySelector('[data-modal="modalBuy"]');
 const butClose=document.querySelector('[data-modal_butt="closeBut"]');
