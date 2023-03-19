@@ -22,7 +22,16 @@ article{
     left: 20vi;
     padding: 1vb;
 }
-
+.catvsfish{
+    width: 15vi;
+    height: 15vi;
+    padding-left: 10vi;
+}
+.catvsbutterfly{
+    width: 15vi;
+    height: 15vi;
+    padding-left: 5vi;
+}
 .modal__title1{
     position: relative;
     margin-left: 8vi;
