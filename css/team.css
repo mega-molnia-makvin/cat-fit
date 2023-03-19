@@ -3,16 +3,11 @@ body{
 }
 
 .header__title{
-    top: 4.5vi;
+    top: 4.8vi;
     text-align: center;
     font-size: 6vi;
 }
-.header__logo{
-    left: 70vi;
-}
-.header{
-    margin-top: -24vi;
-}
+
 .about__description{
     top: 20vi;
     width: 20%;
@@ -47,11 +42,6 @@ body{
     transform: translateY(-50%);
 
 }
-
-.about{
-    margin-top: 44vi;
-}
-
 .img{
     width: 100%;
     height: 100%;

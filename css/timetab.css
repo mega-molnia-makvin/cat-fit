@@ -1,9 +1,9 @@
-h1{
+.header__title{
     position: relative;
-    top: 15%;
+    top: 3vi;
     left: 15%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 200%;
+    font-size: 6vi;
 }
 .about__timetable{
     position: relative;
