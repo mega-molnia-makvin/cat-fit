@@ -8,26 +8,22 @@ body{
     background-attachment: fixed;
     overflow-x: hidden;
 }
-
 .header{
     position: relative;
     width: 100vi;
     height: 30vb;
 }
-
 #header {
   position: relative;
   width: 60%;
   margin-left: 25%;
 }
-
 .header__logo{
     position:relative;
     margin-left: 60%;
     top: -12vi;
     width: 15%;
 }
-
 .header__title{
     font-family: Pussyfoot;
     src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
@@ -37,7 +33,10 @@ body{
     top: 5vi;
     font-size: 7vi;
 }
-
+.header__menu{
+    text-align: center;
+    margin-left: -7vi;
+}
 .header__menu a{
     position: relative;
 /*    top: -25vi; */
@@ -48,8 +47,8 @@ body{
     text-decoration: none;
     font-weight: bold;
     line-height: 1;
-    padding-left: 12vi;
     z-index: 1;
+    padding-left: 6vi;
     text-transform: uppercase;
     transition: color .1s linear;
     -webkit-transition: color .1s linear;
@@ -85,40 +84,24 @@ nav .animation{
     transition: all .5s ease 0s;
 }
 nav .start-home,a:nth-child(1):hover~.animation{
-    top: 3vi;
+    top: 1vi;
     width: 15vi;
-    left: 9.8vi;
+    left: 11vi;
 }
 nav .start-team,a:nth-child(2):hover~.animation{
-    top: 2vi;
-    width: 20vi;
-    left: 30vi;
+    top: 1vi;
+    width: 23vi;
+    left: 28.5vi;
 }
 nav .start-schedule,a:nth-child(3):hover~.animation{
-    top: 3vi;
+    top: 1vi;
     width: 20vi;
-    left: 56vi;
+    left: 53.4vi;
 }
 nav .start-cards,a:nth-child(4):hover~.animation{
-    top: 3vi;
+    top: 1vi;
     width: 13vi;
-    left: 84vi;
-}
-a:nth-child(1){
-    width: 160px;
-}
-a:nth-child(2){
-    width: 180px;
-}
-a:nth-child(3){
-    width: 240px;
-}
-a:nth-child(4){
-    width: 120px;
-}
-a:hover span:nth-child(1){
-transition: 1s;
-transition-delay: 0.25s;
+    left: 75vi;
 }
 .modal .overlay{
     position: fixed;
