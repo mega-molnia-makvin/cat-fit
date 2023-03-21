@@ -119,16 +119,20 @@
                     <p>Дополнительные программы</p>
                     <ul><input type="checkbox" name="cbox">Йога<Br>
                         <div>
-                            <label>Даты посещения</label>
-                            <input type="date" id="my_calendar">
-                            <script>
 
+                            
+                            <label>Даты посещения</label>
+                            <script>
                                 webix.ui({
                                     view:"calendar",
                                     date:new Date(2016,1,16),
-                                    multiselect:true
+                                    multiselect:true,
+                                    return: <div> <input type="date" id="calendar"> </input></div>
                                 });
-    </script>
+                            </script>
+                            <script>webix.ui()</script>
+                            
+
                         </div>
                     </ul>
                     <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
