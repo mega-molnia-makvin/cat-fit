@@ -13,40 +13,94 @@ butClose.addEventListener("click",function(){
 
 //calendar
 
-$(function() {
+// $(function() {
 
-    $.datepicker.regional['ru'] = {
-		closeText: 'Закрыть',
-		prevText: '&#x3c;Пред',
-		nextText: 'След&#x3e;',
-		currentText: 'Сегодня',
-		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
-		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 'Июл','Авг','Сен','Окт','Ноя','Дек'],
-		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
-		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
-		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
-		dateFormat: 'dd.mm.yy',
-		firstDay: 1,
-		isRTL: false,
-		showOtherMonths:true,
-		selectOtherMonths:true,
-		changeMonth:true,
-        changeYear: false,
-        showAnim:'scale'
-};
-var arr_data = [];
-$.datepicker.setDefaults($.datepicker.regional['ru']);
-$( '#datepicker' ).datepicker({ altField: "#show", altFormat: "yy-mm-dd",
-beforeShowDay: function(date) {
-for (var i=0; i<arr_data.length; i++)  { var d = arr_data[i];
-d = d.split('.');
-if (date.getTime() == (new Date(d[2],d[1]-1,d[0])).getTime()) return[true, "active", "Важная дата"] };
-return[true, "test"]},
-onSelect : function(value,b) {
-  var ok = $.inArray(value, arr_data) ;
-  if (ok == -1) arr_data.push(value)
-  else {arr_data.splice(ok,1)};
-  alert(JSON.stringify(arr_data));
-}
-})
-  });
+//     $.datepicker.regional['ru'] = {
+// 		closeText: 'Закрыть',
+// 		prevText: '&#x3c;Пред',
+// 		nextText: 'След&#x3e;',
+// 		currentText: 'Сегодня',
+// 		monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь', 'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+// 		monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн', 'Июл','Авг','Сен','Окт','Ноя','Дек'],
+// 		dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+// 		dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+// 		dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+// 		dateFormat: 'dd.mm.yy',
+// 		firstDay: 1,
+// 		isRTL: false,
+// 		showOtherMonths:true,
+// 		selectOtherMonths:true,
+// 		changeMonth:true,
+//         changeYear: false,
+//         showAnim:'scale'
+// };
+// var arr_data = [];
+// $.datepicker.setDefaults($.datepicker.regional['ru']);
+// $( '#datepicker' ).datepicker({ altField: "#show", altFormat: "yy-mm-dd",
+// beforeShowDay: function(date) {
+// for (var i=0; i<arr_data.length; i++)  { var d = arr_data[i];
+// d = d.split('.');
+// if (date.getTime() == (new Date(d[2],d[1]-1,d[0])).getTime()) return[true, "active", "Важная дата"] };
+// return[true, "test"]},
+// onSelect : function(value,b) {
+//   var ok = $.inArray(value, arr_data) ;
+//   if (ok == -1) arr_data.push(value)
+//   else {arr_data.splice(ok,1)};
+//   alert(JSON.stringify(arr_data));
+// }
+// })
+//   });
+mobiscroll.setOptions({
+    theme: 'ios',
+    themeVariant: 'light'
+});
+
+// mobiscroll.datepicker('#demo-multi-day', {
+//     controls: ['calendar'],
+//     display: 'inline',
+//     selectMultiple: true
+// });
+
+// mobiscroll.datepicker('#demo-max-days', {
+//     controls: ['calendar'],
+//     display: 'inline',
+//     selectMultiple: true,
+//     selectMax: 5,
+//     headerText: 'Pick up to 5 days'
+// });
+
+mobiscroll.datepicker('#demo-counter', {
+    controls: ['calendar'],
+    display: 'inline',
+    selectMultiple: true,
+    selectCounter: true,
+	invalid: [
+		'2023-03-22',
+		'2030-03-25',
+		{
+			recurring: {
+				repeat: 'yearly',
+				day: 24,
+				month: 12
+			}
+		},
+		{
+			recurring: {
+				repeat: 'yearly',
+				day: 31,
+				month: 12
+			}
+		},
+		{
+			start: '2023-03-27',
+			end: '2030-04-03'
+		},
+		{
+			recurring: {
+				repeat: 'weekly',
+				weekDays: 'SA,SU'
+			}
+		}
+	]
+	
+});

@@ -19,13 +19,8 @@
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
-    <!-- Webix Library -->
-  <script src="codebase/webix.js" type="text/javascript"></script>
-  <link rel="stylesheet" href="codebase/webix.css" type="text/css">
- 
-  <!-- Scheduler -->
-  <script type="text/javascript" src="codebase/scheduler.js"></script>
-  <link rel="stylesheet" href="codebase/scheduler.css" type="text/css">
+    <link href="css/mobiscroll.javascript.min.css" rel="stylesheet" />
+    <script src="scripts/mobiscroll.javascript.min.js"></script>
 
 </head>
 <body>
@@ -118,54 +113,51 @@
                 <div class="modal__another">
                     <p>Дополнительные программы</p>
                     <ul><input type="checkbox" name="cbox">Йога<Br>
+                    </ul>
+                    <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
+                    <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
                         <div>
 
                             
                             <label>Даты посещения</label>
-                            <script>
-                                webix.ui({
-                                    view:"calendar",
-                                    date:new Date(2016,1,16),
-                                    multiselect:true,
-                                    return: <div> <input type="date" id="calendar"> </input></div>
-                                });
-                            </script>
-                            <script>webix.ui()</script>
-                            
-
+                            <div class="mbsc-grid">
+                                <div class="mbsc-row">
+                                    <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                                        <div class="mbsc-form-group">
+                                            <div id="demo-counter"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </ul>
-                    <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
-                    <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
                 </div>
             </form>
             </div> 
     
     
         </article>
-        <div class="gif">
-            <img class="catvsbutterfly" src="img/circle.gif" alt="">
-            <img class="catvsfish" src="img/pats.gif" alt="">
+    </div>
+            <div class="gif">
+                <img class="catvsbutterfly" src="img/circle.gif" alt="">
+                
+            </div>
             <div class="wrapper">
                 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
                     <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                        <tspan x="0" y="0">Вы так же</tspan>
+                        <tspan x="0" y="0">Вы так же можете </tspan>
                     </text>
                 </svg>
                 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
-                <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                    <tspan x="0" y="0">можете обратиться к консультанту</tspan>
-                </text>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
-                <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                    <tspan x="0" y="0">к консультанту</tspan>
-                </text>
-            </svg>
+                    <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
+                        <tspan x="0" y="0">обратиться к консультанту</tspan>
+                    </text>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
+                    <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
+                        <tspan x="0" y="0">Если у вас остались  вопросы</tspan>
+                    </text>
+                </svg>
             </div>
-        </div>
-        </div>
-    </div>
     <div class="contacts">
         <footer>
             <h3>Адресс: ул. Пушистиков, дом Желтый</h3>

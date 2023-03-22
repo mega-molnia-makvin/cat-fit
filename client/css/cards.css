@@ -1,7 +1,16 @@
 footer{
     top: 320%;
 }
+.md-bulk-operations-border {
+    border-left: 1px solid #ccc;
+}
 
+.md-selected-event-list {
+    height: 10vi;
+    overflow: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+}
 article{
     position: absolute;
     height: 250%;
@@ -22,6 +31,10 @@ article{
     left: 20vi;
     padding: 1vb;
 }
+.gif{
+    padding-top: 15vi;
+    padding-left: 16vi;
+}
 .catvsfish{
     width: 15vi;
     height: 15vi;
@@ -36,7 +49,6 @@ article{
     position: relative;
     margin-left: 8vi;
 }
-
 .modal__another{
     position: relative;
     bottom: 28vb;
