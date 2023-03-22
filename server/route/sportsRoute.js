@@ -1,6 +1,7 @@
 const Router = require("express");
 const router = new Router();
+const sportController = require('../controllers/sportController')
 
-router.post("/");
-router.get("/");
+router.post("/", sportController.create);
+router.get("/", sportController.getAll);
 module.exports = router;

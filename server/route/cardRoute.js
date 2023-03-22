@@ -1,6 +1,9 @@
 const Router = require("express");
 const router = new Router();
+const cardController = require('../controllers/cardController')
 
-router.post('/')
-router.get('/')
+router.post("/", cardController.create);
+router.get("/", cardController.getAll);
+
+
 module.exports = router;
