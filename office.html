@@ -13,50 +13,65 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="fon">
-            <nav class="flex-container flex-item-row">
+        <div class="header">
+                <button class="header__custom-btn btn-8" >Выйти из ЛК</button>
+                <nav class="header__menu header__row">
                 <a href="index.html" >Главная</a>
                 <a href="team.html" >Наша команда</a>
                 <a href="timetab.html" >Расписание</a>
                 <a href="cards.html" >Карты</a>
                 <div class="animation start-home"></div>
             </nav>
-            <h1 class="office">Личный кабинет</h1>
-            <a href="office.html"><img src="img/arms.webp" alt="" width="50" height="50" class="avatar1"></a>
+            <div id="header">
+                <h1 class="header__title">Личный кабинет</h1>
+            </div>
+        </div> 
 
-            <div class="block">
-                <button>Выйти из лк</button>> 
-                <img src="img/arms.webp" alt="" width="100" height="100" class="avatar2">
-                <h2 class="plan">Расписание</h2>
+        <article class="about">
+            <img src="img/arms.webp" alt="" width="100" class="avatar">
+            <div class = "information">         
                 <h2> Фамилия</h2>
                 <h2> Имя</h2>
                 <h2> Отечество</h2>
                 <h2> Номер телефона</h2>
                 <h2> Номер карты</h2>
                 <h2> Срок действия карты</h2>
-                <div class="schedule">
-                    <TABLE BORDER="1" WIDTH=100% BGCOLOR="#99CCCC">
-                        <TR BGCOLOR="#CCCCFF" ALIGN="CENTER">
-                        <TD> </TD> <TD>Понедельник</TD> <TD>Вторник</TD>
-                        <TD>Среда</TD><TD>Четверг</TD><TD>Пятница</TD>
-                        <TD>Суббота</TD><TD>Воскресенье</TD>
-                        </TR>
-                        <TD>1</TD> <TD></TD>
-                        <TD></TD> <TD></TD> <TD></TD>
-                        <TD></TD> <TD></TD> <TD></TD>
-                        </TR>
-                        <TD>2</TD> <TD></TD>
-                        <TD></TD> <TD></TD><TD></TD>
-                        <TD></TD> <TD></TD> <TD></TD>
-                        </TR>
-                        <TD>3</TD> <TD></TD>
-                        <TD></TD> <TD></TD> <TD></TD>
-                        <TD></TD> <TD></TD> <TD></TD>
-                        </TR>
-                        </TABLE>
-                </div>
-                
             </div>
+            <!-- 
+            <div class = "data">          
+                <h2> Зайцев</h2>
+                <h2> Иван</h2>
+                <h2> Петрович</h2>
+                <h2> 89004562345</h2>
+                <h2> 1234-5567-8965-2345</h2>
+                <h2> до 20 мая 2022 года</h2>
+            </div>
+        -->
+            <h2 class="plan">Расписание</h2>
+            <div class="schedule">
+                <TABLE BORDER="1" WIDTH=100% BGCOLOR="#99CCCC">
+                    <TR BGCOLOR="#CCCCFF" ALIGN="CENTER">
+                    <TD> </TD> <TD>Понедельник</TD> <TD>Вторник</TD>
+                    <TD>Среда</TD><TD>Четверг</TD><TD>Пятница</TD>
+                    <TD>Суббота</TD><TD>Воскресенье</TD>
+                    </TR>
+                    <TD>1</TD> <TD></TD>
+                    <TD></TD> <TD></TD> <TD></TD>
+                    <TD></TD> <TD></TD> <TD></TD>
+                    </TR>
+                    <TD>2</TD> <TD></TD>
+                    <TD></TD> <TD></TD><TD></TD>
+                    <TD></TD> <TD></TD> <TD></TD>
+                    </TR>
+                    <TD>3</TD> <TD></TD>
+                    <TD></TD> <TD></TD> <TD></TD>
+                    <TD></TD> <TD></TD> <TD></TD>
+                    </TR>
+                </TABLE>
+            </div>
+        </article>
+            
+        <div class="contacts">
             <footer>
                 <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
                 <h3>Тел.: meow, спросить Барсика</h3>

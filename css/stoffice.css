@@ -1,62 +1,38 @@
-.office{
-    position: absolute;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 200%;
-    padding-top: 1%;
-    left: 40%;
-}
-nav{
-    padding-top: 30px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 200%;
-}
-
-
-.block{
-    position: absolute;
-    top: 30%;
-    left: 10%;
-    background: rgba(190, 175, 131, 0.836);
-    text-align: center;
-    width: 80%;
-    padding-bottom: 24%;
-}
-.avatar2{
-    position: absolute;
-    top: 3%;
-    left: 46%;
+.avatar{
+    position: relative;
+    margin-top: 0vb;
+    margin-left: 37vi;
     border-radius: 40px;
+    text-align: center;
     
 }
-.avatar1{
-    position: absolute;
-    top: 3%;
-    left: 93%;
-    border-radius: 40px;
-}
+.information{
 
-h2{
     position: relative;
-    top: 125px;
-    left: 10%;
-    text-align: left;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 0vb;
+    margin-left: 0vi;
 
 }
+
+.data{
+
+    position: relative;
+    margin-top: 0vb;
+    margin-left: 0vi;
+
+    
+}
+
 .plan{
-    position: absolute;
-    top: 60%;
-    left: 40%;
-    text-align: center;
-    font-size: 300%;
-}
-h1{
     position: relative;
-    top: 13%;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 270%;
+    margin-top: 0vb;
+    margin-left: 0vi;
+    text-align: center;
+    font-size: 250%;
 }
+
 .schedule{
     position: relative;
-    top: 290px;
+    margin-top: 5vb;
+    margin-left: -3vi;
 }
