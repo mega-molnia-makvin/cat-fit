@@ -1,0 +1,7 @@
+export const LK_ROUTE = '/lk'
+export const LOGIN_ROUTE = '/login'
+export const MAIN_ROUTE = '/'
+export const BASKET_ROUTE = '/basket'
+export const CARDS_ROUTE = '/cards'
+export const SCHEDULER_ROUTE = '/scheduler'
+export const TEAM_ROUTE = '/team'
