@@ -13,6 +13,9 @@ body{
     width: 100vi;
     height: 30vb;
 }
+.leftcol{
+    border-radius: 40px;
+}
 #header {
   position: relative;
   width: 60%;
@@ -79,9 +82,9 @@ nav .animation{
     height: 50%;
     top: 3vi;
     z-index: 0;
-    background: linear-gradient(360deg,transparent,#daad4c70);
-    border-radius: 20px;
+    border-radius: 60px;
     transition: all .5s ease 0s;
+    background: linear-gradient(360deg,transparent,#daad4c70);
 }
 nav .start-home,a:nth-child(1):hover~.animation{
     top: 1vi;
@@ -285,7 +288,7 @@ nav .start-cards,a:nth-child(4):hover~.animation{
 .modal__close{
     position: relative;
     top: -21vi;
-    left: 12vi;
+    left: 10vi;
     border: none;
     background:rgb(202, 177, 129);
     font-weight: bold;

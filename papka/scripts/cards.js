@@ -9,7 +9,7 @@ butOpen.addEventListener("click",function(){
 butClose.addEventListener("click",function(){
     modalBuy.classList.add('content-hidden')
 })
-
+ 
 
 //calendar
 
@@ -74,33 +74,5 @@ mobiscroll.datepicker('#demo-counter', {
     display: 'inline',
     selectMultiple: true,
     selectCounter: true,
-	invalid: [
-		'2023-03-22',
-		'2030-03-25',
-		{
-			recurring: {
-				repeat: 'yearly',
-				day: 24,
-				month: 12
-			}
-		},
-		{
-			recurring: {
-				repeat: 'yearly',
-				day: 31,
-				month: 12
-			}
-		},
-		{
-			start: '2023-03-27',
-			end: '2030-04-03'
-		},
-		{
-			recurring: {
-				repeat: 'weekly',
-				weekDays: 'SA,SU'
-			}
-		}
-	]
 	
 });

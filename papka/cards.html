@@ -94,45 +94,7 @@
         
             </div>                      
             
-            <div data-modal="modalBuy" class="modal1 content-hidden">
-                <form method="post">
-                <h3 class="modal__title1">Оформление</h3>
-                <div class="reg">
-                    <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></ul>
-                    <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></ul>
-                    <ul><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-                    <ul><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></ul>
-                    <div>
-                        <label for="date">Дата начала посещения</label>
-                        <input type="date" name="date">
-                    </div>
-                    <ul><input type="checkbox" name="cbox">Нужна консультация?<Br></ul>
-                        <input type="button" class="submit" value="Продолжить">
-                        <button data-modal_butt="closeBut" class="close">Выход</button>
-                </div>
-                <div class="modal__another">
-                    <p>Дополнительные программы</p>
-                    <ul><input type="checkbox" name="cbox">Йога<Br>
-                    </ul>
-                    <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
-                    <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
-                        <div>
-
-                            
-                            <label>Даты посещения</label>
-                            <div class="mbsc-grid">
-                                <div class="mbsc-row">
-                                    <div class="mbsc-col-sm-12 mbsc-col-md-4">
-                                        <div class="mbsc-form-group">
-                                            <div id="demo-counter"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </form>
-            </div> 
+            
     
     
         </article>
@@ -182,6 +144,46 @@
         </form>
         <div class="overlay"></div>            
 </div>
+<div id="my-modal" data-modal="modalBuy" class="modal1 content-hidden">
+    <form method="post" class="order">
+    <h3 class="modal__title1">Оформление</h3>
+    <div class="reg">
+        <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></ul>
+        <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></ul>
+        <ul><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></ul>
+        <ul><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></ul>
+        <div>
+            <label for="date">Дата начала посещения</label>
+            <input type="date" name="date">
+        </div>
+        <ul><input type="checkbox" name="cbox">Нужна консультация?<Br></ul>
+            <input type="button" class="submit" value="Продолжить">
+            <button data-modal_butt="closeBut" class="modal__close1">X</button>
+    </div>
+    <div class="modal__another">
+        <p>Дополнительные программы</p>
+        <ul><input type="checkbox" name="cbox">Йога<Br>
+        </ul>
+        <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
+        <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
+            <div>
+
+                
+                <label>Даты посещения</label>
+                <div class="mbsc-grid">
+                    <div class="mbsc-row">
+                        <div class="mbsc-col-sm-12 mbsc-col-md-4">
+                            <div class="mbsc-form-group">
+                                <div id="demo-counter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</form>
+<div class="overlay"></div> 
+</div> 
     <script src="scripts/main.js"></script>
     <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>
