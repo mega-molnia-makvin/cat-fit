@@ -1,14 +1,14 @@
-const sequelize = require("db.js");
+const sequelize = require("../db.js");
 const { DataTypes } = require("sequelize");
 
 const User = sequelize.define("user", {
   id: { type: DataTypes.INTEGER, primaryKEY: true, autoIncrement: true },
-  name: { type: DataTypes.STRING },
+  name: { type: DataTypes.STRING, allowNull: false},
   surname: { type: DataTypes.STRING },
   patronymic: { type: DataTypes.STRING },
   password: { type: DataTypes.STRING },
   cardId: { type: DataTypes.INTEGER, primaryKEY: true, autoIncrement: true },
-  telephone: { type: DataTypes.INTEGER },
+  phone: { type: DataTypes.INTEGER, unique: true},
 });
 
 const Card = sequelize.define("card", {
