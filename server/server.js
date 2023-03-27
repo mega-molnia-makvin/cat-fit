@@ -1,19 +1,24 @@
 require("dotenv").config();
 const express = require("express");
 const sequelize = require("./db");
-const port = process.env.port || 5001;
-const app = express();
-
-
+const models = require("./models/models");
 const cors = require("cors");
+
+const port = process.env.port || 5001;
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+
+// начало нерабочей зоны
 const fileUpload = require("express-fileupload");
 const path = require("path");
 
-// начало нерабочей зоны
-const models = require("C:/Users/фвьшт/Desktop/сайт/cat-fit/server/models.js");
+
+
 const errHandling = require("middleware/errorHandlingMiddleware");
-app.use(cors());
-app.use(express.json);
+
 app.use(express.static(path.resolve(__dirname, "static")));
 app.use(fileUpload({}));
 const router = require("./route/main");
