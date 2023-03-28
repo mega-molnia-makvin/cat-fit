@@ -1,6 +1,6 @@
 const ApiError = require("../error/ApiError");
 const bcrypt = require('bcrypt')
-const {User} = require('../models')
+const {User} = require('../models/models')
 
 const generateJwt = (id, telephone) => {
   return jwt.sign(

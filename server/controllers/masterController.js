@@ -1,4 +1,4 @@
-const { Master } = require('../models');
+const { Master } = require('../models/models');
 const { UUIDV4 } = require("sequelize");
 const ApiError = require("../error/ApiError");
 
@@ -15,7 +15,7 @@ class masterController {
     let filename = uuid.v4() + ".jpg"
     img.mv(path.resolve(__dirname, '..', 'static', filename))
     const mast = await Master.create({ name,surname, patronymic, password, telephone });
-    return req.json({ mast });
+    return res.json({ mast });
   }
   catch (e){
     nextTick(ApiError.badRequest(e.message))
@@ -29,4 +29,4 @@ class masterController {
   }
 
 }
-module.exports = new MasterController();
+module.exports = new masterController();

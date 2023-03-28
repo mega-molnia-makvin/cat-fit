@@ -1,8 +1,10 @@
-require("dotenv").config();
+require('dotenv').config({path:'/home/alina/Desktop/cat-fit/server/.env'});
 const express = require("express");
+
 const sequelize = require("./db");
 const models = require("./models/models");
 const cors = require("cors");
+const router = require("./route/main");
 
 const port = process.env.port || 5001;
 
@@ -17,12 +19,12 @@ const path = require("path");
 
 
 
-const errHandling = require("middleware/errorHandlingMiddleware");
+const errHandling = require("/home/alina/Desktop/cat-fit/server/middleware/errorHandingMiddleware.js");
 
 app.use(express.static(path.resolve(__dirname, "static")));
 app.use(fileUpload({}));
-const router = require("./route/main");
-app.use("api", router);
+
+app.use('/api', router);
 //Обработка ошибки
 app.use(errHandling);
 //конец нерабочей зоны

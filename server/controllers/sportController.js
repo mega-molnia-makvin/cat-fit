@@ -1,4 +1,4 @@
-const { Sport } = require('../models');
+const { Sport } = require('../models/models');
 const ApiError = require("../error/ApiError");
 
 class SportController {
