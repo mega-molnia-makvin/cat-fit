@@ -16,11 +16,11 @@ const Card = sequelize.define("card", {
   lastDate: { type: DataTypes.DATE },
 });
 
-const Card_NameSports = sequelize.define("card_namesport", {
+const Card_NamedSports = sequelize.define("card_namedsport", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   firstDate: { type: DataTypes.DATE },
   lastDate: { type: DataTypes.DATE },
-  nameSport: { type: DataTypes.STRING },
+  // namedSport: { type: DataTypes.STRING },
 });
 
 const Master = sequelize.define("master", {
@@ -29,37 +29,38 @@ const Master = sequelize.define("master", {
   surname: { type: DataTypes.STRING },
   patronymic: { type: DataTypes.STRING },
   password: { type: DataTypes.STRING },
-  telephone: { type: DataTypes.INTEGER },
+  telephone: { type: DataTypes.STRING },
+  img: { type: DataTypes.STRING },
 });
 
-const Name_Sport = sequelize.define("name_sports", {
+const Named_Sport = sequelize.define("named_sports", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  nameSport: { type: DataTypes.STRING },
+  name: { type: DataTypes.STRING },
   numberofVacancies: { type: DataTypes.INTEGER },
 });
 
 const Sports = sequelize.define("sports", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
 
-  firstDate: { type: DataTypes.TIME },
-  lastDate: { type: DataTypes.TIME },
+  firstTime: { type: DataTypes.TIME },
+  lastTime: { type: DataTypes.TIME },
   dayofWeek: { type: DataTypes.STRING },
 });
 
 Master.hasMany(Sports);
 Sports.belongsTo(Master);
 
-Master.hasMany(Name_Sport);
-Name_Sport.belongsTo(Master);
+Master.hasMany(Named_Sport);
+Named_Sport.belongsTo(Master);
 
-Name_Sport.hasOne(Sports);
-Sports.belongsTo(Name_Sport);
+Named_Sport.hasOne(Sports);
+Sports.belongsTo(Named_Sport);
 
-Name_Sport.hasMany(Card_NameSports);
-Card_NameSports.belongsTo(Name_Sport);
+Named_Sport.hasMany(Card_NamedSports);
+Card_NamedSports.belongsTo(Named_Sport);
 
-Card.hasMany(Card_NameSports);
-Card_NameSports.belongsTo(Card);
+Card.hasMany(Card_NamedSports);
+Card_NamedSports.belongsTo(Card);
 
 Card.hasOne(User);
 User.belongsTo(Card);
@@ -68,7 +69,7 @@ module.exports = {
   User,
   Master,
   Sports,
-  Name_Sport,
-  Card_NameSports,
+  Named_Sport,
+  Card_NamedSports,
   Card,
 };

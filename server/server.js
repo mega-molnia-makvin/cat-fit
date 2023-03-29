@@ -1,33 +1,25 @@
-require('dotenv').config({path:'/home/alina/Desktop/cat-fit/server/.env'});
+require("dotenv").config();
 const express = require("express");
 
 const sequelize = require("./db");
 const models = require("./models/models");
 const cors = require("cors");
+const fileUpload = require("express-fileupload");
 const router = require("./route/main");
+const errHandling = require("./middleware/errorHandingMiddleware.js");
+const path = require("path");
 
 const port = process.env.port || 5001;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
-
-// начало нерабочей зоны
-const fileUpload = require("express-fileupload");
-const path = require("path");
-
-
-
-const errHandling = require("/home/alina/Desktop/cat-fit/server/middleware/errorHandingMiddleware.js");
-
 app.use(express.static(path.resolve(__dirname, "static")));
-app.use(fileUpload({}));
 
-app.use('/api', router);
-//Обработка ошибки
-app.use(errHandling);
-//конец нерабочей зоны
+app.use(fileUpload({}));
+app.use("/api", router);
+
+app.use(errHandling); //Обработка ошибки
 
 const start = async () => {
   try {

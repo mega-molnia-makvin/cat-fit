@@ -50,12 +50,13 @@ class UserController {
     const token = generateJwt(user.id, user.telephone)
     return res.json({token})
   }
+  
   async check(req, res, next) {
     const {id} = req.query
     if(!id){
       return next(ApiError.badRequest('Не задан ID'))
     }
-    res.json(query)
+    res.json(id)
   }
 }
 module.exports = new UserController();
