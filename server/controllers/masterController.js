@@ -9,9 +9,14 @@ class masterController {
   async create(req, res, next) {
     try {
       const { name, surname, patronymic, password, telephone } = req.body;
-      const { img } = req.files;
-      let filename = uuid.v4() + ".jpg";
-      img.mv(path.resolve(__dirname, "..", "static", filename)); //перемещение изображения в папку статик
+      
+      let filename= null;
+      if (req.files){
+        const { img } = req.files;
+        filename = uuid.v4() + ".jpg";
+        img.mv(path.resolve(__dirname, "..", "static", filename)); //перемещение изображения в папку статик
+      }
+      
       const mast = await Master.create({
         name,
         surname,

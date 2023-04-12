@@ -19,7 +19,7 @@ app.use(express.static(path.resolve(__dirname, "static")));
 app.use(fileUpload({}));
 app.use("/api", router);
 
-app.use(errHandling); //Обработка ошибки
+app.use(errHandling); //Обработка ошибки в самом конце
 
 const start = async () => {
   try {

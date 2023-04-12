@@ -7,6 +7,7 @@ class CardController {
     const car = await Card.create({ name });
     return req.json({ car });
   }
+  
   async getAll(req, res) {
     const card=await Card.findAll()
     return res.json(card)

@@ -11,7 +11,7 @@ class ApiError extends Error {
   static internal(message) {
     return new ApiError(500, message);
   }
-  static forbidden(message) {
+  static forbidden(message) { //нет доступа
     return new ApiError(403, message);
   }
 }
