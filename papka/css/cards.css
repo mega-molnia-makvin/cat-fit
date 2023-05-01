@@ -24,7 +24,6 @@ article{
     font-size: 1vi;
     cursor: pointer;
 }
-
 .modal1{
     z-index: 20000;
     background: rgba(223, 196, 139, 0.959); 
