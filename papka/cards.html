@@ -87,12 +87,6 @@
                         <img class="img" src="img/FT.jpg">
                         
                     </div>
-        
-                    <div class="about_description">
-                        <h3>Что-то еще</h3>
-                        <img class="img" src="img/etc.jpg">
-                       
-                    </div>
                     
                 </div>
         
@@ -160,31 +154,30 @@
             <label for="date">Дата начала посещения</label>
             <input type="date" name="date">
         </div>
-        <ul><input type="checkbox" name="cbox">Нужна консультация?<Br></ul>
+        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
+            <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
             <input type="button" class="submit" value="Продолжить">
             <button data-modal_butt="closeBut" class="modal__close1">X</button>
     </div>
     <div class="modal__another">
         <p>Дополнительные программы</p>
-        <ul><input type="checkbox" name="cbox">Йога<Br>
+        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
         </ul>
-        <ul><input type="checkbox" name="cbox">Бассейн<Br></ul>
-        <ul><input type="checkbox" name="cbox">Что-то еще<Br></ul>
-            <div>
-
-                
-                <label>Даты посещения</label>
-                <div class="container mt-2">
-                    <div class="row">
-                        <div class="col-md-4 offset-mt-1">
-                            <div id="airdatepicker" class="form-control">
-                                </div>
-                        </div>
+        <div>                
+            <label>Даты посещения</label>
+            <div class="container mt-2">
+                <div class="row">
+                    <div class="col-md-4 offset-mt-1">
+                        <input type="text" id="airdatepicker" class="form-control">
+                            
                     </div>
-                    
-                </div>
+                </div>                
+            </div>        
+        </div>
+        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Бассейн<Br></ul>
+        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Индивидуальные тренировки<Br></ul>
             
-            </div>
+            
     </div>
 </form>
 <div class="overlay"></div> 
