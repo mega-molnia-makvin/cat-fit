@@ -90,11 +90,8 @@
                     
                 </div>
         
-            </div>                      
-            
-            
-    
-    
+            </div>                  
+
         </article>
     </div>
             <div class="gif">
@@ -142,42 +139,82 @@
         </form>
         <div class="overlay"></div>            
 </div>
-<div id="my-modal" data-modal="modalBuy" class="modal1 content-hidden">
+<div data-modal="modalBuy" class="modal1 content-hidden">
     <form method="post" class="order">
-    <h3 class="modal__title1">Оформление</h3>
+        <button data-modal_butt="closeBut" class="modal__close1">X</button>
+    <h3 class="modal__title">Оформление</h3>
     <div class="reg">
-        <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></ul>
-        <ul><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></ul>
-        <ul><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></ul>
-        <ul><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></ul>
-        <div>
+        <div class="pole"><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></div>
+        <div class="pole"><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></div>
+        <div class="pole"><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
+        <div class="pole"><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
+        <div class="pole">
             <label for="date">Дата начала посещения</label>
-            <input type="date" name="date">
+            <div class="date">
+                <input type="date" name="date">
+            </div>
+            
         </div>
         <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
             <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
-            <input type="button" class="submit" value="Продолжить">
-            <button data-modal_butt="closeBut" class="modal__close1">X</button>
+                <div class="knop"> 
+                    <button data-modal_butt="add_offers" class="ch-add">Выберете доп. предложения</button>
+                </div>
+                <div class="knop">
+                    <input type="button" class="submit" value="Продолжить">
+                </div>
+               
+            
+               
+            
     </div>
-    <div class="modal__another">
-        <p>Дополнительные программы</p>
-        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
-        </ul>
-        <div>                
-            <label>Даты посещения</label>
-            <div class="container mt-2">
-                <div class="row">
-                    <div class="col-md-4 offset-mt-1">
-                        <input type="text" id="airdatepicker" class="form-control">
+    
+    <div data-modal="modal_offers" class="modal__another content-hidden">
+        <button data-modal_butt="close-offers" class="close-offers">Х</button>
+        <p class="modal__title">Дополнительные программы</p>
+        <div class="additional">
+            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
+            </div>
+            <div>        
+                <div class="going">
+                    <label>Даты посещения</label>
+                <button data-modal_butt="ch-date1" class="ch-date">Выберете дату</button>
+                </div>        
+                
+                <div data-modal="modal-date1" class="modal-date content-hidden">
+                    <div class="container mt-2">
+                        <div class="row">
+                            <button data-modal_butt="close-date1" class="modal-close">Х</button>
+                            <div class="col-md-18 offset-mt-1">
+                                <input type="text" id="input" class="form-control">                            
+                            </div>
                             
-                    </div>
-                </div>                
-            </div>        
+                        </div>                
+                    </div>  
+                </div>      
+            </div>
+            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Бассейн<Br></div>
+            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Индивидуальные тренировки<Br></div>
+                <div>    
+                    <div class="going">
+                        <label>Даты посещения</label>
+                    <button data-modal_butt="ch-date2" class="ch-date">Выберете дату</button>
+                    </div>            
+                    
+                    <div data-modal="modal-date2" class="modal-date content-hidden">
+                        <div class="container mt-2">
+                            <div class="row">
+                                <button data-modal_butt="close-date2" class="modal-close">Х</button>
+                                <div class="col-md-18 offset-mt-1">
+                                    <input type="text" id="date" class="form-control">                            
+                                </div>
+                                
+                            </div>                
+                        </div>  
+                    </div>      
+                </div>
         </div>
-        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Бассейн<Br></ul>
-        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Индивидуальные тренировки<Br></ul>
-            
-            
+        
     </div>
 </form>
 <div class="overlay"></div> 
