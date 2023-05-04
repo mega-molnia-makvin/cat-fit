@@ -1,5 +1,5 @@
 import {makeAutoObservable} from "mobx";
-import { name } from "webix";
+
 
 export default class SportStore {
     constructor(){
