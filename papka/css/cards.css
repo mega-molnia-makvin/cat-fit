@@ -70,6 +70,27 @@ article{
     flex-direction: column;
     margin-top: 1vi;
 }
+.knop a{
+    position: relative;
+    /*    top: -25vi; */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.3vi;
+        display: inline-block;
+        color: #494030;
+        text-decoration: none;
+        font-weight: bold;
+        line-height: 1;
+        margin-left: -6vi;
+        z-index: 1;
+        padding-left: 6vi;
+        text-transform: uppercase;
+        transition: color .1s linear;
+        -webkit-transition: color .1s linear;
+        -moz--transition: color .1s linear;
+        -webkit-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
+    -moz-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
+    text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
+}
 .modal-date{
     z-index: 20000;
     background: rgba(214, 214, 214, 0.959); 
