@@ -7,20 +7,38 @@ const User = sequelize.define("user", {
   surname: { type: DataTypes.STRING },
   patronymic: { type: DataTypes.STRING },
   password: { type: DataTypes.STRING },
-  phone: { type: DataTypes.INTEGER, unique: true },
+  role: { type: DataTypes.STRING, defaultValue: "USER" },
+  telephone: { type: DataTypes.STRING, unique: true },
 });
 
 const Card = sequelize.define("card", {
-  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  number: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   firstDate: { type: DataTypes.DATE },
   lastDate: { type: DataTypes.DATE },
 });
 
-const Card_NamedSports = sequelize.define("card_namedsport", {
+
+const Card_Training = sequelize.define("card_training", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  firstDate: { type: DataTypes.DATE },
-  lastDate: { type: DataTypes.DATE },
-  // namedSport: { type: DataTypes.STRING },
+});
+
+const Training = sequelize.define("training", {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  date: { type: DataTypes.DATE },
+  numberOfPlaces: { type: DataTypes.INTEGER },
+  numberOfAvailablePlaces: { type: DataTypes.INTEGER },
+});
+
+const Sports = sequelize.define("sports", {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  firstTime: { type: DataTypes.TIME },
+  lastTime: { type: DataTypes.TIME },
+  dayofWeek: { type: DataTypes.STRING },
+});
+
+const Named_Sport = sequelize.define("named_sports", {
+  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  name: { type: DataTypes.STRING },
 });
 
 const Master = sequelize.define("master", {
@@ -33,43 +51,30 @@ const Master = sequelize.define("master", {
   img: { type: DataTypes.STRING },
 });
 
-const Named_Sport = sequelize.define("named_sports", {
-  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  name: { type: DataTypes.STRING },
-  numberofVacancies: { type: DataTypes.INTEGER },
-});
-
-const Sports = sequelize.define("sports", {
-  id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-
-  firstTime: { type: DataTypes.TIME },
-  lastTime: { type: DataTypes.TIME },
-  dayofWeek: { type: DataTypes.STRING },
-});
-
 Master.hasMany(Sports);
 Sports.belongsTo(Master);
 
-Master.hasMany(Named_Sport);
-Named_Sport.belongsTo(Master);
-
-Named_Sport.hasOne(Sports);
+Named_Sport.hasMany(Sports);
 Sports.belongsTo(Named_Sport);
 
-Named_Sport.hasMany(Card_NamedSports);
-Card_NamedSports.belongsTo(Named_Sport);
+Sports.hasMany(Training);
+Training.belongsTo(Sports);
 
-Card.hasMany(Card_NamedSports);
-Card_NamedSports.belongsTo(Card);
+User.hasOne(Card);
+Card.belongsTo(User);
 
-Card.hasOne(User);
-User.belongsTo(Card);
+Card.hasOne(Card_Training);
+Card_Training.belongsTo(Card);
+
+Training.hasOne(Card_Training);
+Card_Training.belongsTo(Training);
 
 module.exports = {
   User,
   Master,
   Sports,
   Named_Sport,
-  Card_NamedSports,
+  Card_Training,
+  Training,
   Card,
 };
