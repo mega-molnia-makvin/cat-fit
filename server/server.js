@@ -9,6 +9,9 @@ const router = require("./route/main");
 const errHandling = require("./middleware/errorHandingMiddleware.js");
 const path = require("path");
 
+
+
+
 const port = process.env.port || 5001;
 
 const app = express();
@@ -18,6 +21,7 @@ app.use(express.static(path.resolve(__dirname, "static")));
 
 app.use(fileUpload({}));
 app.use("/api", router);
+
 
 app.use(errHandling); //Обработка ошибки в самом конце
 
