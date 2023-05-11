@@ -15,13 +15,11 @@
     <body>
         <div class="header">
                 <button data-modal_butt="exit" class="header__custom-btn btn-8" >Выйти из ЛК</button>
-                <nav class="header__menu header__row">
-                <a href="index.html" >Главная</a>
-                <a href="team.html" >Наша команда</a>
-                <a href="timetab.html" >Расписание</a>
-                <a href="cards.html" >Карты</a>
-                <div class="animation start-home"></div>
-            </nav>
+
+                <%- include('./partials/nav.ejs') %>
+
+
+
             <div id="header">
                 <h1 class="header__title">Личный кабинет</h1>
             </div>

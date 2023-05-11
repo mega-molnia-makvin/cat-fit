@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="manifest" sizes="32x32" href="img/minilogo.png">
+        <title> CAT FIT</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/team.css">
+</head>
+
+<body>
+    <div class="header">
+        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <%- include('./partials/nav.ejs') %>
+        <div id="header">
+            <h1 class="header__title">Наша команда</h1>
+        </div>
+    </div>
+    
+
+    <div class="block">
+        <article class="about">
+            <div class="content">
+                <div data-name="bayan">
+                    <h2 class="content-title">Групповые программы</h2>
+                </div>
+                <div class="content-hidden">
+                    <div class="about__description">
+                        <img class="img" src="img/1.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+        
+                    <div class="about__description">
+                        <img class="img" src="img/2.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+                    
+                </div>       
+            </div>
+            <div class="content">
+                <div data-name="bayan">
+                    <h2 class="content-title">Тренажерный зал</h2>
+                </div>
+                <div class="content-hidden">
+                    <div class="about__description">
+                        <img class="img" src="img/3.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+        
+                    <div class="about__description">
+                        <img class="img" src="img/4.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+        
+                    <div class="about__description">
+                        <img class="img" src="img/8.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+                    
+                </div>
+        
+            </div>
+            <div class="content">
+                <div data-name="bayan">
+                    <h2 class="content-title">Бассейн</h2>
+                </div>
+                <div class="content-hidden">
+                    <div class="about__description">
+                        <img class="img" src="img/5.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+        
+                    <div class="about__description">
+                        <img class="img" src="img/6.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+        
+                    <div class="about__description">
+                        <img class="img" src="img/7.jpg">
+                        <h3>Классный обжора</h3>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        
+</article>
+    <div class="gif">
+        <img class="catvsbutterfly" src="img/cat.gif" alt="">
+        <img class="catvsfish" src="img/eatingcat.gif" alt="">
+        <div class="wrapper">
+            <svg xmlns="http://www.w3.org/2000/svg" width="500" height="200" viewBox="0 0 1300 399">
+                <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(6 271)">
+                    <tspan x="0" y="0">Уже ознакомились?</tspan>
+                </text>
+            </svg>
+        </div>
+    </div>
+    </div>
+  
+        
+            <footer class="contacts">
+                <div>
+                <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+                <h3>Тел.: meow, спросить Барсика</h3>
+            </div>
+            </footer>
+            <div data-modal="modal0" class="modal content-hidden">
+                <form class="form" method="post">
+                    <h3 class="modal__title">Вход</h3>
+                    <div class="modal__data">
+                        <div class="label">
+                            <input id="log" type="login" required="required" name="login" autocomplete="on"/>
+                            <span>Номер телефона</span>
+                        </div>
+                        <div class="label">
+                            <input id="pas" type="password" required="required" name="password"/>
+                            <span>Пароль</span>
+                        </div>
+                        <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                        <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+                    </div>
+                </form>
+                <div class="overlay"></div>            
+        </div>
+        
+    <script src="scripts/main.js"></script>
+    <script src="scripts/team.js"></script>
+</body>
+</html>
