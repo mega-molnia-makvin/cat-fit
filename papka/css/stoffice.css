@@ -6,12 +6,18 @@
     text-align: center;
     
 }
+.header__title{
+    margin-top: -5vi;
+}
 .information{
 
     position: relative;
     margin-top: 0vb;
     margin-left: 0vi;
 
+}
+.about{
+    top: -3.8vi;
 }
 
 .data{
