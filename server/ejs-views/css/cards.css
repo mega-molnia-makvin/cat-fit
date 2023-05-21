@@ -25,6 +25,16 @@ article{
 .ch-date{
     padding: 7px 25px;
 }
+.input-date{
+    position: relative;
+    margin-top: 1.5vi;
+    margin-left: 1.5vi;
+}
+.form-control{
+    width: 15.5vi;
+    height: 2vi;
+    border-radius: 5px;
+}
 .going{
     margin-top: -2.7vi;
     margin-left: 20vi;
@@ -97,7 +107,7 @@ article{
     position: fixed;
     top: 30vb;
     right: 30vi;
-    bottom: 20vb;
+    bottom: 22vb;
     left: 50vi;
     border-radius: 20px;
     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
@@ -119,11 +129,16 @@ article{
 .modal-close{
     position: relative;
     border: none;
+    margin-left: 16.9vi;
+    margin-top: .5vi;
     background: rgba(214, 214, 214, 0.959); 
     font-weight: bold;
     font-size: 1vi;
     cursor: pointer;
     text-align: right;
+}
+.anketa{
+    color: rgb(93, 143, 126);
 }
 .modal1{
     z-index: 20000;

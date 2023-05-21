@@ -32,9 +32,9 @@
                 </TR>
                 <TD>1</TD> 
                 <TD>
-                  <% if (trainings.length) { %>
-                    <% trainings.forEach(({name, time}) => { %>
-                        <p> <%= name %> <br> <%= time %>  </p>
+                  <% if (sports.length) { %>
+                    <% sports.forEach(({dayofWeek, price}) => { %>
+                        <p> <%= dayofWeek %> <br> <%= price %>  </p>
                     <% }) %>
                 <% } %> 
                 </TD>

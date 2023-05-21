@@ -44,3 +44,10 @@ butOffer.addEventListener("click",function(){
 closeOffer.addEventListener("click",function(){
     modalOffer.classList.add('content-hidden')
 })
+// function lk(){
+//     var login=document.getElementById('log').value;
+//     var password=document.getElementById('pas').value;
+//     if (login && password){
+//     window.location.href='/pay';}
+//     else alert('Заполните все поля');
+// }

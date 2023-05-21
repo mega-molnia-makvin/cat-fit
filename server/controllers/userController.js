@@ -21,7 +21,7 @@ class UserController {
   }
 
   async registration(req, res, next) {
-    const {name, surname, patronymic, password, telephone, firstDate, lastDate, role} = req.body;
+    const {name, surname, telephone, password, firstDate, lastDate  } = req.body;
     if (!telephone || !password) {
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }

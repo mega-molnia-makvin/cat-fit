@@ -135,7 +135,7 @@
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon -e js, ejs"
   },
   "repository": {
     "type": "git",

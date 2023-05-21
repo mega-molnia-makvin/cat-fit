@@ -5,7 +5,6 @@ const User = sequelize.define("user", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING, allowNull: false },
   surname: { type: DataTypes.STRING },
-  patronymic: { type: DataTypes.STRING },
   password: { type: DataTypes.STRING },
   role: { type: DataTypes.STRING, defaultValue: "USER" },
   telephone: { type: DataTypes.STRING, unique: true },
@@ -29,14 +28,15 @@ const Training = sequelize.define("training", {
   numberOfAvailablePlaces: { type: DataTypes.INTEGER },
 });
 
-const Sports = sequelize.define("sports", {
+const Sports = sequelize.define("sport", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   firstTime: { type: DataTypes.TIME },
   lastTime: { type: DataTypes.TIME },
+  price: {type: DataTypes.INTEGER },
   dayofWeek: { type: DataTypes.STRING },
 });
 
-const Named_Sport = sequelize.define("named_sports", {
+const Named_Sport = sequelize.define("named_sport", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
   name: { type: DataTypes.STRING },
 });

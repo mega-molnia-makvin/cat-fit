@@ -9,5 +9,9 @@ module.exports = new Sequelize(
     dialect: "postgres",
     host: process.env.dbHost,
     port: process.env.dbPort,
-  }
+    define:{
+      freezeTableName: true,
+      },
+  },
+  
 );

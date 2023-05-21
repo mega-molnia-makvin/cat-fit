@@ -29,7 +29,7 @@ app.use(errHandling); //Обработка ошибки в самом конце
 const start = async () => {
   try {
     await sequelize.authenticate();
-    await sequelize.sync();
+    await sequelize.sync({alter: true});
     app.listen(port, () => console.log("Server started on port " + port));
   } catch (e) {
     console.log(e);
