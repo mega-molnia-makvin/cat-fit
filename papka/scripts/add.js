@@ -1,11 +1,17 @@
-let btn=document.getElementsByClassName("btn-extend");
-btn.addEventListener("click",function(e){
-    const x =e.clientX- e.target.offsetLeft;
-    const y =e.clientY- e.target.offsetTop;
-    const rip=document.createElement("span");
-    rip.classList.add("ripl");
-    rip.style.left=x+"px";
-    rip.style.top=y+"px";
-    btn.appendClid(rip);
-
+const btn=document.querySelectorAll(".btnadd");
+btn.forEach(button =>{
+    button.addEventListener("click",function(e){
+        const x =e.pageX;
+        const y =e.pageY;
+        const btnTop=e.target.offsetTop;
+        const btnLeft=e.target.offsetLeft;
+        const xInside=x-btnLeft;
+        const yInside=y-btnTop;
+        const rip=document.createElement("span");
+        rip.classList.add("ripl");
+        rip.style.left=xInside+"px";
+    rip.style.top=yInside+"px";
+    this.appendChild(rip);
+    setTimeout(()=>rip.remove(),1000)
+}) 
 })

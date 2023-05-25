@@ -28,7 +28,6 @@
 
     
 }
-
 .plan{
     position: relative;
     margin-top: 0vb;
@@ -36,9 +35,21 @@
     text-align: center;
     font-size: 250%;
 }
-
 .schedule{
     position: relative;
     margin-top: 5vb;
     margin-left: -3vi;
+}
+.btnadd{
+    font-size: 1.6vi;
+    padding: 12px 18px;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    color: cadetblue;
+    font-weight: 600;
+    background-color: linear-gradient(83deg,#8a8a8a 50%,#047b839f 50%);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 4px #363636;
 }
