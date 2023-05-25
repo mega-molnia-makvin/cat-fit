@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="manifest" sizes="32x32" href="img/minilogo.png">
+        <title> CAT FIT</title>
+        <link rel="stylesheet" href="css/stoffice.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Admin.css">
+    </head>
+    <body>
+        <div class="header">
+                <button data-modal_butt="exit" class="header__custom-btn btn-8" >Выйти</button>
+               
+            <div id="header">
+                <h1 class="header__title">Админ-страница</h1>
+            </div>
+        </div> 
+
+        <article class="about">
+            <div class="content">
+                <div data-name="bayan">
+                        <button data-modal_butt="coach" class="add_master">Добавить тренера </button>
+                    </div>
+                </div>
+                
+            
+           
+        </article>
+            
+          <div data-modal="modalc" class="modal content-hidden">
+                <form class="form" method="post">
+                    <h3 class="modal__title">Добавление тренера</h3>
+                    <div class="modal__data">
+                        <div class="label">
+                            <input id="log" type="login" required="required" name="login" autocomplete="on"/>
+                            <span>ФИО</span>
+                        </div>
+                        <div class="label">
+                            <input id="pas" type="login" required="required" name="login"/>
+                            <span>Телефон</span>
+                        </div>
+                        <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                        <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+                    </div>
+                </form>
+                <div class="overlay"></div>            
+        </div>
+
+        <div class="contacts">
+            <footer>
+                <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+                <h3>Тел.: meow, спросить Барсика</h3>
+            </footer>
+        </div>
+        <script src="scripts/Admin.js"></script>
+    </body>
+</html>
