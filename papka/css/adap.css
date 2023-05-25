@@ -21,33 +21,194 @@
         padding: 25px 40px;
         margin-left: 7vi;
     }
-    nav .start-home,a:nth-child(1):hover~.animation{
-        top: 1vi;
-        width: 15vi;
-        left: 11.8vi;
-    }
-    nav .start-team,a:nth-child(2):hover~.animation{
-        top: 1vi;
-        width: 23vi;
-        left: 28.9vi;
-    }
-    nav .start-schedule,a:nth-child(3):hover~.animation{
-        top: 1vi;
-        width: 20vi;
-        left: 53.9vi;
-    }
-    nav .start-cards,a:nth-child(4):hover~.animation{
-        top: 1vi;
-        width: 13vi;
-        left: 75.8vi;
-    }
     }
     @media (max-width: 1490px) {
         .modal__submit{
-            padding: 30px 45px;
+            padding: 30px 35px;
         }
         .modal__close{
             top: -24.8vi;
         }
         
+    }
+    @media (max-width: 1452px) {
+        .modal__close{
+            left: 15vi;
+        }
+        
+    }
+    @media (max-width: 1423px) {
+        .modal__close{
+            top: -25.8vi;
+        }
+        
+    }
+    @media (max-width: 1391px) {
+        .modal__close{
+            top: -26.8vi;
+        }
+        
+    }
+    @media (max-width: 1344px) {
+        .modal__submit{
+            padding: 25px 25px;
+        }
+        .modal__close{
+            top: -26.5vi;
+            left: 14.7vi;
+        }
+        .label input{
+            padding: 30px 30px 10px;
+        }
+        
+    }
+    @media (max-width: 1306px) {
+        .modal{
+            top: 20vb;
+            right: 31vi;
+            bottom: 28vb;
+            left: 30vi;
+        }
+        .modal__close{
+            top: -27vi;
+            left: 14vi;
+        }
+        
+    }
+    @media (max-width: 1252px) {
+        .modal__close{
+            top: -27.7vi;
+            left: 13.7vi;
+        }
+        .label input{
+            padding: 30px 23px 10px;
+        }
+        
+    }
+    @media (max-width: 1216px) {
+        .modal__close{
+            top: -28vi;
+            left: 13vi;
+        }
+    }
+    @media (max-width: 1180px) {
+        .modal__close{
+            top: -29vi;
+            left: 12.8vi;
+        }
+        .label input{
+            padding: 30px 20px 10px;
+        }
+        .modal__title{
+            font-size: 2.7vi;
+        }
+    }
+    @media (max-width: 1152px) {
+        .modal__close{
+            top: -29.9vi;
+            left: 12.8vi;
+        }
+    }
+    @media (max-width: 1143px) {
+        .modal__close{
+            top: -29.9vi;
+            left: 12vi;
+        }
+        .label input{
+            padding: 30px 18px 10px;
+        }
+    }
+    @media (max-width: 1112px) {
+        .modal__close{
+            top: -30.6vi;
+        } 
+        .label input{
+            padding: 30px 10px 10px;
+        } 
+        .label span{
+            font-size: 1.2em;
+        }      
+    }
+    @media (max-width: 1098px) {
+        .modal__close{
+            top: -31vi;
+            left: 11.5vi;
+        }     
+    }
+    @media (max-width: 1058px) {
+        .modal__close{
+            top: -32vi;
+            left: 11vi;
+        }
+        .label input{
+            padding: 30px 5px 10px;
+        }     
+        .modal__submit{
+            padding: 20px 20px;
+        } 
+    }
+    @media (max-width: 1027px) {
+        .modal__close{
+            top: -33vi;
+            left: 10.7vi;
+        }
+        .label input{
+            padding: 30px 1px 10px;
+            left: -1vi;
+        }     
+    }
+    @media (max-width: 1013px) {
+        .modal__close{
+            top: -33.5vi;
+            left: 10.3vi;
+        }     
+    }
+    @media (max-width: 991px) {
+        .modal__close{
+            left: 10vi;
+        } 
+        .label input{
+            padding: 30px 1px 10px;
+            left: -1.5vi;
+        }     
+    }
+    @media (max-width: 975px) {
+        .modal__close{
+            top: -34vi;
+            left: 9.7vi;
+        } 
+        .label input{
+            padding: 30px 1px 10px;
+            left: -1.5vi;
+        }     
+    }
+    @media (max-width: 964px) {
+        .modal__close{
+            top: -34.5vi;
+        } 
+         
+    }
+    @media (max-width: 947px) {
+        .modal__close{
+            top: -35.2vi;
+            left: 9vi;
+        } 
+        .label input{
+            padding: 30px 1px 10px;
+            left: -2vi;
+        } 
+         
+    }
+    @media (max-width: 923px) {
+        .modal__close{
+            top: -35.8vi;
+            left: 10vi;
+        } 
+        .label input{
+            padding: 30px 1px 10px;
+            left: -2.5vi;
+        } 
+        .modal__submit{
+            margin-left: 5vi;
+        }
     }

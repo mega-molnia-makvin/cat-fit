@@ -3,26 +3,20 @@
     margin-top: 0vb;
     margin-left: 37vi;
     border-radius: 40px;
-    text-align: center;
-    
+    text-align: center;    
 }
 .information{
 
     position: relative;
     margin-top: 0vb;
     margin-left: 0vi;
-
 }
-
 .data{
 
     position: relative;
     margin-top: 0vb;
     margin-left: 0vi;
-
-    
 }
-
 .plan{
     position: relative;
     margin-top: 0vb;
@@ -30,9 +24,20 @@
     text-align: center;
     font-size: 250%;
 }
-
 .schedule{
     position: relative;
     margin-top: 5vb;
     margin-left: -3vi;
 }
+/* .btn-extend{
+    font-size: 1.6rem;
+    padding: .7rem 2.4rem;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    color: cadetblue;
+    font-weight: 600;
+    background-color: linear-gradient(83deg,#8a8a8a 50%,#047b839f 50%);
+    position: relative;
+    cursor: pointer;
+} */
