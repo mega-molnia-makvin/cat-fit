@@ -41,15 +41,46 @@
     margin-left: -3vi;
 }
 .btnadd{
+    margin-top: 1vi;
     font-size: 1.6vi;
-    padding: 12px 18px;
+    padding: 20px 40px 10px 100px;
     outline: none;
     border: none;
     border-radius: 2rem;
     color: cadetblue;
     font-weight: 600;
-    background-color: linear-gradient(83deg,#8a8a8a 50%,#047b839f 50%);
+    height: 2.8em;
+    background: rgb(207, 175, 175);
+    display: flex;
+    background-color: linear-gradient(to right,#353434 50%,#047b839f 50%);
     position: relative;
     cursor: pointer;
     box-shadow: 0 0 4px #363636;
+}
+.btnadd .btn-text{
+    letter-spacing: .05em;
+    font-weight: bold;
+    text-align: center;
+}
+.btnadd .btn-icons{
+    margin-right: 1em;
+    position: absolute;
+    left: .3em;
+    height: 1.4em;
+    width: 2.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(145, 80, 80);
+    border-radius: 10px;
+    transition: all .3s;
+}
+.btnadd .btn-icons i{
+    width: 1.1em;
+    transition: transform .3s;
+    color: rgb(243, 219, 187);
+    transform: translateX(.1em);
+}
+.btnadd:hover .btn-icons{
+    width: calc(100% - .6em);
 }
