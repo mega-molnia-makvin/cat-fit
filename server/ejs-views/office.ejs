@@ -27,43 +27,128 @@
         <article class="about">
             <img src="img/arms.webp" alt="" width="100" class="avatar">
             <div class = "information">         
-                <h2> Фамилия</h2>
-                <h2> Имя</h2>
-                <h2> Отечество</h2>
-                <h2> Номер телефона</h2>
-                <h2> Номер карты</h2>
-                <h2> Срок действия карты</h2>
+                <h2> Фамилия: <%= user.surname %> </h2>
+                <h2> Имя: <%= user.name %></h2>
+                <h2> Номер телефона: <%= user.telephone %></h2>
+                <h2> Номер карты: <%= user.card.number %></h2>
+                <h2> Дата начала действия карты: <%= user.card.firstDate.getFullYear()%>-0<%=user.card.firstDate.getMonth()+1%>-<%=user.card.firstDate.getDate()%></h2> 
+
+                <h2> Дата окончания действия карты: <%= user.card.lastDate.getFullYear()%>-0<%=user.card.lastDate.getMonth()+1%>-<%=user.card.lastDate.getDate()%></h2> 
             </div>
-            <!-- 
-            <div class = "data">          
-                <h2> Зайцев</h2>
-                <h2> Иван</h2>
-                <h2> Петрович</h2>
-                <h2> 89004562345</h2>
-                <h2> 1234-5567-8965-2345</h2>
-                <h2> до 20 мая 2022 года</h2>
-            </div>
-        -->
-            <h2 class="plan">Расписание</h2>
+            
+
+
+            <h2 class="plan">Расписание на неделю</h2>
             <div class="schedule">
                 <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                     <TR BGCOLOR="#C99C52" ALIGN="CENTER">
-                    <TD> </TD> <TD>Понедельник</TD> <TD>Вторник</TD>
-                    <TD>Среда</TD><TD>Четверг</TD><TD>Пятница</TD>
-                    <TD>Суббота</TD><TD>Воскресенье</TD>
+                     <TH>Понедельник</TH> <TH>Вторник</TH>
+                    <TH>Среда</TH><TH>Четверг</TH><TH>Пятница</TH>
+                    <TH>Суббота</TH><TH>Воскресенье</TH>
                     </TR>
-                    <TD>1</TD> <TD></TD>
-                    <TD></TD> <TD></TD> <TD></TD>
-                    <TD></TD> <TD></TD> <TD></TD>
+                    <TD>
+                        <% if (sports.length) { %>
+                        <% sports.forEach((sport) => { %>
+                                     
+                            <% if (sport.dayofWeek === "Понедельник") { %>
+                            <p> 
+                                <%= sport.named_sport.name %>  <br>
+                                Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                 <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                
+                            </p>
+                            <% } %>
+                        <% }) %>
+                    <% } %> 
+                    </TD>
+                    <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Вторник") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                     
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD> <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Среда") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                     
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD> <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Четверг") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                    
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD>
+                    <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Пятница") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                    
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD> <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Суббота") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                  
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD> <TD>
+                        <% if (sports.length) { %>
+                            <% sports.forEach((sport) => { %>
+                                         
+                                <% if (sport.dayofWeek === "Воскресенье") { %>
+                                <p> 
+                                    <%= sport.named_sport.name %>  <br>
+                                    Тренер: <%= sport.master.name %> <%= sport.master.surname %>  <br>
+                                     <%= sport.firstTime.slice(0,5) %> - <%= sport.lastTime.slice(0,5) %> <br>
+                                     
+                                </p>
+                                <% } %>
+                            <% }) %>
+                        <% } %> 
+                    </TD>
                     </TR>
-                    <TD>2</TD> <TD></TD>
-                    <TD></TD> <TD></TD><TD></TD>
-                    <TD></TD> <TD></TD> <TD></TD>
-                    </TR>
-                    <TD>3</TD> <TD></TD>
-                    <TD></TD> <TD></TD> <TD></TD>
-                    <TD></TD> <TD></TD> <TD></TD>
-                    </TR>
+                   
                 </TABLE>
             </div>
         </article>

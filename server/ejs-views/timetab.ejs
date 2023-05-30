@@ -26,29 +26,124 @@
         <div class="about__timetable">
             <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                 <TR BGCOLOR="#C99C52" ALIGN="CENTER">
-                <TD> </TD> <TD>Понедельник</TD> <TD>Вторник</TD>
+                <TD>Понедельник</TD> <TD>Вторник</TD>
                 <TD>Среда</TD><TD>Четверг</TD><TD>Пятница</TD>
                 <TD>Суббота</TD><TD>Воскресенье</TD>
-                </TR>
-                <TD>1</TD> 
+                </TR>               
                 <TD>
-                  <% if (sports.length) { %>
-                    <% sports.forEach(({dayofWeek, price}) => { %>
-                        <p> <%= dayofWeek %> <br> <%= price %>  </p>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Понедельник") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button onclick="document.location='/pay?id=5'"  target="_blank"> Купить </button> 
+                        </p>
+                        <% } %>
                     <% }) %>
                 <% } %> 
                 </TD>
-                <TD></TD> <TD></TD> <TD></TD>
-                <TD></TD> <TD></TD> <TD></TD>
-                </TR>
-                <TD>2</TD> <TD></TD>
-                <TD></TD> <TD></TD><TD></TD>
-                <TD></TD> <TD></TD> <TD></TD>
-                </TR>
-                <TD>3</TD> <TD></TD>
-                <TD></TD> <TD></TD> <TD></TD>
-                <TD></TD> <TD></TD> <TD></TD>
-                </TR>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Вторник") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Среда") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Четверг") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Пятница") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Суббота") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                <TD>
+                    <% if (trainings.length) { %>
+                    <% trainings.forEach((article) => { %>
+                                 
+                        <% if (article.dayofWeek === "Воскресенье") { %>
+                        <p> 
+                            <%= article.named_sport.name %>  <br>
+                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                              Цена: <%= article.price %>  <br>
+                            <button> Купить </button> 
+                        </p>
+                        <% } %>
+                    <% }) %>
+                <% } %> 
+                </TD>
+                
+
                 </TABLE>
         </div>
         <div>

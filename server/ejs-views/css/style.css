@@ -327,3 +327,31 @@ nav .start-cards,a:nth-child(4):hover~.animation{
     left: 12vi;
     width: 79vi;
 }
+
+
+
+
+/* тест */
+.login-form {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    font-size: 2.2rem;
+  }
+  
+  .login-form form {
+    width: 40%;
+  }
+  
+  .form-control {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .form-control label {
+    display: block;
+    margin-bottom: 1rem;
+  }

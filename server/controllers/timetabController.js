@@ -1,37 +1,36 @@
 const { User, Master, Sports, Named_Sport, Card_Training, Training, Card} = require('../models/models');
 const ApiError = require("../error/ApiError");
+const path = require("path");
+const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page}.ejs`);
 
 class timetabController {
-    async getAll(req, res) {
-        const { name, surname, patronymic } = req.query;
-        let masters;
-        if (name) {
-        masters = await Master.findAll({ where: { name } });
-        } else {
-        masters = await Master.findAll();
-        }
+    async getAll(req, res){
 
-        return res.json(masters);
+            
+            const sports = await Sports.findAll({
+                include:  [{
+                    model: Named_Sport,
+                    attributes: ["name"]
+                },
+                {
+                    model: Master,
+                    attributes: ["name", "surname"]
+                },
+            ]
+            });
+
+        
+
+
+           // console.log(sports2);
+        
+            res.render(createPath('timetab'), {trainings: sports});
+            //res.send(sports);
+     
+            
     }
-
-  async getAll(req, res) {
-    const card=await Card.findAll()
-    return res.json(card)
-  }
 }
 
-const users = await User.findAll({
-  include: {
-    model: Tool,
-    as: 'Instruments',
-    include: {
-      model: Teacher,
-      include: [
-        /* и т.д. */
-      ]
-    }
-  }
-})
-console.log(JSON.stringify(users, null, 2))
+
 
 module.exports = new timetabController ;

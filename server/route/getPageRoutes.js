@@ -4,22 +4,23 @@ const cardController = require('../controllers/cardController')
 const path = require("path");
 const  {User, Master, Sports,Named_Sport, Card_Training,Training,Card} = require("../models/models")
 
+const timetabController = require("../controllers/timetabController");
+const officeController = require("../controllers/officeController");
+
 
 const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page}.ejs`);
 
 
 router.get('/card', (req, res)=>{
-    res.render(createPath('cards'));
-    //res.send(str);
+    //res.render(createPath('cards'));
+    res.send(str);
 } );
 
 router.get("/", (req, res)=>{
     res.render(createPath('index'));
 } );
 
-router.get("/office", (req, res)=>{
-    res.render(createPath('office'));
-} );
+router.get("/office", officeController.getAll );
 
 router.get('/team', (req, res)=>{
     res.render(createPath('team'));
@@ -29,16 +30,9 @@ router.get('/pay', (req, res)=>{
     res.render(createPath('pay'));
 } );
 
-router.get('/timetab', (req, res)=>{
-    const title = 'Home'
+router.get('/timetab', timetabController.getAll );
 
-    
-    const sports =[
-        {dayofWeek: 'Пн', price: 100}
-    ];
 
-    res.render(createPath('timetab'), {title, sports});
-} );
 
 router.get('/', (req, res)=>{
     res.render(createPath('office'));

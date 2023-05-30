@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
+        <link rel="manifest" sizes="32x32" href="img/minilogo.png">
+        <title> CAT FIT</title>
+        <link rel="stylesheet" href="css/stoffice.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="header">
+                <button data-modal_butt="exit" class="header__custom-btn btn-8" >Выйти из ЛК</button>
+
+                <%- include('./partials/nav.ejs') %>
+
+
+            <div id="header">
+                <h1 class="header__title">Тест</h1>
+            </div>
+        </div> 
+
+        
+        <div class="login-form">
+            <form action = "/login" method="post">
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type = "text" name="name" id="username" placeholder="Enter your name." />
+                </div>
+                <div class = "form-control">
+                    <label for="password">Password</label>
+                    <input type = "password" name="password" id="password" placeholder="Enter your password, my lord." />
+                </div>
+                <div class="form-control">
+                    <button type="submit" class="btn"> Login</button> 
+                </div>
+            </form>
+        </div>
+            
+        <div class="contacts">
+            <footer>
+                <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
+                <h3>Тел.: meow, спросить Барсика</h3>
+            </footer>
+        </div>
+        <script src="./scripts/lk.js"></script>
+    </body>
+</html>
