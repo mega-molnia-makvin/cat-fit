@@ -12,8 +12,7 @@ const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page
 
 
 router.get('/card', (req, res)=>{
-    //res.render(createPath('cards'));
-    res.send(str);
+    res.render(createPath('cards'));
 } );
 
 router.get("/", (req, res)=>{

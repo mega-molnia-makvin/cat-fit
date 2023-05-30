@@ -13,21 +13,18 @@
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/team.css">
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/resources/demos/style.css" />
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/sunny/jquery-ui.css" /> -->
-
     <link rel="stylesheet" href="air-datepicker/air-datepicker.css">
 
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/e33ee0e3a9.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
+    <audio autoplay loop>
+        <source src="sounds/Loris Buono & Alexander Cruel - It's A Game [FREE DOWNLOAD].mp3">
+    </audio>
     <div class="header">
         <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
-        <%- include('./partials/nav.ejs') %>
+            <%- include('./partials/nav.ejs') %>
         <div id="header">
             <h1 class="header__title">Наши предложения</h1>
         </div>
@@ -110,6 +107,34 @@
         <footer>
             <h3>Адресс: ул. Пушистиков, дом Желтый</h3>
             <h3>Тел.: meow, спросить Барсика</h3>
+            <h3>Почта: kitties@mail.ru</h3>
+            <div class="icons">
+                <div class="icon github">
+                    <div class="tooltip">Github</div>
+                    <a class="git" href="https://github.com/mega-molnia-makvin/cat-fit">
+                        <span><i class="fab fa-github"></i></span>
+                    </a>
+                </div>
+                <div class="icon vk">
+                    <div class="tooltip">VK</div>
+                    <a class="viki" href="https://vk.com/bulochka_bao">
+                        <span><i class="fa-brands fa-vk"></i></span>
+                    </a>                            
+                </div>
+                <div class="icon youtube">
+                    <div class="tooltip">YouTube</div>
+                    <a class="yt" href="https://www.youtube.com/@yuukasagawa5483">
+                        <span><i class="fab fa-youtube"></i></span>
+                    </a>                            
+                </div>
+                <div class="icon telegram">
+                    <div class="tooltip">Telegram</div>
+                    <a class="tg" href="https://t.me/Bukochka_Bao">
+                        <span><i class="fa-brands fa-telegram"></i></span>
+                    </a>
+                    
+                </div>
+            </div>
         </footer>
     </div>
     <div data-modal="modal0" class="modal content-hidden">
@@ -135,73 +160,30 @@
         <button data-modal_butt="closeBut" class="modal__close1">X</button>
     <h3 class="modal__title">Оформление</h3>
     <div class="reg">
-        <div class="pole"><input required type="text" name="login" autocomplete="on" placeholder="Введите имя"/></div>
-        <div class="pole"><input required type="text" name="login" autocomplete="on" placeholder="Введите фамилию"/></div>
-        <div class="pole"><input required type="login" name="login" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
-        <div class="pole"><input required type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
-        <div class="pole">
-            <label for="date">Дата начала посещения</label>
-            <div class="date">
-                <input type="date" name="date">
-            </div>
-            
-        </div>
-        <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
-            <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
-                <div class="knop"> 
-                    <button data-modal_butt="add_offers" class="ch-add">Выберете доп. предложения</button>
-                </div>
-                <div class="knop">
-                    <p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
-                    <a class="cont" href="/pay">Продолжить</a>
-                </div>
-               
-            
-               
-            
+        <div class="pole required"><input type="text" name="name" autocomplete="on" placeholder="Введите имя" pattern="[A-Za-zА-Яа-яЁё]"/></div>
+<div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию" pattern="[A-Za-zА-Яа-яЁё]"/></div>
+<div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона" pattern="[0-9]+11"/></div>
+<div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
+<div class="pole required">
+<label for="date">Дата начала посещения</label>
+<div class="date">
+<input type="date" name="date">
+</div>
+
+</div>
+<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
+<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
+<div class="knop">
+<p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
+<button class="cont"><a href="/pay">Продолжить</a></button>
+</div>
+
     </div>
     
-    <div data-modal="modal_offers" class="modal__another content-hidden">
-        <button data-modal_butt="close-offers" class="close-offers">Х</button>
-        <p class="modal__title">Дополнительные программы</p>
-        <div class="additional">
-            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
-            </div>
-            <div>        
-                <div class="going">
-                    <label>Даты посещения</label>
-                <button data-modal_butt="ch-date1" class="ch-date">Выберете дату</button>
-                </div>        
-                
-                <div data-modal="modal-date1" class="modal-date content-hidden">                    
-                            <button data-modal_butt="close-date1" class="modal-close">Х</button>
-                            <div class="input-date">
-                                <input type="text" id="input" class="form-control">                            
-                            </div>                          
-                </div>      
-            </div>
-            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Бассейн<Br></div>
-            <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Индивидуальные тренировки<Br></div>
-                <div>    
-                    <div class="going">
-                        <label>Даты посещения</label>
-                    <button data-modal_butt="ch-date2" class="ch-date">Выберете дату</button>
-                    </div>            
-                    
-                    <div data-modal="modal-date2" class="modal-date content-hidden">                        
-                                <button data-modal_butt="close-date2" class="modal-close">Х</button>
-                                <div class="input-date">
-                                    <input type="text" id="date" class="form-control">                            
-                                </div>                               
-                    </div>      
-                </div>
-        </div>
-        
-    </div>
+   
 </form>
 <div class="overlay"></div> 
 </div> 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
     <script src="scripts/main.js"></script>
     <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>

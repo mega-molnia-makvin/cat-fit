@@ -46,7 +46,7 @@ class officeController {
             } ],
             where: {id: 1}   
         });
-        console.log(JSON.stringify(sports, null, 2));
+        //console.log(JSON.stringify(sports, null, 2));
         
             res.render(createPath('office'), { user, sports});
             //res.send(user);

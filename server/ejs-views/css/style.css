@@ -21,29 +21,30 @@ body{
   position: relative;
   width: 60%;
   margin-left: 25%;
+  margin-top: -3vi;
 }
 .header__logo{
     position:relative;
-    margin-left: 60%;
+    margin-left: 55%;
     top: -12vi;
     width: 15%;
+    height: 12vi;
 }
 .header__title{
     font-family: Pussyfoot;
     src: url(pussyfoot\PUSSYFOO.TTF) format('TrueType');
     font-display: swap;
     position:relative;
-/*    left: 30vi; */
     top: 5vi;
     font-size: 7vi;
 }
 .header__menu{
     text-align: center;
-    margin-left: -7vi;
+    margin-left: -4vi;
+    margin-top: -2vi;
 }
 .header__menu a{
     position: relative;
-/*    top: -25vi; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5vi;
     display: inline-block;
@@ -52,7 +53,9 @@ body{
     font-weight: bold;
     line-height: 1;
     z-index: 1;
-    padding-left: 6vi;
+    margin-left: 3vi;
+    padding: 27px 30px;
+    border-radius: 60px;
     text-transform: uppercase;
     transition: color .1s linear;
     -webkit-transition: color .1s linear;
@@ -61,52 +64,15 @@ body{
 -moz-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
 text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
 }
-.header__menu a:after {
-    background-color: #4b2821;
-    display: block;
-    height: 2px;
-    content: "";
-    width: 0%;
-    -webkit-transition: width .3s ease-in-out;
-    -moz--transition: width .3s ease-in-out;
-    transition: width .3s ease-in-out;
-}
-.header__menu a:hover:after,
-.header__menu a:focus:after {
-    width: 100%;
-}
-.header__menu a:hover{
+
+.header__menu a:hover,
+.header__menu a.active{
     color: #885512f5;
-}
-nav .animation{
-    position: absolute;
-    height: 50%;
-    top: 3vi;
-    z-index: 0;
-    border-radius: 60px;
-    transition: all .5s ease 0s;
+    background-color: #ddccb3;
     background: linear-gradient(360deg,transparent,#daad4c70);
+
 }
-nav .start-home,a:nth-child(1):hover~.animation{
-    top: 1vi;
-    width: 15vi;
-    left: 11vi;
-}
-nav .start-team,a:nth-child(2):hover~.animation{
-    top: 1vi;
-    width: 23vi;
-    left: 28.5vi;
-}
-nav .start-schedule,a:nth-child(3):hover~.animation{
-    top: 1vi;
-    width: 20vi;
-    left: 53.4vi;
-}
-nav .start-cards,a:nth-child(4):hover~.animation{
-    top: 1vi;
-    width: 13vi;
-    left: 75vi;
-}
+
 .modal .overlay{
     position: fixed;
     top: 0;
@@ -301,8 +267,7 @@ nav .start-cards,a:nth-child(4):hover~.animation{
   }
 .about{
     position:relative;
-    margin-top: 20vi;
-    height: 50%;
+    margin-top: 7vi;
     width: 80%;
     margin-left: 7.9%; 
     background: rgba(190, 175, 131, 0.836);
@@ -317,41 +282,116 @@ nav .start-cards,a:nth-child(4):hover~.animation{
     padding-top: 3vb;
     width: 80%;
     height: 20%;
-    margin-top: 5%;
+    margin-top: 3%;
     margin-left: 20%;
 }
 .comment{
     position: relative;
-    top: 8vb;
+    top: 3vb;
     border: 2px solid rgb(189, 188, 188);
-    left: 12vi;
+    left: 10vi;
     width: 79vi;
 }
-
-
-
-
-/* тест */
-.login-form {
-    width: 60%;
-    margin: auto;
+.icons{
+    display: inline-flex;
+    margin-top: 3vi;
+}
+.icons .icon{
+    margin: 0 20px;
+    cursor: pointer;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 60vh;
-    font-size: 2.2rem;
-  }
-  
-  .login-form form {
-    width: 40%;
-  }
-  
-  .form-control {
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  
-  .form-control label {
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: all .5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.icons .icon span{
+    position: relative;
+    z-index: 2;
+    height:60px;
+    width: 60px;
     display: block;
-    margin-bottom: 1rem;
-  }
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    text-align: center;
+}
+.icons .icon:hover span{
+    color: #fff;
+}
+.icons .icon span i{
+    font-size: 25px;
+    line-height: 60px;
+}
+.icons .icon .tooltip{
+    position: absolute;
+    top: 0px;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.icons .icon:hover .tooltip{
+    top: -49px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.icons .icon .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+.icons .icon:hover span,
+.icons .icon:hover .tooltip
+{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+.icons .github:hover span,
+.icons .github:hover .tooltip,
+.icons .github:hover .tooltip:before{
+    background: #333;
+}
+.icons .vk:hover span,
+.icons .vk:hover .tooltip,
+.icons .vk:hover .tooltip:before{
+    background: #3d7ddf;
+}
+.icons .youtube:hover span,
+.icons .youtube:hover .tooltip,
+.icons .youtube:hover .tooltip:before{
+    background:red;
+}
+.icons .telegram:hover span,
+.icons .telegram:hover .tooltip,
+.icons .telegramhover .tooltip:before{
+    background:#0dc1fd;
+    
+}
+.icon .yt{
+    color: red;
+    text-decoration: none;
+}
+.icon .viki{
+    color: #3d7ddf;
+    text-decoration: none;
+}
+.icon .tg{
+    color: #0dc1fd;
+    text-decoration: none;
+}
+.icon .git{
+    color: black;
+    text-decoration: none;
+}
+
