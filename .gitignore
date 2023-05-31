@@ -1,42 +1,42 @@
 
 # Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+##logs
+# *.log
+#npm-debug.log*
+#yarn-debug.log*
+#yarn-error.log*
 
 # Runtime data
-pids
-*.pid
-*.seed
-*.pid.lock
+#pids
+# *.pid
+# *.seed
+# *.pid.lock
 
 # Dependency directories
 # node_modules/
 
 # Optional npm cache directory
-.npm
+# .npm
 
 # Optional eslint cache
-.eslintcache
+# .eslintcache
 
 # Optional REPL history
-.node_repl_history
+# .node_repl_history
 
 # Yarn Integrity file
-.yarn-integrity
+# .yarn-integrity
 
 # dotenv environment variables file
 #.env
 
 # Misc
-.DS_Store
-Thumbs.db
+# .DS_Store
+#Thumbs.db
 
 
 
 
 
 # Production build
-www/
+# www/
