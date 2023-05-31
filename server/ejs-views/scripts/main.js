@@ -12,13 +12,13 @@ buttonClose.addEventListener("click",function(){
 
 
 
-function lk(){
-    var login=document.getElementById('log').value;
-    var password=document.getElementById('pas').value;
-    if (login && password){
-    window.location.href='/office';}
-    else alert('Заполните все поля');
-}
+// function lk(){
+//     var login=document.getElementById('log').value;
+//     var password=document.getElementById('pas').value;
+//     if (login && password){
+//     window.location.href='/office';}
+//     else alert('Заполните все поля');
+// }
 
 
 

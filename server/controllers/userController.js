@@ -2,6 +2,7 @@ const ApiError = require("../error/ApiError");
 const bcrypt = require("bcrypt"); //для хэширования паролей для хранения в бд
 const jwt = require("jsonwebtoken");
 const { User, Card } = require("../models/models");
+//const getAll =require("./officeController");
 
 const generateJwt = (id, telephone, role) => {
   return jwt.sign({ id, telephone, role }, process.env.secretKey, {
@@ -21,7 +22,7 @@ class UserController {
   }
 
   async registration(req, res, next) {
-    const {name, surname, telephone, password, firstDate, lastDate  } = req.body;
+    const {name, role, surname, telephone, password, firstDate, lastDate  } = req.body;
     if (!telephone || !password) {
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }
@@ -37,7 +38,6 @@ class UserController {
     const user = await User.create({
       name,
       surname,
-      patronymic,
       password: hashPassword,
       telephone,
       role
@@ -58,8 +58,14 @@ class UserController {
     if (!comparePassword) {
       return next(ApiError.internal("Указан неверный пароль"));
     }
+
+
     const token = generateJwt(user.id, user.telephone, user.role);
-    return res.json({ token });
+    res.redirect("/office");
+  
+    //officeController.getAll();
+    //return res.json({ token });
+    //return next(res.getAll());
   }
 
   async check(req, res, next) {

@@ -56,5 +56,5 @@ class officeController {
 }
 
 
-
-module.exports = new officeController ;
+module.exports = new  officeController ;
+ //module.exports = { officeController: getAll} ;
