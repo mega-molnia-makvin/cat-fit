@@ -22,7 +22,7 @@ class UserController {
   }
 
   async registration(req, res, next) {
-    const {name, role, surname, telephone, password, firstDate, lastDate  } = req.body;
+    const {name, surname, telephone, password, firstDate, lastDate  } = req.body;
     if (!telephone || !password) {
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }
@@ -40,7 +40,6 @@ class UserController {
       surname,
       password: hashPassword,
       telephone,
-      role
     });
 
     const card = await Card.create({ firstDate, lastDate, userId: user.id });
@@ -52,20 +51,18 @@ class UserController {
     const { password, telephone } = req.body;
     const user = await User.findOne({ where: { telephone } });
     if (!user) {
+      res.redirect(304, "/office")
       return next(ApiError.internal("Пользователь не найден"));
     }
     let comparePassword = bcrypt.compareSync(password, user.password); // сравнение паролей
     if (!comparePassword) {
+      res.redirect(304, "/office")
       return next(ApiError.internal("Указан неверный пароль"));
     }
 
-
+    
     const token = generateJwt(user.id, user.telephone, user.role);
     res.redirect("/office");
-  
-    //officeController.getAll();
-    //return res.json({ token });
-    //return next(res.getAll());
   }
 
   async check(req, res, next) {

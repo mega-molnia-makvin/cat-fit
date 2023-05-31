@@ -120,7 +120,7 @@
                     <input id="pas" type="password" required="required" name="password"/>
                     <span>Пароль</span>
                 </div>
-                <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
                 <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
             </div>
         </form>
@@ -138,7 +138,8 @@
 <div class="pole required">
 <label for="date">Дата начала посещения</label>
 <div class="date">
-<input type="date" name="date">
+<input type="date" name="firstDate">
+<!-- <button onclick="year()">Подтвердить</button> -->
 </div>
 
 </div>
@@ -146,7 +147,7 @@
 <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
 <div class="knop">
 <p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
-<button class="cont"><a href="/pay">Продолжить</a></button>
+<button class="cont" type="submit"><a href="/pay">Продолжить</a></button>
 </div>
 
     </div>

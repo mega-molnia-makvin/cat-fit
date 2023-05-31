@@ -14,6 +14,12 @@ const modalOffer=document.querySelector('[data-modal="modal_offers"]');
 const closeOffer=document.querySelector('[data-modal_butt="close-offers"]');
 
 
+function year(){
+    let date = document.getElementsByName('firstDate');
+    let fdate = date.value;
+    fdate.setMonth(fdate.getMonth()+12);
+    console.log(fdate);
+}
 butOpen1.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
 })

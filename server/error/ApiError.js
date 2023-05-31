@@ -1,3 +1,4 @@
+const alert = require('alert');
 class ApiError extends Error {
   constructor(status, messege) {
     super();
@@ -6,13 +7,13 @@ class ApiError extends Error {
   }
 
   static badRequest(message) {
-    return new ApiError(404, message);
+    return alert(message);
   }
   static internal(message) {
-    return new ApiError(500, message);
+    return alert(message);
   }
   static forbidden(message) { //нет доступа
-    return new ApiError(403, message);
+    return alert(message);
   }
 }
 module.exports = ApiError;
