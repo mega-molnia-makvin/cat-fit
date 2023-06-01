@@ -72,7 +72,7 @@
                 <h2>Продлить карту и/или купить доп.услуги</h2>
                 <button class="btnadd" data-modal_butt="btn-ex">
                     <div class="btn-icons">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping fa-spin"></i>
                         </div>
                     <span class="btn-text">Продлить карту</span>
                 </button>
@@ -80,7 +80,7 @@
             </div>
             <button class="btnadd" data-modal_butt="btn-add">
                 <div class="btn-icons">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <i class="fa-solid fa-fire-flame-curved fa-spin"></i>
                     </div>
                 <span class="btn-text">Купить доп.услуги</span>
             </button>
@@ -121,7 +121,9 @@
             </footer>
         </div>
         <div data-modal="modal_offers" class="modal__another content-hidden">
-            <button data-modal_butt="btn-close" class="close-offers">Х</button>
+               
+            <form action="">
+                <button data-modal_butt="btn-close" class="close-offers">Х</button>
             <p class="modal__title">Дополнительные программы</p>
             <div class="additional">
                 <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
@@ -155,11 +157,13 @@
                         </div>      
                     </div>
             </div>
-            <div class="overlay"></div>
-            
+            </form>   
+                   
         </div>
         <div data-modal="modal_con" class="modal__another content-hidden">
-            <button data-modal_butt="btn-close-con" class="close-offers">Х</button>
+            
+            <form action="">
+                <button data-modal_butt="btn-close-con" class="close-offers">Х</button>
             <p class="modal__title">Продлить карту</p>
             <div class="additional">
                 <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Месяц<Br>
@@ -193,7 +197,7 @@
                         </div>      
                     </div>
             </div>
-            <div class="overlay"></div>
+            </form>
         </div>
         
         <script src="scripts/office.js"></script>
