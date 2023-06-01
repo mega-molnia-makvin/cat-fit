@@ -12,14 +12,29 @@ const butDate1=document.querySelector('[data-modal_butt="ch-date1"]');
 const butOffer=document.querySelector('[data-modal_butt="add_offers"]');
 const modalOffer=document.querySelector('[data-modal="modal_offers"]');
 const closeOffer=document.querySelector('[data-modal_butt="close-offers"]');
+const confirm=document.getElementById('confirm')
+var write_date = document.getElementsByName('kill-me');
+//var date = document.getElementsByName('firstdate');
+var firstDate = document.getElementsByClassName("firstDate")[0].value;
 
 
-function year(){
-    let date = document.getElementsByName('firstDate');
-    let fdate = date.value;
-    fdate.setMonth(fdate.getMonth()+12);
-    console.log(fdate);
-}
+
+    
+    confirm.addEventListener("click",function()
+    {
+        // var selected=new Date(input.value);
+        
+        //var selected=new Date(date.required);
+        console.log(firstDate);
+        //selected.setMonth(selected.getMonth()+12);
+        //console.log(selected);
+        console.log("kgfj");
+
+        // input.value=selected.toISOString.substring(0,10);
+       // write_date=selected.toISOString.substring(0,10);
+        
+    })
+   
 butOpen1.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
 })

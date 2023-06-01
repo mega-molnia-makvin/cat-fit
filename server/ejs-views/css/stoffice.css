@@ -47,10 +47,9 @@
     outline: none;
     border: none;
     border-radius: 2rem;
-    color: cadetblue;
     font-weight: 600;
     height: 2.8em;
-    background: rgb(207, 175, 175);
+    background: rgba(254, 226, 170, 0.702);
     display: flex;
     background-color: linear-gradient(to right,#353434 50%,#047b839f 50%);
     position: relative;
