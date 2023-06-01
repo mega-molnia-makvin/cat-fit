@@ -33,15 +33,17 @@
                 <h2> Имя: <%= user.name %></h2>
                 <h2> Номер телефона: <%= user.telephone %></h2>
                 <h2> Номер карты: <%= user.card.number %></h2>
-                <h2> Дата начала действия карты: <%= user.card.firstDate.getFullYear()%>-0<%=user.card.firstDate.getMonth()+1%>-<%=user.card.firstDate.getDate()%></h2> 
+                <h2> Дата начала действия карты: <%= user.card.firstDate.getFullYear()%>-<%=user.card.firstDate.getMonth()+1%>-<%=user.card.firstDate.getDate()%></h2> 
 
-                <h2> Дата окончания действия карты: <%= user.card.lastDate.getFullYear()%>-0<%=user.card.lastDate.getMonth()+1%>-<%=user.card.lastDate.getDate()%></h2> 
+                <h2> Дата окончания действия карты: <%= user.card.lastDate.getFullYear()%>-<%=user.card.lastDate.getMonth()+1%>-<%=user.card.lastDate.getDate()%></h2> 
             </div>
             
 
 
             <h2 class="plan">Расписание на неделю</h2>
+            <% if (sports.length) { %>
             <div class="schedule">
+              
                 <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                     <TR BGCOLOR="#C99C52" ALIGN="CENTER">
                      <TH>Понедельник</TH> <TH>Вторник</TH>
@@ -49,7 +51,7 @@
                     <TH>Суббота</TH><TH>Воскресенье</TH>
                     </TR>
                     <TD>
-                        <% if (sports.length) { %>
+                        
                         <% sports.forEach((sport) => { %>
                                      
                             <% if (sport.dayofWeek === "Понедельник") { %>
@@ -61,7 +63,7 @@
                             </p>
                             <% } %>
                         <% }) %>
-                    <% } %> 
+                   
                     </TD>
                     <TD>
                         <% if (sports.length) { %>
@@ -152,7 +154,12 @@
                     </TR>
                    
                 </TABLE>
+
+               
             </div>
+            <% } else { %> 
+                <h2  align="center"> Вы не записаны на групповые тренировки </h2>
+                <% } %>     
             <div class="add-smth">
                 <h2>Продлить карту и/или купить доп.услуги</h2>
                 <button class="btnadd" data-modal_butt="btn-ex">

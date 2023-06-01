@@ -136,10 +136,11 @@
 <div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона" pattern="[0-9]+11"/></div>
 <div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
 <div class="pole required">
-<label for="date">Дата начала посещения</label>
+<label for="date" name="firstDate" >Дата начала посещения</label>
 <div class="date">
-<input type="date" name="firstDate">
-<!-- <button onclick="year()">Подтвердить</button> -->
+<input type="date" class="firstDate" name="firstdate">
+<button type="button" id="confirm">Подтвердить</button>
+<input type="text" name="kill-me">
 </div>
 
 </div>

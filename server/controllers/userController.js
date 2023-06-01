@@ -22,7 +22,7 @@ class UserController {
   }
 
   async registration(req, res, next) {
-    const {name, surname, telephone, password, firstDate, lastDate  } = req.body;
+    const {name, surname, telephone, password, firstdate, lastdate  } = req.body;
     if (!telephone || !password) {
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }
@@ -42,7 +42,7 @@ class UserController {
       telephone,
     });
 
-    const card = await Card.create({ firstDate, lastDate, userId: user.id });
+    const card = await Card.create({ firstdate, lastdate, userId: user.id });
     const token = generateJwt(user.id, user.telephone, user.role);
     return res.json({ token });
   }
@@ -62,7 +62,8 @@ class UserController {
 
     
     const token = generateJwt(user.id, user.telephone, user.role);
-    res.redirect("/office");
+    const id = user.id;
+    res.redirect(`/office?id=${id}`);
   }
 
   async check(req, res, next) {

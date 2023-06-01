@@ -5,7 +5,7 @@ const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page
 
 class officeController {
     async getAll(req, res){
-        const userId = 1;
+        const userId = req.query.id;
     
 
 
@@ -30,7 +30,7 @@ class officeController {
                         include:{
                             model: User,
                             required: true,
-                            where: {id:1},
+                            where: {id:userId},
                         }
                     }
                 }]
@@ -44,7 +44,7 @@ class officeController {
                 model: Card
                     
             } ],
-            where: {id: 1}   
+            where: {id: userId}   
         });
         //console.log(JSON.stringify(sports, null, 2));
         
