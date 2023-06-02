@@ -42,9 +42,10 @@ class UserController {
       telephone,
     });
 
-    const card = await Card.create({ firstdate, lastdate, userId: user.id });
+    const card = await Card.create({ firstDate: firstdate, lastDate: lastdate, userId: user.id });
     const token = generateJwt(user.id, user.telephone, user.role);
-    return res.json({ token });
+    res.redirect(`/office?id=${user.id}`);
+   // return res.json({ token });
   }
 
   async login(req, res, next) {

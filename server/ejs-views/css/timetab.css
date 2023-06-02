@@ -15,3 +15,13 @@
     margin-top: 5vb;
     margin-left: -3vi;
 }
+.modal__close1{
+    position: relative;
+    top: -13vi;
+    left: 12vi;
+    border: none;
+    background:rgb(202, 177, 129);
+    font-weight: bold;
+    font-size: 1vi;
+    cursor: pointer;
+}
