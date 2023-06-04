@@ -112,11 +112,11 @@
         </footer>
     </div>
     <div data-modal="modal0" class="modal content-hidden">
-        <form class="form" method="post">
+        <form class="form" method="post" action="/user/login">
             <h3 class="modal__title">Вход</h3>
             <div class="modal__data">
                 <div class="label">
-                    <input id="log" type="login" required="required" name="login" autocomplete="on"/>
+                    <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
                     <span>Номер телефона</span>
                 </div>
                 <div class="label">
@@ -130,19 +130,21 @@
         <div class="overlay"></div>            
 </div>
 <div data-modal="modalBuy" class="modal1 content-hidden">
-    <form method="post" class="order">
+    <form method="post" action="/user/registration" class="order">
         <button data-modal_butt="closeBut" type = "reset" class="modal__close1">X</button>
     <h3 class="modal__title">Оформление</h3>
     <div class="reg">
-        <div class="pole required"><input type="text" name="name" autocomplete="on" placeholder="Введите имя" pattern="[A-Za-zА-Яа-яЁё]"/></div>
-<div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию" pattern="[A-Za-zА-Яа-яЁё]"/></div>
-<div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона" pattern="[0-9]+11"/></div>
+        <div class="pole required"><input type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
+<div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
+<div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
 <div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
 <div class="pole required">
-<label for="date" name="firstDate" >Дата начала посещения</label>
+<label for="date">Дата начала посещения</label>
 <div class="date">
-    <input type="date" name="date" id="start-date">
-    <br><label id="end-date"></label>
+    <p><input type="date" name="firstdate" id="start-date"></p>
+    <label for="date">Дата окончания посещения</label>
+    <p><input name="lastdate" id="end-date" readonly></p>
+    
 </div>
 
 </div>
@@ -150,7 +152,7 @@
 <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
 <div class="knop">
 <p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
-<button class="cont" type="submit"><a href="/pay">Продолжить</a></button>
+<button class="cont" type="submit">Продолжить</button>
 </div>
 
     </div>

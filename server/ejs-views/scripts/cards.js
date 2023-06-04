@@ -10,7 +10,7 @@ butOpen1.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
     const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
-endDateOutput.textContent='';
+// endDateOutput.textContent='';
 
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
@@ -18,18 +18,18 @@ selectedDate.setMonth(selectedDate.getMonth() + 12);
 
 const endDate = selectedDate.toLocaleDateString('en-US', {
 year: 'numeric',
-month: 'long',
+month: 'numeric',
 day: 'numeric'
 });
 
-endDateOutput.textContent = `Дата окончания посещения: ${endDate}`;
+endDateOutput.value = `${endDate}`;
 });
 })
 butOpen2.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
     const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
-endDateOutput.textContent='';
+// endDateOutput.textContent='';
 
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
@@ -37,18 +37,18 @@ selectedDate.setMonth(selectedDate.getMonth() + 6);
 
 const endDate = selectedDate.toLocaleDateString('en-US', {
 year: 'numeric',
-month: 'long',
+month: 'numeric',
 day: 'numeric'
 });
 
-endDateOutput.textContent = `Дата окончания посещения: ${endDate}`;
+endDateOutput.value = `${endDate}`;
 });
 })
 butOpen3.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
     const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
-endDateOutput.textContent='';
+// endDateOutput.textContent='';
 
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
@@ -56,11 +56,11 @@ selectedDate.setMonth(selectedDate.getMonth() + 1);
 
 const endDate = selectedDate.toLocaleDateString('en-US', {
 year: 'numeric',
-month: 'long',
+month: 'numeric',
 day: 'numeric'
 });
 
-endDateOutput.textContent = `Дата окончания посещения: ${endDate}`;
+endDateOutput.value = `${endDate}`;
 });
 })
 butClose.addEventListener("click",function(){

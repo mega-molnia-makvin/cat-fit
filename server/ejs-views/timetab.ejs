@@ -28,6 +28,20 @@
     </div>
     <div class="block1">
     <article class="about">
+        <div data-modal="modal0" class="modal content-hidden">
+            <form class="form" method="post" action="/user/bye">
+                <h3 class="modal__title">Купить</h3>
+                <div class="modal__data">
+                    <div class="label">
+                        <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
+                        <span>Номер карты</span>
+                    </div>
+                    <input type="submit" class="modal__submit" value="Продолжить">
+                    <input type="button" data-modal_butt="modal2" class="modal__close1" value="X">
+                </div>
+            </form>
+            <div class="overlay"></div>            
+    </div>
         <div class="about__timetable">
             <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                 <TR BGCOLOR="#C99C52" ALIGN="CENTER">
@@ -45,7 +59,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button onclick="document.location='/pay?id=5'"  target="_blank"> Купить </button> 
+                            <button  id="1"  target="_blank"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -61,7 +75,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="2"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -77,7 +91,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="3"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -93,7 +107,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="4"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -109,7 +123,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="5"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -125,7 +139,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="6"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -141,7 +155,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button> Купить </button> 
+                            <button id="7"> Купить </button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -218,18 +232,18 @@
             <%- include('./partials/footer.ejs') %>
         </footer>
         <div data-modal="modal0" class="modal content-hidden">
-            <form class="form" method="post">
+            <form class="form" method="post" action="/user/login">
                 <h3 class="modal__title">Вход</h3>
                 <div class="modal__data">
                     <div class="label">
-                        <input id="log" type="login" required="required" name="login" autocomplete="on"/>
+                        <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
                         <span>Номер телефона</span>
                     </div>
                     <div class="label">
                         <input id="pas" type="password" required="required" name="password"/>
                         <span>Пароль</span>
                     </div>
-                    <input type="button" class="modal__submit" onclick="lk()" value="Продолжить">
+                    <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
                     <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
                 </div>
             </form>
@@ -237,5 +251,6 @@
     </div>
         
         <script src="scripts/main.js"></script>
+        <script src="scripts/timetabe.js"></script>
     </body>
     </html>
