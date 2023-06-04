@@ -83,3 +83,12 @@
 .btnadd:hover .btn-icons{
     width: calc(100% - .6em);
 }
+.date-of{
+    margin-left: 13vi;
+    margin-top: 1vi;
+}
+.help{
+    font-size: 1.3vi;
+    margin-top: -3vi;
+    display: flex;
+}

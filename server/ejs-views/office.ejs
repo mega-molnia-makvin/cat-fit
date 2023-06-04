@@ -180,26 +180,30 @@
             <button data-modal_butt="btn-close-con" class="close-offers">Х</button>
             <p class="modal__title">Продлить карту</p>
             <div class="additional">
-                <div class="date">
+                
+                <div class="help">
+                    <div class="labels">
+                        <input type="radio" class="month1" id="month" name="cbox" style="cursor: pointer;">
+                        <label for="month">Месяц</label>                    
+                    </div>
+                    <div class="labels">
+                        <input type="radio" id="half" class="half1" name="cbox" style="cursor: pointer;">
+                        <label for="half">Полгода</label>
+                    </div>
+                    <div class="labels">
+                        <input type="radio" id="year" class="year1" name="cbox" style="cursor: pointer;">
+                        <label for="year">Год</label>
+                    </div>
+                </div>
                     <div class="date-of">
                         <label for="date">Дата начала посещения</label>
                         <p><input type="date" name="firstdate" id="start-date"></p>
                         <label for="date">Дата окончания посещения</label>
                         <p><input name="lastdate" id="end-date" readonly></p>
                     </div>
-                    <button class="cont" type="submit">Продолжить</button>
-                    </div>
-                <div class="labels">
-                    <input type="checkbox" class="month1" id="month" name="cbox" style="cursor: pointer;">
-                    <label for="month">Месяц</label>                    
-                </div>
-                <div class="labels">
-                    <input type="checkbox" id="half" class="half1" name="cbox" style="cursor: pointer;">
-                    <label for="half">Полгода</label></div>
-                <div class="labels">
-                    <input type="checkbox" id="year" class="year1" name="cbox" style="cursor: pointer;">
-                    <label for="year">Год</label>
-                </div>
+
+                <button class="cont" type="submit">Продолжить</button>
+
             </div>
             
         </div>
