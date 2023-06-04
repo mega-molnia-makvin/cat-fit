@@ -161,7 +161,6 @@
                 <h2  align="center"> Вы не записаны на групповые тренировки </h2>
                 <% } %>     
             <div class="add-smth">
-                <h2>Продлить карту и/или купить доп.услуги</h2>
                 <button class="btnadd" data-modal_butt="btn-ex">
                     <div class="btn-icons">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -170,12 +169,6 @@
                 </button>
 
             </div>
-            <button class="btnadd" data-modal_butt="btn-add">
-                <div class="btn-icons">
-                    <i class="fa-solid fa-fire-flame-curved"></i>
-                    </div>
-                <span class="btn-text">Купить доп.услуги</span>
-            </button>
         </article>
             
         <div class="contacts">
@@ -183,80 +176,32 @@
                 <%- include('./partials/footer.ejs') %>
             </footer>
         </div>
-        <div data-modal="modal_offers" class="modal__another content-hidden">
-            <button data-modal_butt="btn-close" class="close-offers">Х</button>
-            <p class="modal__title">Дополнительные программы</p>
-            <div class="additional">
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Йога<Br>
-                </div>
-                <div>        
-                    <div class="going">
-                        <label>Даты посещения</label>
-                    <button data-modal_butt="ch-date1" class="ch-date">Выберете дату</button>
-                    </div>        
-                    
-                    <div data-modal="modal-date1" class="modal-date content-hidden">                    
-                                <button data-modal_butt="close-date1" class="modal-close">Х</button>
-                                <div class="input-date">
-                                    <input type="text" id="input" class="form-control">                            
-                                </div>                          
-                    </div>      
-                </div>
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Бассейн<Br></div>
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Индивидуальные тренировки<Br></div>
-                    <div>    
-                        <div class="going">
-                            <label>Даты посещения</label>
-                        <button data-modal_butt="ch-date2" class="ch-date">Выберете дату</button>
-                        </div>            
-                        
-                        <div data-modal="modal-date2" class="modal-date content-hidden">                        
-                                    <button data-modal_butt="close-date2" class="modal-close">Х</button>
-                                    <div class="input-date">
-                                        <input type="text" id="date" class="form-control">                            
-                                    </div>                               
-                        </div>      
-                    </div>
-            </div>
-            <div class="overlay"></div>
-            
-        </div>
         <div data-modal="modal_con" class="modal__another content-hidden">
             <button data-modal_butt="btn-close-con" class="close-offers">Х</button>
             <p class="modal__title">Продлить карту</p>
             <div class="additional">
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Месяц<Br>
-                </div>
-                <div>        
-                    <div class="going">
-                        <label>Даты посещения</label>
-                    <button data-modal_butt="ch-date3" class="ch-date">Выберете дату</button>
-                    </div>        
-                    
-                    <div data-modal="modal-date3" class="modal-date content-hidden">                    
-                                <button data-modal_butt="close-date3" class="modal-close">Х</button>
-                                <div class="input-date">
-                                    <input type="text" id="cal" class="form-control">                            
-                                </div>                          
-                    </div>      
-                </div>
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Полгода<Br></div>
-                <div class="labels"><input type="checkbox" name="cbox" style="cursor: pointer;">Год<Br></div>
-                    <div>    
-                        <div class="going">
-                            <label>Даты посещения</label>
-                        <button data-modal_butt="ch-date4" class="ch-date">Выберете дату</button>
-                        </div>            
-                        
-                        <div data-modal="modal-date4" class="modal-date content-hidden">                        
-                                    <button data-modal_butt="close-date4" class="modal-close">Х</button>
-                                    <div class="input-date">
-                                        <input type="text" id="cal2" class="form-control">                            
-                                    </div>                               
-                        </div>      
+                <div class="date">
+                    <div class="date-of">
+                        <label for="date">Дата начала посещения</label>
+                        <p><input type="date" name="firstdate" id="start-date"></p>
+                        <label for="date">Дата окончания посещения</label>
+                        <p><input name="lastdate" id="end-date" readonly></p>
                     </div>
+                    <button class="cont" type="submit">Продолжить</button>
+                    </div>
+                <div class="labels">
+                    <input type="checkbox" class="month1" id="month" name="cbox" style="cursor: pointer;">
+                    <label for="month">Месяц</label>                    
+                </div>
+                <div class="labels">
+                    <input type="checkbox" id="half" class="half1" name="cbox" style="cursor: pointer;">
+                    <label for="half">Полгода</label></div>
+                <div class="labels">
+                    <input type="checkbox" id="year" class="year1" name="cbox" style="cursor: pointer;">
+                    <label for="year">Год</label>
+                </div>
             </div>
-            <div class="overlay"></div>
+            
         </div>
         
         <script src="scripts/office.js"></script>
