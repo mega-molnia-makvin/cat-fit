@@ -37,7 +37,7 @@
                         <span>Номер карты</span>
                     </div>
                     <input type="submit" class="modal__submit" value="Продолжить">
-                    <input type="button" data-modal_butt="modal2" class="modal__close1" value="X">
+                    <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
                 </div>
             </form>
             <div class="overlay"></div>            
@@ -59,7 +59,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button  id="1"  target="_blank"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -75,7 +75,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="2"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -91,7 +91,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="3"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -107,7 +107,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="4"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -123,7 +123,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="5"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -139,7 +139,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="6"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -155,7 +155,7 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button id="7"> Купить </button> 
+                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
                         </p>
                         <% } %>
                     <% }) %>

@@ -29,6 +29,13 @@ class timetabController {
      
             
     }
+
+    async getAllId(){            
+        const idSports = await Sports.findAll({
+            attributes: ["id"]
+        }); 
+       return idSports;        
+}
 }
 
 

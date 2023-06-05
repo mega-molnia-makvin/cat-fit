@@ -25,3 +25,24 @@
     font-size: 1vi;
     cursor: pointer;
 }
+.buy{
+    margin-top: 1vi;
+    font-size: .8vi;
+    padding: 10px 10px 8px 5px;
+    outline: none;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    height: 2.8em;
+    background: rgba(254, 226, 170, 0.702);
+    display: flex;
+    background-color: linear-gradient(to right,#353434 50%,#047b839f 50%);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 4px #363636;
+}
+.buy span{
+    letter-spacing: .05em;
+    font-weight: bold;
+    text-align: center;
+}

@@ -20,7 +20,9 @@ class UserController {
       nextTick(ApiError.badRequest(e.message));
     }
   }
-
+  async continue (req, res, next){
+    
+  }
   async registration(req, res, next) {
     const {name, surname, telephone, password, firstdate, lastdate  } = req.body;
     if (!telephone || !password) {
