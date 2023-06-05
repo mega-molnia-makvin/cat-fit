@@ -50,8 +50,10 @@
                 <TD>Суббота</TD><TD>Воскресенье</TD>
                 </TR>               
                 <TD>
+                    <% let ind = 1 %>
                     <% if (trainings.length) { %>
                     <% trainings.forEach((article) => { %>
+                        
                                  
                         <% if (article.dayofWeek === "Понедельник") { %>
                         <p> 
@@ -59,7 +61,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"  target="_blank"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -75,7 +78,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -91,7 +95,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -107,7 +112,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -123,7 +129,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -139,7 +146,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -155,7 +163,8 @@
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= article.id %>"><span>Купить</span></button> 
+                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
+                            <% ind++ %>
                         </p>
                         <% } %>
                     <% }) %>
