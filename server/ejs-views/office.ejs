@@ -20,7 +20,10 @@
             <source src="sounds/Let It Drop (Extended).mp3">
         </audio>
         <div class="header">
-                <button data-modal_butt="exit" class="header__custom-btn btn-8" >Выйти из ЛК</button>
+            <form action="/user/logout" method="post">
+                <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК</button>
+            </form>
+
             <div id="header">
                 <h1 class="header__title">Личный кабинет</h1>
             </div>
@@ -213,7 +216,6 @@
         </div>
         
         <script src="scripts/office.js"></script>
-        <script src="scripts/lk.js"></script>
         <script src="air-datepicker/air-datepicker.js"></script>
         <script src="scripts/datepicker.js"></script>
 

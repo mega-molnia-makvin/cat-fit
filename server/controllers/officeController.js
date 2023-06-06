@@ -5,8 +5,8 @@ const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page
 
 class officeController {
     async getAll(req, res){
-        const userId = req.query.id;
-    
+        const userId = req.session.user;
+        if (!userId) return res.redirect(`/`);
 
 
         const sports = await Sports.findAll({

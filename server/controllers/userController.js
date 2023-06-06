@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 const { User, Card } = require("../models/models");
 //const getAll =require("./officeController");
 
+
 const generateJwt = (id, telephone, role) => {
   return jwt.sign({ id, telephone, role }, process.env.secretKey, {
     expiresIn: "24h",
@@ -46,7 +47,8 @@ class UserController {
 
     const card = await Card.create({ firstDate: firstdate, lastDate: lastdate, userId: user.id });
     const token = generateJwt(user.id, user.telephone, user.role);
-    res.redirect(`/office?id=${user.id}`);
+    req.session.user = user.id;
+    res.redirect(`/office`);
    // return res.json({ token });
   }
 
@@ -65,8 +67,8 @@ class UserController {
 
     
     const token = generateJwt(user.id, user.telephone, user.role);
-    const id = user.id;
-    res.redirect(`/office?id=${id}`);
+    req.session.user = user.id;
+    res.redirect(`/office`);
   }
 
   async check(req, res, next) {

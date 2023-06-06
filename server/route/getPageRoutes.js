@@ -37,11 +37,7 @@ router.post("/choose-name", (req, res) => {
     res.send(`<p>Thank you</p> <a href="/test">Back home</a>`)
   })
   
-  router.post("/logout", (req, res) => {
-    req.session.destroy(err => {
-      res.redirect("/test")
-    })
-  })
+
  
 
 
@@ -56,7 +52,7 @@ router.get("/", (req, res)=>{
     res.render(createPath('index'));
 } );
 
-router.get("/office", officeController.getAll );
+router.get("/office",  officeController.getAll);
 
 router.get('/team', (req, res)=>{
     res.render(createPath('team'));

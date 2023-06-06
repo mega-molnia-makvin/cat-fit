@@ -11,6 +11,8 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+var PostgreSqlStore = require('connect-pg-simple')(session); 
+
 
 
 const port = process.env.port || 5001;
@@ -35,6 +37,15 @@ app.use(
       cookie: {},
       resave: false,
       saveUninitialized: false,
+      store : new PostgreSqlStore({
+            /*
+            connection string is built by following the syntax:
+            postgres://USERNAME:PASSWORD@HOST_NAME:PORT/DB_NAME
+            */
+            conString: "postgres://postgres:Edinorog16@localhost:5432/FatCat5",
+            createTableIfMissing: true,
+          })
+        
   })
 );
 
