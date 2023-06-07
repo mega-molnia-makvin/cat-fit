@@ -9,9 +9,6 @@
     cursor: pointer;
     margin-left: 36vi;
 }
-.ch-date{
-    padding: 7px 25px;
-}
 .input-date{
     position: relative;
     margin-top: 1.5vi;
@@ -52,14 +49,19 @@
     width: 60%;
     margin-left: 8vi;
 }
-.ch-add{
-    padding: 7px 25px;
-}
+
 .pole input{
     border-radius: 5px;
     border: none;
     outline: none;
     width: 40%;
+    padding: 7px 10px 10px;
+}
+.pole .bal{
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    width: 13%;
     padding: 7px 10px 10px;
 }
 .knop{
@@ -138,7 +140,7 @@
      transition: all .9s ease-out; 
     top: 10vb;
     right: 30vi;
-    bottom: 10vb;
+    bottom: 2vb;
     left: 30vi;
     padding: 1vb;
 }
@@ -154,20 +156,7 @@
     height: 100%;
     z-index: 0;
 }
-.gif{
-    padding-top: 15vi;
-    padding-left: 16vi;
-}
-.catvsfish{
-    width: 15vi;
-    height: 15vi;
-    padding-left: 10vi;
-}
-.catvsbutterfly{
-    width: 15vi;
-    height: 15vi;
-    padding-left: 5vi;
-}
+
 .modal__title1{
     position: relative;
     margin-left: 8vi;
@@ -187,11 +176,6 @@
     bottom: 32vb;
     left: 30vi;
     padding: 1vb;
-}
-
-#datepicker{
-    position: relative;
-    font-size: 12px;
 }
 
 .buyButton{
@@ -257,4 +241,7 @@
     border-radius: 20px;
     background: rgb(223, 196, 139);
     z-index: 10;
+}
+.balance{
+    width: 10%;
 }
