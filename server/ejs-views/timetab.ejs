@@ -66,8 +66,9 @@
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
                             </p>
-                            
+                            <% if (userId){ %>
                             <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                            <% } %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -79,12 +80,16 @@
                                  
                         <% if (article.dayofWeek === "Вторник") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                            </p>
+                            
+                            <% if (userId){ %>
+                                <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                                <% } %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -96,12 +101,16 @@
                                  
                         <% if (article.dayofWeek === "Среда") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                            </p>
+                            
+                            <% if (userId){ %>
+                                <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                                <% } %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -113,12 +122,16 @@
                                  
                         <% if (article.dayofWeek === "Четверг") { %>
                         <p> 
+                            <p name="text">
                             <%= article.named_sport.name %>  <br>
-                            Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
-                             <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
-                              Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                        Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
+                         <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
+                          Цена: <%= article.price %>  <br>
+                        </p>
+                        
+                        <% if (userId){ %>
+                            <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                            <% } %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -130,12 +143,16 @@
                                  
                         <% if (article.dayofWeek === "Пятница") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                            </p>
+                            
+                            <% if (userId){ %>
+                                <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                                <% } %> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -147,12 +164,16 @@
                                  
                         <% if (article.dayofWeek === "Суббота") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                            </p>
+                            
+                            <% if (userId){ %>
+                                <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                                <% } %>
                         </p>
                         <% } %>
                     <% }) %>
@@ -164,12 +185,16 @@
                                  
                         <% if (article.dayofWeek === "Воскресенье") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"><span>Купить</span></button> 
-                            <% ind++ %>
+                            </p>
+                            
+                            <% if (userId){ %>
+                                <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
+                                <% } %> 
                         </p>
                         <% } %>
                     <% }) %>
@@ -266,5 +291,6 @@
         
         <script src="scripts/main.js"></script>
         <script src="scripts/timetabe.js"></script>
+
     </body>
     </html>

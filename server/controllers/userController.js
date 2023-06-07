@@ -40,17 +40,17 @@ class UserController {
       const training = await Training.findOne({where: {sportId: sport.id}});
 
       if (card.balance<sport.price){        
-        res.redirect(304, "/timetab");
+        res.redirect( "/timetab");
         return next(ApiError.badRequest("Не удалось купить тренировку: недостаточно средств на карте"));
       }
 
-      const isBuy = Card_Training.findOne({where: {
+      const isBuy = await Card_Training.findOne({where: {
         cardNumber: card.number,
         trainingId: training.id, 
       }})
-      
+      console.log(isBuy);
       if (isBuy){
-        res.redirect(304, "/timetab");
+        res.redirect( "/timetab");
         return next(ApiError.badRequest("Тренировка уже куплена"));
       }
   
@@ -72,7 +72,7 @@ class UserController {
 
     }
     catch (e){
-      res.redirect(304, "/timetab");
+      res.redirect( "/timetab");
       return next(ApiError.badRequest("Не удалось купить тренировку "+e.message));
       //nextTick(ApiError.badRequest(e.message));
     }
