@@ -1,7 +1,13 @@
 const ApiError = require("../error/ApiError");
 const bcrypt = require("bcrypt"); //для хэширования паролей для хранения в бд
 const jwt = require("jsonwebtoken");
-const { User, Card } = require("../models/models");
+const { User, Card,
+  Master,
+  Sports,
+  Named_Sport,
+  Card_Training,
+  Training,
+  } = require("../models/models");
 //const getAll =require("./officeController");
 
 
@@ -21,8 +27,24 @@ class UserController {
       nextTick(ApiError.badRequest(e.message));
     }
   }
-  async continue (req, res, next){
-    
+  async buy (req, res, next){
+    const id = req.session.user;
+    const {idSport}=req.body;
+    try{
+      const user = await User.findPk(id);
+      const card =  await user.getCard();
+      const sport = await Sports.findPk(idSport);
+      const training = await Training.findOne({where: {sportId: sport.id}});
+
+       await Card_Training.create({
+        cardNumber: card.number,
+        trainingId: training.id,
+      });
+
+    }
+    catch (e){
+      //nextTick(ApiError.badRequest(e.message));
+    }
   }
   async registration(req, res, next) {
     const {name, surname, telephone, password, firstdate, lastdate, balance  } = req.body;

@@ -6,6 +6,8 @@ const  {User, Master, Sports,Named_Sport, Card_Training,Training,Card} = require
 
 const timetabController = require("../controllers/timetabController");
 const officeController = require("../controllers/officeController");
+const userController = require("../controllers/userController");
+
 
 
 const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page}.ejs`);
@@ -63,6 +65,8 @@ router.get('/pay', (req, res)=>{
 } );
 
 router.get('/timetab', timetabController.getAll );
+
+router.post('/user/buy', userController.buy );
 
 
 

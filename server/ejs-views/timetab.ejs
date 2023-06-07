@@ -29,14 +29,14 @@
     <div class="block1">
     <article class="about">
         <div data-modal="modal-buy" class="modal content-hidden">
-            <form class="form" method="post" action="/user/bye">
+            <form class="form" method="post" action="/user/buy">
                 <h3 class="modal__title">Купить</h3>
                 <div class="modal__data">
                     <div class="label">
-                        <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
-                        <span>Номер карты</span>
+                        <input  type = "hidden" name="idSport" readonly/>
+                        <p name="info"></p>
                     </div>
-                    <input type="submit" class="modal__submit" value="Продолжить">
+                    <input type="submit" class="modal__submit" value="Подтвердить">
                     <input type="button" data-modal_butt="close-buy" class="modal__close" value="X">
                 </div>
             </form>
@@ -60,11 +60,14 @@
                                  
                         <% if (article.dayofWeek === "Понедельник") { %>
                         <p> 
-                            <%= article.named_sport.name %>  <br>
+                            <p name="text">
+                                <%= article.named_sport.name %>  <br>
                             Тренер: <%= article.master.name %> <%= article.master.surname %>  <br>
                              <%= article.firstTime.slice(0,5) %> - <%= article.lastTime.slice(0,5) %> <br>
                               Цена: <%= article.price %>  <br>
-                            <button class="buy" id="<%= ind %>"  target="_blank"><span>Купить</span></button> 
+                            </p>
+                            
+                            <button class="buy" id ="<%= article.id %>"  target="_blank"><span>Купить</span></button> 
                             <% ind++ %>
                         </p>
                         <% } %>
