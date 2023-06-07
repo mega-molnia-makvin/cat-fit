@@ -14,36 +14,6 @@ const createPath = (page)=> path.resolve(__dirname, '..',  'ejs-views',  `${page
 
 
 
-router.get('/test', (req, res)=>{
-     //res.cookie('sky', 'blue', {httpOnly: true, maxAge: 12000});
-    // res.cookie('grass', 'green');
-    //console.log(req.cookies);
-    //if (req.session.user) name = req.session.user
-    const name = req.session.user || "Guest";
-
-    res.cookie("simpletest", "qwerty", { httpOnly: true })
-
-    res.send(`<h1> Приветик, ${name}!</h1>
-    <form action="/choose-name" method="POST">
-      <input type="text" name="name" placeholder="your name"> 
-      <button>Submit</button>
-    </form>
-    <form action="/logout" method="POST">
-    <button>Logout</button>
-  </form>
-  `);
-});
-
-router.post("/choose-name", (req, res) => {
-    req.session.user = req.body.name.trim()
-    res.send(`<p>Thank you</p> <a href="/test">Back home</a>`)
-  })
-  
-
- 
-
-
-    
 
 
 router.get('/card', (req, res)=>{

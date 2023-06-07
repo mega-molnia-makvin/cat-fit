@@ -9,6 +9,7 @@ const { User, Card,
   Training,
   } = require("../models/models");
 //const getAll =require("./officeController");
+const alert = require("alert");
 
 
 const generateJwt = (id, telephone, role) => {
@@ -27,25 +28,58 @@ class UserController {
       nextTick(ApiError.badRequest(e.message));
     }
   }
+
+
   async buy (req, res, next){
     const id = req.session.user;
     const {idSport}=req.body;
     try{
-      const user = await User.findPk(id);
+      const user = await User.findOne({where: {id}});
       const card =  await user.getCard();
-      const sport = await Sports.findPk(idSport);
+      const sport = await Sports.findOne({where: {id: idSport}});
       const training = await Training.findOne({where: {sportId: sport.id}});
+
+      if (card.balance<sport.price){        
+        res.redirect(304, "/timetab");
+        return next(ApiError.badRequest("Не удалось купить тренировку: недостаточно средств на карте"));
+      }
+
+      const isBuy = Card_Training.findOne({where: {
+        cardNumber: card.number,
+        trainingId: training.id, 
+      }})
+      
+      if (isBuy){
+        res.redirect(304, "/timetab");
+        return next(ApiError.badRequest("Тренировка уже куплена"));
+      }
+  
+
+      //return next(ApiError.badRequest("Некорректный телефон или пароль"));
+
+      const newBalance = card.balance - sport.price;
+      card.update({ balance: newBalance });
 
        await Card_Training.create({
         cardNumber: card.number,
         trainingId: training.id,
       });
+      
+
+      req.session.balance = newBalance;
+      res.redirect(`/timetab`);
+      return next(alert("Успех"));
 
     }
     catch (e){
+      res.redirect(304, "/timetab");
+      return next(ApiError.badRequest("Не удалось купить тренировку "+e.message));
       //nextTick(ApiError.badRequest(e.message));
     }
   }
+
+
+
   async registration(req, res, next) {
     const {name, surname, telephone, password, firstdate, lastdate, balance  } = req.body;
     if (!telephone || !password) {
