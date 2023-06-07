@@ -1,7 +1,10 @@
 <% if(!userId) {%>
     <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
 <% } else {%>
-    <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК  </button>
+    <form action="/user/logout" method="post">
+        <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК  </button>
+    </form>
+    
 <% } %>
 
 
