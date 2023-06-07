@@ -32,10 +32,7 @@
         <div class="block">
         <article class="about">
             <div class="content">
-                <div data-name="bayan">
-                    <h2 class="content-title">Абонементы в тренажерный зал</h2>
-                </div>
-                <div class="content-hidden">
+                    <h2>Абонементы в тренажерный зал</h2>
                     <div class="about_description">
                         <h3>На год</h3>
                         <img class="img" src="img/month.jpg">
@@ -60,52 +57,10 @@
                         <button data-modal_butt="buyBut3" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
                     </div>
                     
-                </div>
             </div>
-            <div class="content">
-                <div data-name="bayan">
-                    <h2 class="content-title">Дополнительные предложения</h2>
-                </div>
-                <div class="content-hidden">
-                    <div class="about_description">
-                        <h3>Индивидуальные тренировки</h3>
-                        <img class="img" src="img/yoga.jpg">
-                        
-                    </div>
-        
-                    <div class="about_description">
-                        <h3>Фитнес-тест</h3>
-                        <img class="img" src="img/FT.jpg">
-                        
-                    </div>
-                    
-                </div>
-        
-            </div>                  
 
         </article>
     </div>
-            <div class="gif">
-                <img class="catvsbutterfly" src="img/circle.gif" alt="">
-                
-            </div>
-            <div class="wrapper">
-                <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
-                    <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                        <tspan x="0" y="0">Вы так же можете </tspan>
-                    </text>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
-                    <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                        <tspan x="0" y="0">обратиться к консультанту</tspan>
-                    </text>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="700" height="100" viewBox="0 0 1300 399">
-                    <text data-name="Nihil Babu" id="id" class="cls-1" transform="translate(0 271)">
-                        <tspan x="0" y="0">Если у вас остались  вопросы</tspan>
-                    </text>
-                </svg>
-            </div>
     <div class="contacts">
         <footer>
             <%- include('./partials/footer.ejs') %>
@@ -134,12 +89,12 @@
         <button data-modal_butt="closeBut" type = "reset" class="modal__close1">X</button>
     <h3 class="modal__title">Оформление</h3>
     <div class="reg">
-        <div class="pole required"><input type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
-        <div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
-        <div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
-        <div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
-        <div class="pole required"> <label> Баланс карты: <input type="text" name="balance" id="balance" readonly /> </label> </div>
-        <div class="pole required">         
+        <div class="pole"><input type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
+        <div class="pole"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
+        <div class="pole"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
+        <div class="pole"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
+        <div class="pole"> <label> Баланс карты: <input type="text" class="bal" name="balance" id="balance" readonly /> </label> </div>
+        <div class="pole">         
             <div class="date">
                 <label for="date">Дата начала посещения</label>
                 <p><input type="date" name="firstdate" id="start-date"></p>
