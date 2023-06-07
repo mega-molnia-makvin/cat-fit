@@ -14,7 +14,7 @@ const generateJwt = (id, telephone, role) => {
 class UserController {
   async create(req, res) {
     try {
-      const { name, surname, patronymic, password, telephone } = req.body;
+      const { name, surname, patronymic, password, telephone, balance } = req.body;
       const user = await User.create({ name, surname, patronymic, password, telephone, });
       return req.json({ user });
     } catch (e) {
@@ -25,7 +25,7 @@ class UserController {
     
   }
   async registration(req, res, next) {
-    const {name, surname, telephone, password, firstdate, lastdate  } = req.body;
+    const {name, surname, telephone, password, firstdate, lastdate, balance  } = req.body;
     if (!telephone || !password) {
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }
@@ -45,9 +45,10 @@ class UserController {
       telephone,
     });
 
-    const card = await Card.create({ firstDate: firstdate, lastDate: lastdate, userId: user.id });
+    const card = await Card.create({ firstDate: firstdate, lastDate: lastdate, userId: user.id, balance });
     const token = generateJwt(user.id, user.telephone, user.role);
     req.session.user = user.id;
+    req.session.balance = card.balance;
     res.redirect(`/office`);
    // return res.json({ token });
   }
@@ -65,9 +66,11 @@ class UserController {
       return next(ApiError.internal("Указан неверный пароль"));
     }
 
+    const card =  await user.getCard();
     
     const token = generateJwt(user.id, user.telephone, user.role);
     req.session.user = user.id;
+    req.session.balance = card.balance;
     res.redirect(`/office`);
   }
 

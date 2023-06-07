@@ -12,6 +12,7 @@ const User = sequelize.define("user", {
 
 const Card = sequelize.define("card", {
   number: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
+  balance: { type: DataTypes.INTEGER},
   firstDate: { type: DataTypes.DATE },
   lastDate: { type: DataTypes.DATE },
 });

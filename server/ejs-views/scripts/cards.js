@@ -4,6 +4,8 @@ const butOpen3=document.querySelector('[data-modal_butt="buyBut3"]');
 const modalBuy=document.querySelector('[data-modal="modalBuy"]');
 const butClose=document.querySelector('[data-modal_butt="closeBut"]');
 
+const balance = document.getElementById('balance');
+
 
    
 butOpen1.addEventListener("click",function(){
@@ -11,7 +13,7 @@ butOpen1.addEventListener("click",function(){
     const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
 // endDateOutput.textContent='';
-
+balance.value = "50000";
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
 selectedDate.setMonth(selectedDate.getMonth() + 12);
@@ -30,7 +32,7 @@ butOpen2.addEventListener("click",function(){
     const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
 // endDateOutput.textContent='';
-
+balance.value = "20000";
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
 selectedDate.setMonth(selectedDate.getMonth() + 6);
@@ -50,6 +52,7 @@ butOpen3.addEventListener("click",function(){
 const endDateOutput = document.getElementById('end-date');
 // endDateOutput.textContent='';
 
+balance.value = "5000";
 startDateInput.addEventListener('change', function() {
 const selectedDate = new Date(this.value);
 selectedDate.setMonth(selectedDate.getMonth() + 1);

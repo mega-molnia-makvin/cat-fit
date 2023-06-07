@@ -1,7 +1,18 @@
+<% if(!userId) {%>
+    <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+<% } else {%>
+    <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК  </button>
+<% } %>
+
 <nav class="header__menu header__row">
-    <a class="header-fonts" href="/" >Главная</a>
-    <a class="header-fonts" href="/team" >Наша команда</a>
-    <a class="header-fonts" href="/timetab" >Расписание</a>
-    <a class="header-fonts" href="/card" >Карты</a>
+    <% if(userId) {%>
+        <a class="header-fonts" href="/office">Профиль</a>
+    <% } %>
+    <a class="header-fonts" href="/">Главная</a>
+    <a class="header-fonts" href="/team">Наша команда</a>
+    <a class="header-fonts" href="/timetab">Расписание</a>
+    <% if(!userId) {%>
+        <a class="header-fonts" href="/card">Карты</a>
+    <% } %>
     <div class="animation start-home"></div>
 </nav>

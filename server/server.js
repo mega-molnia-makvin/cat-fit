@@ -49,6 +49,13 @@ app.use(
   })
 );
 
+//передача данных сессии в шаблоны
+app.use(function(req, res, next) {
+  res.locals.userId = req.session.user;
+  res.locals.balance = req.session.balance;
+  next();
+});
+
 app.use(fileUpload({}));
 app.use("/", router);
 

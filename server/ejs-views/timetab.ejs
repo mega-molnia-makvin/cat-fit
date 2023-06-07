@@ -20,7 +20,7 @@
         <source src="sounds/Loris Buono & Alexander Cruel - It's A Game [FREE DOWNLOAD].mp3">
     </audio>
     <div class="header">
-        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <!-- <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button> -->
         <%- include('./partials/nav.ejs') %>
         <div id="header">
             <h1 class="header__title">Расписание</h1>
@@ -28,7 +28,7 @@
     </div>
     <div class="block1">
     <article class="about">
-        <div data-modal="modal0" class="modal content-hidden">
+        <div data-modal="modal-buy" class="modal content-hidden">
             <form class="form" method="post" action="/user/bye">
                 <h3 class="modal__title">Купить</h3>
                 <div class="modal__data">
@@ -37,12 +37,15 @@
                         <span>Номер карты</span>
                     </div>
                     <input type="submit" class="modal__submit" value="Продолжить">
-                    <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+                    <input type="button" data-modal_butt="close-buy" class="modal__close" value="X">
                 </div>
             </form>
             <div class="overlay"></div>            
     </div>
         <div class="about__timetable">
+            <% if (userId){ %>
+                <h2> Баланс карты: <%= balance %></h2>
+                <% } %>
             <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                 <TR BGCOLOR="#C99C52" ALIGN="CENTER">
                 <TD>Понедельник</TD> <TD>Вторник</TD>

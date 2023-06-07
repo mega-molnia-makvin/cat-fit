@@ -23,7 +23,7 @@
         <source src="sounds/Loris Buono & Alexander Cruel - It's A Game [FREE DOWNLOAD].mp3">
     </audio>
     <div class="header">
-        <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button>
+        <!-- <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button> -->
             <%- include('./partials/nav.ejs') %>
         <div id="header">
             <h1 class="header__title">Наши предложения</h1>
@@ -135,19 +135,18 @@
     <h3 class="modal__title">Оформление</h3>
     <div class="reg">
         <div class="pole required"><input type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
-<div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
-<div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
-<div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
-<div class="pole required">
-<label for="date">Дата начала посещения</label>
-<div class="date">
-    <p><input type="date" name="firstdate" id="start-date"></p>
-    <label for="date">Дата окончания посещения</label>
-    <p><input name="lastdate" id="end-date" readonly></p>
-    
-</div>
-
-</div>
+        <div class="pole required"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
+        <div class="pole required"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
+        <div class="pole required"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
+        <div class="pole required"> <label> Баланс карты: <input type="text" name="balance" id="balance" readonly /> </label> </div>
+        <div class="pole required">         
+            <div class="date">
+                <label for="date">Дата начала посещения</label>
+                <p><input type="date" name="firstdate" id="start-date"></p>
+                <label for="date">Дата окончания посещения</label>
+                <p><input name="lastdate" id="end-date" readonly></p>            
+            </div>
+        </div>
 <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
 <ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
 <div class="knop">

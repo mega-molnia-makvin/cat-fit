@@ -21,7 +21,8 @@
         </audio>
         <div class="header">
             <form action="/user/logout" method="post">
-                <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК</button>
+                <!-- <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК  </button> -->
+                <%- include('./partials/nav.ejs') %>
             </form>
 
             <div id="header">
@@ -36,6 +37,7 @@
                 <h2> Имя: <%= user.name %></h2>
                 <h2> Номер телефона: <%= user.telephone %></h2>
                 <h2> Номер карты: <%= user.card.number %></h2>
+                <h2> Баланс карты: <%= user.card.balance %></h2>
                 <h2> Дата начала действия карты: <%= user.card.firstDate.getFullYear()%>-<%=user.card.firstDate.getMonth()+1%>-<%=user.card.firstDate.getDate()%></h2> 
 
                 <h2> Дата окончания действия карты: <%= user.card.lastDate.getFullYear()%>-<%=user.card.lastDate.getMonth()+1%>-<%=user.card.lastDate.getDate()%></h2> 
