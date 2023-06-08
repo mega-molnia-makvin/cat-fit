@@ -19,15 +19,6 @@
 .about{
     top: -3.8vi;
 }
-
-.data{
-
-    position: relative;
-    margin-top: 0vb;
-    margin-left: 0vi;
-
-    
-}
 .plan{
     position: relative;
     margin-top: 0vb;
@@ -87,10 +78,14 @@
     margin-left: 13vi;
     margin-top: 1vi;
 }
+.date-hehe{
+    margin-left: 2vi;
+}
 .help{
     font-size: 1.3vi;
-    margin-top: -3vi;
+    margin-top: -1vi;
     display: flex;
+    justify-content: center;
 }
 .cont{
     margin-top: 2.6vi;
@@ -108,4 +103,29 @@
     position: relative;
     cursor: pointer;
     box-shadow: 0 0 4px #363636;
+}
+.modal__another{
+    z-index: 20000;
+    background: rgba(211, 198, 169, 0.959); 
+    position: fixed;
+    border-radius: 20px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+     overflow: hidden;
+     transition: all .9s ease-out; 
+    top: 16vb;
+    right: 30vi;
+    bottom: 32vb;
+    left: 30vi;
+    padding: 1vb;
+}
+.close-offers{
+    position: relative;
+    left: 36vi;
+    border: none;
+    background: rgba(211, 198, 169, 0.959); 
+    font-weight: bold;
+    font-size: 1vi;
+    cursor: pointer;
 }

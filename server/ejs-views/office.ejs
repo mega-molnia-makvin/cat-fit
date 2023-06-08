@@ -11,16 +11,11 @@
         <title> CAT FIT</title>
         <link rel="stylesheet" href="css/stoffice.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/cards.css">
-        <link rel="stylesheet" href="air-datepicker/air-datepicker.css">
+        <!-- <link rel="stylesheet" href="css/cards.css"> -->
         <script src="https://kit.fontawesome.com/e33ee0e3a9.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <audio autoplay loop>
-            <source src="sounds/Let It Drop (Extended).mp3">
-        </audio>
         <div class="header">
-                <!-- <button data-modal_butt="exit" type="submit" class="header__custom-btn btn-8" >Выйти из ЛК  </button> -->
                 <%- include('./partials/nav.ejs') %>
 
             <div id="header">
@@ -186,7 +181,6 @@
                 <button data-modal_butt="btn-close-con" type="reset" class="close-offers">Х</button>
                 <p class="modal__title">Продлить карту</p>
                 <div class="additional">
-                    <input name="id" readonly value="<%= user.card.id%>">
                     <div class="help">
                         <div class="labels">
                             <input type="radio" class="month1" id="month" name="cbox" style="cursor: pointer;">
@@ -203,7 +197,7 @@
                     </div>
                         <div class="date-of">
                             <label for="date">Дата начала посещения</label>
-                            <p><input type="date" name="firstdate" id="start-date"></p>
+                            <p><input type="date" class="date-hehe" name="firstdate" id="start-date"></p>
                             <label for="date">Дата окончания посещения</label>
                             <p><input name="lastdate" id="end-date" readonly></p>
                         </div>
@@ -217,8 +211,5 @@
         </div>
         
         <script src="scripts/office.js"></script>
-        <script src="air-datepicker/air-datepicker.js"></script>
-        <script src="scripts/datepicker.js"></script>
-
     </body>
 </html>

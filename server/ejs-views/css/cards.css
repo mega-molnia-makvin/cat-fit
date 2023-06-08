@@ -1,32 +1,7 @@
 .header__title{
     left: -6vi;
 }
-.close-offers{
-    background: rgba(211, 198, 169, 0.959); 
-    border: none;
-    font-weight: bold;
-    font-size: 1vi;
-    cursor: pointer;
-    margin-left: 36vi;
-}
-.input-date{
-    position: relative;
-    margin-top: 1.5vi;
-    margin-left: 1.5vi;
-}
-.form-control{
-    width: 15.5vi;
-    height: 2vi;
-    border-radius: 5px;
-}
-.going{
-    margin-top: -2.7vi;
-    margin-left: 20vi;
-}
-.labels{
-    margin-top: 2.8vi;
-    margin-left: 2vi;
-}
+
 .modal__close1{
     top: .4vi;
     left: 36vi;
@@ -89,42 +64,6 @@
     -moz-text-shadow: 4px -2px 4px rgba(0, 0, 0, 0.47);
     text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
 }
-.modal-date{
-    z-index: 20000;
-    background: rgba(214, 214, 214, 0.959); 
-    position: fixed;
-    top: 30vb;
-    right: 30vi;
-    bottom: 22vb;
-    left: 50vi;
-    border-radius: 20px;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-     overflow: hidden;
-}
-.submit{
-    background: #a5936f;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    padding: 20px 25px;
-    border-radius: 10px;
-    width: 30%;
-    font-weight: 700;
-}
-
-.modal-close{
-    position: relative;
-    border: none;
-    margin-left: 16.9vi;
-    margin-top: .5vi;
-    background: rgba(214, 214, 214, 0.959); 
-    font-weight: bold;
-    font-size: 1vi;
-    cursor: pointer;
-    text-align: right;
-}
 .anketa{
     color: rgb(93, 143, 126);
 }
@@ -161,22 +100,6 @@
     position: relative;
     margin-left: 8vi;
 }
-.modal__another{
-    z-index: 20000;
-    background: rgba(211, 198, 169, 0.959); 
-    position: fixed;
-    border-radius: 20px;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
-     overflow: hidden;
-     transition: all .9s ease-out; 
-    top: 16vb;
-    right: 30vi;
-    bottom: 32vb;
-    left: 30vi;
-    padding: 1vb;
-}
 
 .buyButton{
     position: relative;
@@ -187,7 +110,7 @@
     border: rgb(71, 38, 6);
     left: 67vi;
     bottom: 12vi;
-    margin-top: 8vi;
+    margin-top: -2vi;
 }
 
 .buyImg{
@@ -195,12 +118,17 @@
     width: 100%;
     
 }
+.about{
+    height: 93%;
+}
 .about_description{
     top: 20vi;
     width: 20%;
     height: 20%;
     font-size: 1.6vi;
-    margin: 20px;
+}
+.time{
+    margin-top: -2vi;
 }
 .modal1::before{
     content: '';
@@ -214,6 +142,16 @@
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
+}
+.cont{
+    background: #ad9668;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-top: -.1vi;
+    font-weight: 700;
 }
 .modal1::after{
     content: '';

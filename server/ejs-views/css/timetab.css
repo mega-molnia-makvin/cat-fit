@@ -7,6 +7,46 @@
 #header{
     top: 6vi;
 }
+.modal-buy{
+    background: rgba(221, 186, 110, 0.959); 
+    position: fixed;
+    top: 20vb;
+    right: 30vi;
+    bottom: 37vb;
+    left: 30vi;
+    border-radius: 20px;
+    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+     overflow: hidden;
+     transition: all .9s ease-out; 
+}
+.buy-smt{
+    margin-top: -2vi;
+    margin-left: 1vi;
+}
+.modal-buy .overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: hidden;
+    background: rgba(0,0,0,0.7);
+    transition: opacity 500ms;
+    height: 100%;
+    z-index: 0;
+}
+.close-buy{
+    position: relative;
+    top: -17.7vi;
+    left: 12.6vi;
+    border: none;
+    background:rgb(202, 177, 129);
+    font-weight: bold;
+    font-size: 1vi;
+    cursor: pointer;
+}
 .block1{
     margin-top: 6.8vi;
 }
@@ -14,16 +54,6 @@
     position: relative;
     margin-top: 5vb;
     margin-left: -3vi;
-}
-.modal__close1{
-    position: relative;
-    top: -13vi;
-    left: 12vi;
-    border: none;
-    background:rgb(202, 177, 129);
-    font-weight: bold;
-    font-size: 1vi;
-    cursor: pointer;
 }
 .buy{
     margin-top: 1vi;

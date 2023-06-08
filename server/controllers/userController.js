@@ -29,6 +29,22 @@ class UserController {
     }
   }
 
+  async continue (res,req,next){
+    const {firstdate, lastdate  } = req.body;
+    const id = req.session.user;
+    try{
+      const user = await User.findOne({where: {id}});
+      const card =  await user.getCard();
+      card.firstDate=firstdate;
+      card.lastDate=lastdate;
+      res.redirect( "/office");
+      return next(alert("Удалось продлить абонемент"));
+    }
+    catch (e){
+      res.redirect( "/office");
+      return next(ApiError.badRequest("Не удалось продлить абонемент "+e.message));
+    }
+  }
 
   async buy (req, res, next){
     const id = req.session.user;
@@ -53,9 +69,6 @@ class UserController {
         res.redirect( "/timetab");
         return next(ApiError.badRequest("Тренировка уже куплена"));
       }
-  
-
-      //return next(ApiError.badRequest("Некорректный телефон или пароль"));
 
       const newBalance = card.balance - sport.price;
       card.update({ balance: newBalance });
@@ -68,13 +81,12 @@ class UserController {
 
       req.session.balance = newBalance;
       res.redirect(`/timetab`);
-      return next(alert("Успех"));
+      return next(alert("Тренировка успешно куплена"));
 
     }
     catch (e){
       res.redirect( "/timetab");
       return next(ApiError.badRequest("Не удалось купить тренировку "+e.message));
-      //nextTick(ApiError.badRequest(e.message));
     }
   }
 
@@ -83,10 +95,12 @@ class UserController {
   async registration(req, res, next) {
     const {name, surname, telephone, password, firstdate, lastdate, balance  } = req.body;
     if (!telephone || !password) {
+      res.redirect(304, "/card");
       return next(ApiError.badRequest("Некорректный телефон или пароль"));
     }
     const candidate = await User.findOne({ where: { telephone } });
     if (candidate) {
+      res.redirect(304, "/card")
       return next(
         ApiError.badRequest(
           "Пользователь с таким номером телефона уже существует"

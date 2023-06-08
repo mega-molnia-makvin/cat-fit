@@ -133,7 +133,6 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     outline: none;
 }
 .modal {
-    z-index: 20000;
     background: rgba(221, 186, 110, 0.959); 
     position: fixed;
     top: 20vb;
@@ -208,12 +207,7 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     margin-top: 2.7vi;
     font-weight: 700;
 }
-.modal__submit:active{
-    background: sandybrown;
-    box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-    7px 7px 20px 0px rgba(0,0,0,.1),
-    4px 4px 5px 0px rgba(0,0,0,.1);
-}
+
 .label{
     position: relative;
     margin-top: 60px;

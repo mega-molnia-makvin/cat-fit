@@ -16,11 +16,8 @@
     <script src="https://kit.fontawesome.com/e33ee0e3a9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="sounds/Loris Buono & Alexander Cruel - It's A Game [FREE DOWNLOAD].mp3">
-    </audio>
+
     <div class="header">
-        <!-- <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button> -->
         <%- include('./partials/nav.ejs') %>
         <div id="header">
             <h1 class="header__title">Расписание</h1>
@@ -28,24 +25,13 @@
     </div>
     <div class="block1">
     <article class="about">
-        <div data-modal="modal-buy" class="modal content-hidden">
-            <form class="form" method="post" action="/user/buy">
-                <h3 class="modal__title">Купить</h3>
-                <div class="modal__data">
-                    <div class="label">
-                        <input  type = "hidden" name="idSport" readonly/>
-                        <p name="info"></p>
-                    </div>
-                    <input type="submit" class="modal__submit" value="Подтвердить">
-                    <input type="button" data-modal_butt="close-buy" class="modal__close" value="X">
-                </div>
-            </form>
-            <div class="overlay"></div>            
-    </div>
+        
         <div class="about__timetable">
             <% if (userId){ %>
                 <h2> Баланс карты: <%= balance %></h2>
-                <% } %>
+                <% } else{ %>
+                    <h2 class="buy-smt"> <a href="/card" >Купите абонемент</a> или войдите в лк, чтобы купить доп.тренировку</h2>
+                    <% } %>
             <TABLE BORDER="1" WIDTH=100% BGCOLOR="#CCAA72">
                 <TR BGCOLOR="#C99C52" ALIGN="CENTER">
                 <TD>Понедельник</TD> <TD>Вторник</TD>
@@ -270,6 +256,20 @@
         <footer class="contacts">
             <%- include('./partials/footer.ejs') %>
         </footer>
+        <div data-modal="modal-buy" class="modal-buy content-hidden">
+            <form class="form" method="post" action="/user/buy">
+                <h3 class="modal__title">Купить</h3>
+                <div class="modal__data">
+                    <div class="label">
+                        <input  type = "hidden" name="idSport" readonly/>
+                        <h2 name="info"></h2>
+                    </div>
+                    <input type="submit" class="modal__submit" value="Подтвердить">
+                    <input type="button" data-modal_butt="close-buy" class="close-buy" value="X">
+                </div>
+            </form>
+            <div class="overlay"></div>            
+    </div>
         <div data-modal="modal0" class="modal content-hidden">
             <form class="form" method="post" action="/user/login">
                 <h3 class="modal__title">Вход</h3>

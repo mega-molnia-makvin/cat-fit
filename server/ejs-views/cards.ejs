@@ -12,24 +12,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/team.css">
-
-    <link rel="stylesheet" href="air-datepicker/air-datepicker.css">
-
     <script src="https://kit.fontawesome.com/e33ee0e3a9.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="sounds/Loris Buono & Alexander Cruel - It's A Game [FREE DOWNLOAD].mp3">
-    </audio>
     <div class="header">
-        <!-- <button class="header__custom-btn btn-8" data-modal_butt="modal1" type="submit">Войти в ЛК</button> -->
             <%- include('./partials/nav.ejs') %>
         <div id="header">
             <h1 class="header__title">Наши предложения</h1>
         </div>
     </div>    
-        <div class="block">
         <article class="about">
             <div class="content">
                     <h2>Абонементы в тренажерный зал</h2>
@@ -42,25 +34,26 @@
                     </div>
         
                     <div class="about_description">
-                        <h3>На полгода</h3>
+                        <div class="time">
+                            <h3>На полгода</h3>
                         <img class="img" src="img/6month.jpg">
                         <p>Стоимость абонемента:30 000 <i class="fa-solid fa-ruble-sign fa-sm"></i></p>
-                        
                         <button data-modal_butt="buyBut2" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                        </div>
                     </div>
-        
                     <div class="about_description">
-                        <h3>На месяц</h3>
+                        <div class="time">
+                            <h3>На месяц</h3>
                         <img class="img" src="img/year.jpg">
                         <p>Стоимость абонемента:10 000 <i class="fa-solid fa-ruble-sign fa-sm"></i></p>
-                        
                         <button data-modal_butt="buyBut3" class="buyButton"><img class="buyImg" src="img/buy.png"> </button>
+                        </div>
+                        
                     </div>
                     
             </div>
 
         </article>
-    </div>
     <div class="contacts">
         <footer>
             <%- include('./partials/footer.ejs') %>
@@ -118,7 +111,5 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>
-    <script src="air-datepicker/air-datepicker.js"></script>
-    <script src="scripts/datepicker.js"></script>
 </body>
 </html>
