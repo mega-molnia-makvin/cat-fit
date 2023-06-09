@@ -30,15 +30,15 @@ class UserController {
   }
 
   async continue (res,req,next){
-    const {firstdate, lastdate  } = req.body;
+    const {firstdate, lastdate } = req.body;
     const id = req.session.user;
     try{
       const user = await User.findOne({where: {id}});
       const card =  await user.getCard();
-      card.firstDate=firstdate;
-      card.lastDate=lastdate;
+      card.update({firstDate: firstdate});
+      card.update({lastDate: lastdate});
       res.redirect( "/office");
-      return next(alert("Удалось продлить абонемент"));
+      return next(alert("Абонемент продлен"));
     }
     catch (e){
       res.redirect( "/office");

@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 
 const sequelize = require("./db");
-const models = require("./models/models");
+const {defaultDb} = require("./models/defaultDatabase");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const router = require("./route/main");
@@ -12,6 +12,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 var PostgreSqlStore = require('connect-pg-simple')(session); 
+
 
 
 
@@ -42,7 +43,7 @@ app.use(
             connection string is built by following the syntax:
             postgres://USERNAME:PASSWORD@HOST_NAME:PORT/DB_NAME
             */
-            conString: "postgres://postgres:Edinorog16@localhost:5432/FatCat5",
+            conString: "postgres://postgres:Edinorog16@localhost:5432/CatFit",
             createTableIfMissing: true,
           })
         
@@ -66,6 +67,7 @@ const start = async () => {
   try {
     await sequelize.authenticate();
     await sequelize.sync({alter: true});
+    defaultDb();
     app.listen(port, () => console.log("Server started on port " + port));
   } catch (e) {
     console.log(e);

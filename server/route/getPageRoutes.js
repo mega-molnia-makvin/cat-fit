@@ -1,6 +1,5 @@
 const Router = require("express");
 const router = new Router();
-const cardController = require('../controllers/cardController')
 const path = require("path");
 const  {User, Master, Sports,Named_Sport, Card_Training,Training,Card} = require("../models/models")
 
@@ -36,13 +35,7 @@ router.get('/pay', (req, res)=>{
 
 router.get('/timetab', timetabController.getAll );
 
-router.post('/user/buy', userController.buy );
 
-
-
-router.get('/', (req, res)=>{
-    res.render(createPath('office'));
-} );
 
 router.use((req, res)=>{
     res
