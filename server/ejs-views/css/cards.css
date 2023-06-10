@@ -103,14 +103,18 @@
 
 .buyButton{
     position: relative;
-    height: 28%;
-    width: 28%;
+    width: 30%;
     cursor: pointer;
     background: rgb(71, 38, 6);
     border: rgb(71, 38, 6);
     left: 67vi;
-    bottom: 12vi;
-    margin-top: -2vi;
+    bottom: 3vi;
+    margin-top: -4vi;
+    font-size: 1vi;
+    color: white;
+}
+.btn2{
+    margin-top: 8vi;
 }
 
 .buyImg{
@@ -118,18 +122,25 @@
     width: 100%;
     
 }
-.about{
-    height: 93%;
+
+.text-description{
+    position: absolute;
+    width: 100vb;
+    font-size: 1.3vi;
+    margin-left: 23vi;
+    margin-top: -3vi;
 }
+.validity{
+    font-size: 1.3vi;
+}
+
 .about_description{
     top: 20vi;
     width: 20%;
     height: 20%;
     font-size: 1.6vi;
 }
-.time{
-    margin-top: -2vi;
-}
+
 .modal1::before{
     content: '';
     position: absolute;

@@ -388,4 +388,7 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     color: black;
     text-decoration: none;
 }
-
+.inform{
+    margin-top: -2vi;
+    margin-left: -2vi;
+}
