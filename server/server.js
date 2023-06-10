@@ -42,8 +42,9 @@ app.use(
             /*
             connection string is built by following the syntax:
             postgres://USERNAME:PASSWORD@HOST_NAME:PORT/DB_NAME
-            */
-            conString: "postgres://postgres:Edinorog16@localhost:5432/CatFit",
+            */ 
+            //conString: "postgres://postgres:Edinorog16@localhost:5432/CatFit",
+            conString: `postgres://${process.env.dbUser}:${process.env.dbPassword}@${process.env.dbHost}:${process.env.dbPort}/${process.env.dbName}`,
             createTableIfMissing: true,
           })
         

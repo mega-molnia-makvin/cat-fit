@@ -9,70 +9,122 @@ const { User, Card,
 
 const defaultDb = async () =>{
     let count = await Sports.count({})
-    console.log(count);
     if (count === 0){
         await User.create({
             name: 'Ефремов', surname: 'Константин', password: '$2b$05$SZ2.CKh.QA./71F.H5t46OObWa/TOyTctccG1iDHu/slBOp7onjFq', role: 'ADMIN', telephone: '89674351276'
-          })
-    }
-        
-    // INSERT INTO public.cards(
-    //     "number", "firstDate", "lastDate", "createdAt", "updatedAt", "userId")
-    //     VALUES ('123', '2023-04-25', '2023-04-25', '2023-04-25', '2023-04-25', 1);
-        
-    // INSERT INTO public.masters(
-    //      name, surname,  password, telephone, "createdAt", "updatedAt")
-    //     VALUES ( 'Роман','Куликов' , 'fgthjk', '89543875434', '2023-04-25' , '2023-04-25'),
-    //     ( 'Алена','Егорова' , 'rtyui', '89543875474', '2023-04-25' , '2023-04-25');
-        
-    // INSERT INTO public.named_sports(name, "createdAt", "updatedAt")
-    //     VALUES ('Йога', '2023-04-25', '2023-04-25'),
-    //     ('Бассейн', '2023-04-25', '2023-04-25'),
-    //     ('Что-то еще', '2023-04-25', '2023-04-25'),
-    //     ('Хула', '2023-04-25', '2023-04-25'),
-    //     ('Велосипед', '2023-04-25', '2023-04-25');;
-    
-    // INSERT INTO public.sports(
-    //      "firstTime", "lastTime", price, "dayofWeek", "createdAt", "updatedAt", "masterId", "namedSportId")
-    //     VALUES ('8:30', '9:30', 300, 'Понедельник', '2023-04-25', '2023-04-25',2, 1),
-    //     ('18:00', '19:30', 500, 'Понедельник', '2023-04-25', '2023-04-25',2, 2),
-    //     ('9:00', '10:00', 300, 'Вторник', '2023-04-25', '2023-04-25',1, 5),
-    //     ('19:30', '20:30', 400, 'Вторник', '2023-04-25', '2023-04-25',1, 4),
-    //     ('10:30', '11:30', 300, 'Среда', '2023-04-25', '2023-04-25',2, 1),
-    //     ('18:30', '19:30', 200, 'Среда', '2023-04-25', '2023-04-25',2, 5),
-    //     ('9:00', '10:00', 300, 'Четверг', '2023-04-25', '2023-04-25',1, 2),
-    //     ('19:30', '20:30', 200, 'Четверг', '2023-04-25', '2023-04-25',2, 5),
-    //     ('8:30', '9:30', 300, 'Пятница', '2023-04-25', '2023-04-25',1, 2),
-    //     ('18:30', '19:30', 300, 'Пятница', '2023-04-25', '2023-04-25',2, 4),
-    //     ('19:30', '20:30', 300, 'Пятница', '2023-04-25', '2023-04-25',2, 2),
-    //     ('12:30', '13:30', 300, 'Суббота', '2023-04-25', '2023-04-25',2, 1),
-    //     ('13:00', '14:30', 300, 'Воскресенье', '2023-04-25', '2023-04-25',1, 1);
-    
-    // INSERT INTO public.trainings(
-    //     date, "numberOfPlaces", "numberOfAvailablePlaces", "createdAt", "updatedAt", "sportId")
-    //     VALUES ('2023-05-22', 20, 19, '2023-05-22', '2023-05-22', 1),
-    //     ('2023-05-22', 20, 19, '2023-05-22', '2023-05-22', 2),
-    //     ('2023-05-23', 20, 19, '2023-05-22', '2023-05-22', 3),
-    //     ('2023-05-23', 20, 19, '2023-05-22', '2023-05-22', 4),
-    //     ('2023-05-24', 20, 19, '2023-05-22', '2023-05-22', 5),
-    //     ('2023-05-24', 20, 19, '2023-05-22', '2023-05-22', 6),
-    //     ('2023-05-25', 20, 19, '2023-05-22', '2023-05-22', 7),
-    //     ('2023-05-25', 20, 19, '2023-05-22', '2023-05-22', 8),
-    //     ('2023-05-26', 20, 19, '2023-05-22', '2023-05-22', 9),
-    //     ('2023-05-26', 20, 19, '2023-05-22', '2023-05-22', 10),
-    //     ('2023-05-26', 20, 19, '2023-05-22', '2023-05-22', 11),
-    //     ('2023-05-27', 20, 19, '2023-05-22', '2023-05-22', 12),
-    //     ('2023-05-28', 20, 19, '2023-05-22', '2023-05-22', 13);
-        
-    
-    // INSERT INTO public.card_trainings(
-    //      "createdAt", "updatedAt", "cardNumber", "trainingId")
-    //     VALUES ('2023-05-18', '2023-05-18', 123, 10),
-    //     ('2023-05-18', '2023-05-18', 123, 11),
-    //     ('2023-05-18', '2023-05-18', 123, 9),
-    //     ('2023-05-18', '2023-05-18', 123, 3);
+        });
 
+        await Card.create({
+            number: '123', firstDate: '2023-04-25', lastDate:'2024-04-25', balance: 1000, userId: 1            
+        });
 
+        await Master.create({
+            name: 'Роман', surname: 'Куликов',  password: '$2b$05$SZ2.CKh.QA./71F.H5t46OObWa/TOyTctccG1iDHu/slBOp7onjFq', telephone: '89543875434'
+        });
+        await Master.create({
+            name: 'Алена', surname: 'Егорова',  password: '$2b$05$SZ2.CKh.QA./71F.H5t46OObWa/TOyTctccG1iDHu/slBOp7onjFq', telephone: '89543875474'
+        });
+
+        await Named_Sport.create({ name: 'Йога'});
+        await Named_Sport.create({ name: 'Бассейн'});
+        await Named_Sport.create({ name: 'Конный спорт'});
+        await Named_Sport.create({ name: 'Хула'});
+        await Named_Sport.create({ name: 'Велосипед'});
+        
+        await Sports.create({
+            firstTime:'8:30', lastTime: '9:30', price: 300, dayofWeek:'Понедельник', masterId: 2, namedSportId:1
+        });
+        await Sports.create({
+            firstTime:'18:00', lastTime: '19:30', price: 500, dayofWeek:'Понедельник', masterId: 2, namedSportId:2
+        });
+        await Sports.create({
+            firstTime:'9:00', lastTime: '10:00', price: 300, dayofWeek:'Вторник', masterId: 1, namedSportId: 5
+        });
+        await Sports.create({
+            firstTime:'19:30', lastTime: '20:30', price: 400, dayofWeek:'Вторник', masterId: 1, namedSportId:4
+        });
+        await Sports.create({
+            firstTime:'10:30', lastTime: '11:30', price: 300, dayofWeek:'Среда', masterId: 2, namedSportId:1
+        });     
+        await Sports.create({
+            firstTime:'18:30', lastTime: '19:30', price: 200, dayofWeek:'Среда', masterId: 2, namedSportId: 5
+        }); 
+        await Sports.create({
+            firstTime:'9:00', lastTime: '10:00', price: 300, dayofWeek:'Четверг', masterId: 1, namedSportId: 2
+        });  
+        await Sports.create({
+            firstTime:'19:30', lastTime: '20:30', price: 200, dayofWeek:'Четверг', masterId: 2, namedSportId: 5
+        });  
+        await Sports.create({
+            firstTime:'8:30', lastTime: '9:30', price: 300, dayofWeek:'Пятница', masterId: 1, namedSportId: 2
+        });  
+        await Sports.create({
+            firstTime:'18:30', lastTime: '19:30', price: 300, dayofWeek:'Пятница', masterId: 2, namedSportId: 4
+        });  
+        await Sports.create({
+            firstTime:'19:40', lastTime: '20:40', price: 350, dayofWeek:'Пятница', masterId: 2, namedSportId: 2
+        });  
+        await Sports.create({
+            firstTime: '12:30', lastTime: '13:30', price: 300, dayofWeek:'Суббота', masterId: 2, namedSportId: 1
+        }); 
+        await Sports.create({
+            firstTime:'13:00', lastTime: '14:00', price: 300, dayofWeek:'Воскресенье', masterId: 1, namedSportId: 1
+        }); 
+
+        await Training.create({
+            date: '2023-06-22' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 1
+        });
+        await Training.create({
+            date: '2023-06-22' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 2
+        });
+        await Training.create({
+            date: '2023-06-23' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 3
+        });
+        await Training.create({
+            date: '2023-06-23' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 4
+        });
+        await Training.create({
+            date: '2023-06-24' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 5
+        });
+        await Training.create({
+            date: '2023-06-24' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 6
+        });
+        await Training.create({
+            date: '2023-06-25' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 7
+        });
+        await Training.create({
+            date: '2023-06-25' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 8
+        });
+        await Training.create({
+            date: '2023-06-26' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 9
+        });
+        await Training.create({
+            date: '2023-06-26' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 10
+        });
+        await Training.create({
+            date: '2023-06-26' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 11
+        });
+        await Training.create({
+            date: '2023-06-27' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 12
+        });
+        await Training.create({
+            date: '2023-06-28' , numberOfPlaces: 20, numberOfAvailablePlaces: 19, sportId: 13
+        });
+
+        await Card_Training.create({
+            cardNumber: 123, trainingId: 10
+        });
+        await Card_Training.create({
+            cardNumber: 123, trainingId: 11
+        });
+        await Card_Training.create({
+            cardNumber: 123, trainingId: 9
+        });
+        await Card_Training.create({
+            cardNumber: 123, trainingId: 3
+        });       
+    
+    }    
 }
 
 module.exports = {defaultDb }
