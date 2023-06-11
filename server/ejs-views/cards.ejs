@@ -130,7 +130,7 @@
             <h3 class="modal__title">Вход</h3>
             <div class="modal__data">
                 <div class="label">
-                    <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
+                    <input id="tel" type="tel" required="required" name="telephone" autocomplete="on"/>
                     <span>Номер телефона</span>
                 </div>
                 <div class="label">
@@ -148,9 +148,9 @@
         <button data-modal_butt="closeBut" type = "reset" class="modal__close1">X</button>
     <h3 class="modal__title">Оформление</h3>
     <div class="reg">
-        <div class="pole"><input type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
-        <div class="pole"><input type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
-        <div class="pole"><input type="login" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
+        <div class="pole"><input id="name" type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
+        <div class="pole"><input id="surname" type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
+        <div class="pole"><input id="tel" type="tel" name="telephone" minlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
         <div class="pole"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
         <div class="pole"> <label> Баланс карты: <input type="text" class="bal" name="balance" id="balance" readonly /> </label> </div>
         <div class="pole">         
