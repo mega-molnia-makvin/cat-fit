@@ -21,7 +21,13 @@ function validateForm() {
     var name = document.forms["orderForm"]["name"].value;
     var surname = document.forms["orderForm"]["surname"].value;
     var telephone = document.forms["orderForm"]["tel"].value;
+    var date = document.forms["orderForm"]["lastdate"].value;
     
+
+    if (date ==''){
+        alert("Выберите дату начала посещения");
+        return false;
+    }
     var nameRegex = /^[A-Za-zА-Яа-яЁё]+$/;
     if (!name.match(nameRegex)) {
     alert("Поле 'Имя' должно содержать только буквы");
