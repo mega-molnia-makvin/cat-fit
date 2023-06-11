@@ -7,7 +7,8 @@ const butClose=document.querySelector('[data-modal_butt="closeBut"]');
 const balance = document.getElementById('balance');
 const startDateInput = document.getElementById('start-date');
 const endDateOutput = document.getElementById('end-date');
- //Отключение пред.дни в календаре
+
+ //Отключение пред.дней в календаре
 var today = new Date().toISOString().split('T')[0];
 startDateInput.min = today;
 function updateEndDateMinDate() {
@@ -15,6 +16,32 @@ endDateInput.min = startDateInput.value;
 }
 startDateInput.addEventListener('change', updateEndDateMinDate);
 
+//Проверка на буквенные и цифровые символы,а также на правильный формат номера телефона(должен состоять из 11 цифр)
+function validateForm() {
+    var name = document.forms["orderForm"]["name"].value;
+    var surname = document.forms["orderForm"]["surname"].value;
+    var telephone = document.forms["orderForm"]["tel"].value;
+    
+    var nameRegex = /^[A-Za-zА-Яа-яЁё]+$/;
+    if (!name.match(nameRegex)) {
+    alert("Поле 'Имя' должно содержать только буквы");
+    return false;
+    }
+    
+    var surnameRegex = /^[A-Za-zА-Яа-яЁё]+$/;
+    if (!surname.match(surnameRegex)) {
+    alert("Поле 'Фамилия' должно содержать только буквы");
+    return false;
+    }
+    
+    var telephoneRegex = /^\d{11}$/;
+    if (!telephone.match(telephoneRegex)) {
+    alert("Номер телефона должен состоять из 11 цифр");
+    return false;
+    }
+    }
+
+//Добавление месяцев к выбранной дате
 butOpen1.addEventListener("click",function(){
     modalBuy.classList.remove('content-hidden')
 balance.value = "50000";
