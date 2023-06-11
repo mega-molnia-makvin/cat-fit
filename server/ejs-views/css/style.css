@@ -279,12 +279,13 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     margin-top: 3%;
     margin-left: 20%;
 }
-.comment{
+#disqus_thread{
     position: relative;
     top: 3vb;
     border: 2px solid rgb(189, 188, 188);
     left: 10vi;
     width: 79vi;
+    background-color: #f7f1d6;
 }
 .icons{
     display: inline-flex;
