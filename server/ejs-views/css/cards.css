@@ -162,6 +162,7 @@
     padding: 20px 25px;
     border-radius: 10px;
     margin-top: -.1vi;
+    margin-bottom: 2vi;
     font-weight: 700;
 }
 .modal1::after{
@@ -190,6 +191,8 @@
     border-radius: 20px;
     background: rgb(223, 196, 139);
     z-index: 10;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 .balance{
     width: 10%;

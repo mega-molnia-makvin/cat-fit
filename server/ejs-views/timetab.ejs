@@ -7,8 +7,6 @@
     <title> CAT FIT</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-    <link rel="manifest" sizes="32x32" href="img/minilogo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/timetab.css">
     <link rel="stylesheet" href="css/stoffice.css">
@@ -23,6 +21,39 @@
             <h1 class="header__title">Расписание</h1>
         </div>
     </div>
+    <div data-modal="modal-buy" class="modal-buy content-hidden">
+        <form class="form" method="post" action="/user/buy">
+            <h3 class="modal__title">Купить</h3>
+            <div class="modal__data">
+                <div class="label">
+                    <input  type = "hidden" name="idSport" readonly/>
+                    <h2 name="info"></h2>
+                </div>
+                <input type="submit" class="modal__submit" value="Подтвердить">
+                <input type="button" data-modal_butt="close-buy" class="close-buy" value="X">
+            </div>
+        </form>
+        <div class="overlay"></div>            
+</div>
+    <div data-modal="modal0" class="modal content-hidden">
+        <form class="form" method="post" action="/user/login">
+            <h3 class="modal__title">Вход</h3>
+            <div class="modal__data">
+                <div class="label">
+                    <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
+                    <span>Номер телефона</span>
+                </div>
+                <div class="label">
+                    <input id="pas" type="password" required="required" name="password"/>
+                    <span>Пароль</span>
+                </div>
+                <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+            </div>
+        </form>
+        <div class="overlay"></div>            
+</div>
+    
     <div class="block1">
     <article class="about">
         
@@ -256,38 +287,6 @@
         <footer class="contacts">
             <%- include('./partials/footer.ejs') %>
         </footer>
-        <div data-modal="modal-buy" class="modal-buy content-hidden">
-            <form class="form" method="post" action="/user/buy">
-                <h3 class="modal__title">Купить</h3>
-                <div class="modal__data">
-                    <div class="label">
-                        <input  type = "hidden" name="idSport" readonly/>
-                        <h2 name="info"></h2>
-                    </div>
-                    <input type="submit" class="modal__submit" value="Подтвердить">
-                    <input type="button" data-modal_butt="close-buy" class="close-buy" value="X">
-                </div>
-            </form>
-            <div class="overlay"></div>            
-    </div>
-        <div data-modal="modal0" class="modal content-hidden">
-            <form class="form" method="post" action="/user/login">
-                <h3 class="modal__title">Вход</h3>
-                <div class="modal__data">
-                    <div class="label">
-                        <input id="log" type="login" required="required" name="telephone" autocomplete="on"/>
-                        <span>Номер телефона</span>
-                    </div>
-                    <div class="label">
-                        <input id="pas" type="password" required="required" name="password"/>
-                        <span>Пароль</span>
-                    </div>
-                    <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
-                    <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
-                </div>
-            </form>
-            <div class="overlay"></div>            
-    </div>
         
         <script src="scripts/main.js"></script>
         <script src="scripts/timetabe.js"></script>

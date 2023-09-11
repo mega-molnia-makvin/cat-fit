@@ -7,8 +7,6 @@
     <title> CAT FIT</title>
     <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-    <link rel="manifest" sizes="32x32" href="img/minilogo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cards.css">
     <link rel="stylesheet" href="css/team.css">
@@ -21,7 +19,55 @@
         <div id="header">
             <h1 class="header__title">Наши предложения</h1>
         </div>
-    </div>    
+    </div>
+    <div data-modal="modal0" class="modal content-hidden">
+        <form class="form" method="post" action="/user/login">
+            <h3 class="modal__title">Вход</h3>
+            <div class="modal__data">
+                <div class="label">
+                    <input id="tel" type="tel" required="required" name="telephone" autocomplete="on"/>
+                    <span>Номер телефона</span>
+                </div>
+                <div class="label">
+                    <input id="pas" type="password" required="required" name="password"/>
+                    <span>Пароль</span>
+                </div>
+                <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
+                <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
+            </div>
+        </form>
+        <div class="overlay"></div>            
+</div>
+
+<div data-modal="modalBuy" class="modal1 content-hidden">
+    <form method="post" name="orderForm" onsubmit="return validateForm()" action="/user/registration" class="order">
+        <button data-modal_butt="closeBut" type = "reset" class="modal__close1">X</button>
+    <h3 class="modal__title">Оформление</h3>
+    <div class="reg">
+        <div class="pole"><input id="name" type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
+        <div class="pole"><input id="surname" type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
+        <div class="pole"><input id="tel" type="tel" name="telephone" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
+        <div class="pole"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
+        <div class="pole"> <label> Баланс карты: <input type="text" class="bal" name="balance" id="balance" readonly /> </label> </div>
+        <div class="pole">         
+            <div class="date">
+                <label for="date">Дата начала посещения</label>
+                <p><input type="date" name="firstdate" id="start-date"></p>
+                <label for="date">Дата окончания посещения</label>
+                <p><input name="lastdate" id="end-date" readonly></p>            
+            </div>
+        </div>
+<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
+<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
+<div class="knop">
+<p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
+<button class="cont" type="submit">Продолжить</button>
+</div>
+    </div>   
+   
+</form>
+<div class="overlay"></div> 
+</div>     
         <article class="about">
             <div class="content">
                     <h2>Абонементы в тренажерный зал</h2>
@@ -125,55 +171,7 @@
             <%- include('./partials/footer.ejs') %>
         </footer>
     </div>
-    <div data-modal="modal0" class="modal content-hidden">
-        <form class="form" method="post" action="/user/login">
-            <h3 class="modal__title">Вход</h3>
-            <div class="modal__data">
-                <div class="label">
-                    <input id="tel" type="tel" required="required" name="telephone" autocomplete="on"/>
-                    <span>Номер телефона</span>
-                </div>
-                <div class="label">
-                    <input id="pas" type="password" required="required" name="password"/>
-                    <span>Пароль</span>
-                </div>
-                <input type="submit" class="modal__submit" onclick="lk()" value="Продолжить">
-                <input type="button" data-modal_butt="modal2" class="modal__close" value="X">
-            </div>
-        </form>
-        <div class="overlay"></div>            
-</div>
-<div data-modal="modalBuy" class="modal1 content-hidden">
-    <form method="post" name="orderForm" onsubmit="return validateForm()" action="/user/registration" class="order">
-        <button data-modal_butt="closeBut" type = "reset" class="modal__close1">X</button>
-    <h3 class="modal__title">Оформление</h3>
-    <div class="reg">
-        <div class="pole"><input id="name" type="text" name="name" autocomplete="on" placeholder="Введите имя"/></div>
-        <div class="pole"><input id="surname" type="text" name="surname" autocomplete="on" placeholder="Введите фамилию"/></div>
-        <div class="pole"><input id="tel" type="tel" name="telephone" minlength="11" maxlength="11" autocomplete="on" placeholder="Введите номер телефона"/></div>
-        <div class="pole"><input type="password" name="password" minlength="6" placeholder="Придумайте пароль"/></div>
-        <div class="pole"> <label> Баланс карты: <input type="text" class="bal" name="balance" id="balance" readonly /> </label> </div>
-        <div class="pole">         
-            <div class="date">
-                <label for="date">Дата начала посещения</label>
-                <p><input type="date" name="firstdate" id="start-date"></p>
-                <label for="date">Дата окончания посещения</label>
-                <p><input name="lastdate" id="end-date" readonly></p>            
-            </div>
-        </div>
-<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Нужна консультация?<Br></ul>
-<ul><input type="checkbox" name="cbox" style="cursor: pointer;">Фитнес-тест<Br></ul>
-<div class="knop">
-<p class="anketa">Заполняя анкету,вы автоматически <br> даёте согласие на обработку персональных данных</p>
-<button class="cont" type="submit">Продолжить</button>
-</div>
-
-    </div>
     
-   
-</form>
-<div class="overlay"></div> 
-</div> 
     <script src="scripts/main.js"></script>
     <script src="scripts/team.js"></script>
     <script src="scripts/cards.js"></script>

@@ -145,6 +145,7 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
      4px 4px 5px 0px rgba(0,0,0,.1);
      overflow: hidden;
      transition: all .9s ease-out; 
+     z-index: 100000;
 }
 .modal::before{
     content: '';
@@ -267,6 +268,7 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     background: rgba(190, 175, 131, 0.836);
     padding-top: 3vb;
     padding-left: 3vi;
+    padding-bottom: 5vi;
 }
 .contacts{
     position:relative;
@@ -285,6 +287,7 @@ text-shadow: 4px -2px 4px rgba(129, 5, 5, 0.47);
     border: 2px solid rgb(189, 188, 188);
     left: 10vi;
     width: 79vi;
+    padding: 13px;
     background-color: #f7f1d6;
 }
 .icons{

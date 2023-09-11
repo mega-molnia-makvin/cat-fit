@@ -6,12 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="apple-touch-icon" sizes="180x180" href="img/minilogo.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="img/minilogo.png">
-        <link rel="manifest" sizes="32x32" href="img/minilogo.png">
         <title> CAT FIT</title>
         <link rel="stylesheet" href="css/stoffice.css">
         <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="stylesheet" href="css/cards.css"> -->
         <script src="https://kit.fontawesome.com/e33ee0e3a9.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -160,15 +157,6 @@
                 <% } %>    
                 
             <h2>Записаться на тренировки: <a href="/timetab">расписание</a> </h2>
-            <div class="add-smth">
-                <button class="btnadd" data-modal_butt="btn-ex">
-                    <div class="btn-icons">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        </div>
-                    <span class="btn-text">Продлить карту</span>
-                </button>
-
-            </div>
         </article>
             
         <div class="contacts">
@@ -176,40 +164,7 @@
                 <%- include('./partials/footer.ejs') %>
             </footer>
         </div>
-        <div data-modal="modal_con" class="modal__another content-hidden">
-            <form action="/user/continue" method="post">
-                <button data-modal_butt="btn-close-con" type="reset" class="close-offers">Х</button>
-                <p class="modal__title">Продлить карту</p>
-                <div class="additional">
-                    <div class="help">
-                        <div class="labels">
-                            <input type="radio" class="month1" id="month" name="cbox" style="cursor: pointer;">
-                            <label for="month">Месяц</label>                    
-                        </div>
-                        <div class="labels">
-                            <input type="radio" id="half" class="half1" name="cbox" style="cursor: pointer;">
-                            <label for="half">Полгода</label>
-                        </div>
-                        <div class="labels">
-                            <input type="radio" id="year" class="year1" name="cbox" style="cursor: pointer;">
-                            <label for="year">Год</label>
-                        </div>
-                    </div>
-                        <div class="date-of">
-                            <label for="date">Дата начала посещения</label>
-                            <p><input type="date" class="date-hehe" name="firstdate" id="start-date"></p>
-                            <label for="date">Дата окончания посещения</label>
-                            <p><input name="lastdate" id="end-date" readonly></p>
-                        </div>
-    
-                    <!-- <button class="cont" type="submit">Продолжить</button> -->
-
-    
-                </div>
-            </form>
-
-            
-        </div>
+        
         
         <script src="scripts/office.js"></script>
     </body>

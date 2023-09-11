@@ -11,10 +11,7 @@ const endDateOutput = document.getElementById('end-date');
  //Отключение пред.дней в календаре
 var today = new Date().toISOString().split('T')[0];
 startDateInput.min = today;
-function updateEndDateMinDate() {
-endDateInput.min = startDateInput.value;
-}
-startDateInput.addEventListener('change', updateEndDateMinDate);
+
 
 //Проверка на буквенные и цифровые символы,а также на правильный формат номера телефона(должен состоять из 11 цифр)
 function validateForm() {
@@ -101,3 +98,9 @@ endDateOutput.value = `${endDate}`;
 butClose.addEventListener("click",function(){
     modalBuy.classList.add('content-hidden')
 })
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+     modalBuy.classList.add('content-hidden')
+    }
+  });
+  
