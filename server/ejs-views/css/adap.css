@@ -73,6 +73,9 @@
             top: -27vi;
             left: 14vi;
         }
+        .icons{
+            margin-top: 1vi;
+        }
         
     }
     @media (max-width: 1252px) {
@@ -102,6 +105,9 @@
         .modal__title{
             font-size: 2.7vi;
         }
+        .inform h3{
+            font-size: 1.3vi;
+        }
     }
     @media (max-width: 1152px) {
         .modal__close{
@@ -117,6 +123,8 @@
         .label input{
             padding: 30px 18px 10px;
         }
+
+       
     }
     @media (max-width: 1112px) {
         .modal__close{
@@ -127,7 +135,8 @@
         } 
         .label span{
             font-size: 1.2em;
-        }      
+        }     
+
     }
     @media (max-width: 1098px) {
         .modal__close{
